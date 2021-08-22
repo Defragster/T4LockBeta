@@ -67,11 +67,13 @@ void setup() {
   for ( int ii = 0; ii < 20; ii++ ) {
     if ( 0x2a != bufREAL[ii] ) jjc++;
   }
-  if ( jjc > 4 ) {
+  if ( jjc > 4 ) { // CATCH COLD START and perform the head tail buffer fills
     Serial.println("\t1K Fills DONE!\n");
     memset(&bufREAL, 0x2a, 1024);
     memset(&bufREAL[ sizeof(bufREAL) - 1024] , 0x2a, 1024);
   }
+  else
+    Serial.println("\t1K Fills SKIPPED!\n");
 
   if (!myfs.begin(&bufREAL[1024], sizeof(bufREAL) - 2048)) {
     //  if (!myfs.begin(bufBACK, sizeof(bufBACK))) {
@@ -81,7 +83,7 @@ void setup() {
   MemoryHexDump(Serial, bufREAL , 1024, true, "*** HEADER >> bufREAL[] At Startup ::  BEGUN ***\n", 10);
   MemoryHexDump(Serial, &bufREAL[1024], sizeof(bufREAL) - 2048, true, "*** bufREAL[] At Startup ::  BEGUN ***\n", 10);
   MemoryHexDump(Serial, &bufREAL[ sizeof(bufREAL) - 1024] , 1024, true, "*** TAIL >> bufREAL[] At Startup ::  BEGUN ***\n", 10);
-  MemoryHexDump(Serial, bufBACK , sizeof(bufBACK), true, "*** bufBACK[] At Startup ::  BEGUN ***\n", 10);
+  MemoryHexDump(Serial, bufBACK , sizeof(bufBACK), true, "*** bufBACK[] At Startup ::  BEGUN ***\n", 12);
   filecount = printDirectoryFilecount( myfs.open("/") );  // Set base value of filecount for disk
   printDirectory();
   parseCmd( '?' );
@@ -115,4 +117,24 @@ void loop() {
   }
   else
     checkInput( 1 );
+}
+
+void bufComp_t() {
+  // Serial.print(" compare two buff regions : bufBACK == bufREAL");
+  uint ii = 0;
+  for ( ii = 0; ii < sizeof(bufREAL); ii++) {
+    if ( bufREAL[ii] != bufBACK[ii] ) {
+      ii = ii & 0xFFFFFFF0;
+      MemoryHexDump(Serial, &bufREAL[ ii] , 64, false, "\t ----->>>>> BUF REAL != BACK \n");
+      MemoryHexDump(Serial, &bufBACK[ ii] , 64, false, "\t  BUF BACK <<<<<-----\n");
+      ii += 64;
+      Serial.println();
+    }
+  }
+}
+void bufCopy_T() {
+  // Serial.print(" explicit copy of : bufREAL >> bufBACK");
+  arm_dcache_flush_delete(bufREAL, sizeof(bufREAL) ); // BUGBUG - test copy for unflushed data
+  memcpy( bufBACK, bufREAL, sizeof(bufREAL) );
+  arm_dcache_flush_delete(bufBACK, sizeof(bufBACK) );
 }

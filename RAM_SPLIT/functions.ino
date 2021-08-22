@@ -1,5 +1,5 @@
 
-char szInputs[] = "0123456789RdDwcghkFqvplmusSBbyYxfan+-?";
+char szInputs[] = "0123456789RtTdDwcghkFqvplmusSBbyYxfan+-?";
 uint32_t lastTime;
 void checkInput( int step ) { // prompt for input without user input with step != 0
 	uint32_t nowTime = micros();
@@ -65,14 +65,25 @@ void parseCmd( char chIn ) { // pass chIn == '?' for help
  'n' No verify on Write- TOGGLE\n\
  'u' Update Filecount\n\
  'R' Restart Teensy - Except 'RAM' - data persists\n\
+ 't' compare two buff regions : bufBACK == bufREAL\n\
+ 'T' explicit copy of : bufREAL >> bufBACK\n\
  '+, or -': more, or less add .vs. delete in Loop\n\
  '?' Help list : A Loop will Create, Extend, or Delete files to verify Integrity" );
 		break;
-	case 'R':
-		Serial.print(" RESTART Teensy ...");
-		delay(100);
-		SCB_AIRCR = 0x05FA0004;
-		break;
+  case 'R':
+    Serial.print(" RESTART Teensy ...");
+    bufCopy_T();
+    delay(100);
+    SCB_AIRCR = 0x05FA0004;
+    break;
+  case 't':
+    Serial.print("\ncompare two buff regions : bufBACK == bufREAL");
+    bufComp_t();
+    break;
+  case 'T':
+    Serial.print("\nexplicit copy of : bufREAL >> bufBACK");
+    bufCopy_T();
+    break;
 	case '0':
 	case '1':
 	case '2':
