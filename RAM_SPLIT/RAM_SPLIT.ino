@@ -133,7 +133,7 @@ void bufComp_t() {
   }
 }
 void bufCopy_T() {
-  // Serial.print(" explicit copy of : bufREAL >> bufBACK");
+  Serial.print("\n explicit copy of : bufREAL >> bufBACK\n");
   arm_dcache_flush_delete(bufREAL, sizeof(bufREAL) ); // BUGBUG - test copy for unflushed data
   memcpy( bufBACK, bufREAL, sizeof(bufREAL) );
   arm_dcache_flush_delete(bufBACK, sizeof(bufBACK) );
