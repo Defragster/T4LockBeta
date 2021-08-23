@@ -1,5 +1,5 @@
 
-char szInputs[] = "0123456789RtTdDwcghkFqvplmusSBbyYxfan+-?";
+char szInputs[] = "0123456789RdDwcghkFqvplmusSBbyYxfan+-?";
 uint32_t lastTime;
 void checkInput( int step ) { // prompt for input without user input with step != 0
   uint32_t nowTime = micros();
@@ -44,7 +44,7 @@ void parseCmd( char chIn ) { // pass chIn == '?' for help
  'c, or 0': Continuous Loop, or stop Loop in progress\n\
  'h, or k': start Hundred or Thousand Loops\n\
  'd' Directory of LittleFS Media\n\
- 'D' Walk all Dir Files verify Read Size\n\
+ 'D' Walk all Dir Files verify Read Size and Content bytes\n\
  'l' Show count of loop()'s, Bytes Read,Written\n\
  'B, or b': Make Big file half of free space, or remove all Big files\n\
  'S, or s': Make 2MB file , or remove all 2MB files\n\
@@ -65,24 +65,13 @@ void parseCmd( char chIn ) { // pass chIn == '?' for help
  'n' No verify on Write- TOGGLE\n\
  'u' Update Filecount\n\
  'R' Restart Teensy - Except 'RAM' - data persists\n\
- 't' compare two buff regions : bufBACK == bufREAL\n\
- 'T' explicit copy of : bufREAL >> bufBACK\n\
  '+, or -': more, or less add .vs. delete in Loop\n\
  '?' Help list : A Loop will Create, Extend, or Delete files to verify Integrity" );
       break;
     case 'R':
       Serial.print(" RESTART Teensy ...");
-      bufCopy_T();
       delay(100);
       SCB_AIRCR = 0x05FA0004;
-      break;
-    case 't':
-      Serial.print("\ncompare two buff regions : bufBACK == bufREAL");
-      bufComp_t();
-      break;
-    case 'T':
-      Serial.print("\nexplicit copy of : bufREAL >> bufBACK");
-      bufCopy_T();
       break;
     case '0':
     case '1':
@@ -134,7 +123,7 @@ void parseCmd( char chIn ) { // pass chIn == '?' for help
       chIn = 0;
       break;
     case 'D':
-      Serial.println("\nWalk all Files verify Read Size:\t");
+      Serial.println("\nWalk all Files verify Read Size and Content bytes:\t");
       lastTime = micros();
       Serial.printf( "\t%u Errors found\n" , DirectoryVerify( myfs.open("/") ) );
       Serial.printf("\nBytes Used: %llu, Bytes Total:%llu\n", myfs.usedSize(), myfs.totalSize());
@@ -389,6 +378,7 @@ int DirectoryVerify(File dir) {
     if (! entry) {
       break;
     }
+    char mm;
     if (entry.isDirectory()) {
       Serial.print("\tD");
       Serial.print(entry.name()[0]);
@@ -397,7 +387,6 @@ int DirectoryVerify(File dir) {
       Serial.print("\n");
     } else {
       uint64_t fileSize, sizeCnt = 0;
-      char mm;
       cFU = entry.name()[0];
       if ( cFU >= 'A' && cFU <= 'Z' )
         cFL = cFU + lowOffset;
@@ -419,7 +408,7 @@ int DirectoryVerify(File dir) {
         if ( cFL != 0 )
           Serial.printf("\n File Size Error:: %s found %llu Bytes for Size %llu \n", entry.name(), sizeCnt, fileSize);
         else
-          Serial.printf("\n File Content Error:: %s at byte %llu of Size %llu \n", entry.name(), sizeCnt, fileSize);
+          Serial.printf("\n File Content Error:: 0x%x %s at byte %llu of Size %llu \n", (uint)mm, entry.name(), sizeCnt, fileSize);
         errCnt++;
         errsLFS++;
       }
