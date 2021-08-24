@@ -20,7 +20,7 @@ void setup() {
   memInfo();
   getFreeITCM();
 
-  extern const uint32_t hab_csf[768]; // placeholder for HAB signature
+  extern const uint32_t hab_csf[]; // placeholder for HAB signature
   Serial.println();
   //dumpRam(Serial, 0x60000000 + ptrFreeITCM - 1024, 1024);
   //  Serial.println((uint32_t)&_stextload + (uint32_t)&_etext, HEX);
@@ -31,14 +31,14 @@ void setup() {
 
   isEncrypt();
   time_now = millis();
-  
+
 }
 
 
 void loop() {
   //float testTemp = tempmonGetTemp() - myTemp;
-  Serial.print((millis()-time_now)*0.00001667,4);Serial.print(", "); 
-  Serial.println(tempmonGetTemp(),2);
+  Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
+  Serial.println(tempmonGetTemp(), 2);
   delay(500);
 }
 
@@ -143,12 +143,12 @@ FLASHMEM void title_function() {
 
 //extern "C" uint32_t _sdata, _edata, _sdataload; /* special linker symbols */
 extern "C" uint32_t _sdataload; /* special linker symbols */
-extern const uint32_t hab_csf[768]; // placeholder for HAB signature
+extern const uint32_t hab_csf[]; // placeholder for HAB signature
 
 int isEncrypt() {
-  int ok=0;
+  int ok = 0;
   title_function();
- 
+
   if ((IOMUXC_GPR_GPR11 & 0x100) == 0x100) {
     Serial.println("Pass: Bus Encryption Engine is active");
   } else {
@@ -187,18 +187,37 @@ int isEncrypt() {
     Serial.println("Fail: title_text[] is not in encrypted region");
     ok--;
   }
-   uint jj = 0;
-  for ( uint ii = 0; ii < sizeof(hab_csf) / sizeof(hab_csf[0]); ii++ ) jj += hab_csf[ii];
-  if ( jj ) {
-    Serial.println("Pass: csf not Zero");
+  uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
+  if ( hab_PJRC == hab_csf[0] ) {
+    Serial.println("Pass: csf is PJRC");
   } else {
-    Serial.println("Fail: csf is Zero");
+    Serial.println("Fail: csf not PJRC");
     ok--;
   }
- // TODO: check HAB version and HAB logfile status
-
+  const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
+  const uint32_t hab_status = (*(int (**)(int *, int *))0x00200324)(NULL, NULL);
+  if (hab_version == 0x40307) {
+    Serial.println("NOTE: hab_version == 0x40307");
+  } else {
+    Serial.println("NOTE: hab_version NOT == 0x40307");
+    ok--;
+  }
+  if (hab_status == 0xF0) {
+    Serial.println("NOTE: hab_status == 0xF0");
+  } else {
+    Serial.println("NOTE: hab_status NOT == 0xF0");
+    ok--;
+  }
+  if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
+    Serial.print("Secure mode IS set :: Fuses == 0x");
+  } else {
+    Serial.print("Secure mode NOT SET :: Fuses == 0x");
+    ok--;
+  }
+  Serial.println( HW_OCOTP_CFG5, HEX );
+  
   Serial.println();
-  if (0==ok) Serial.println("All Tests Passed.  :-)");
+  if (0 == ok) Serial.println("All Tests Passed.  :-)");
   else printf(" %d Tests failed.  :-(", -ok);
   return ok;
 }
