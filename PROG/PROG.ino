@@ -19,7 +19,7 @@
 
 // NOTE: This option is only available on the Teensy 4.0, Teensy 4.1 and Teensy Micromod boards.
 
-#define PROG_FLASH_SIZE 1024 * 1024 * 6 // Specify size to use of onboard Teensy Program Flash chip
+#define PROG_FLASH_SIZE 1024 * 1024 * 7 // Specify size to use of onboard Teensy Program Flash chip
 // This creates a LittleFS drive in Teensy PCB FLash.
 // This will persist until a new UPLOAD - Bootloader may change after TD 1.54 to prevent reformat.
 LittleFS_Program myfs;
