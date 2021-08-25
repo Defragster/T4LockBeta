@@ -40,6 +40,10 @@ void loop() {
   Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
   delay(500);
+  if ( !Serial.available() ) {
+    delay(5000);
+  }
+  if ( Serial.available() ) Serial.read();
 }
 
 

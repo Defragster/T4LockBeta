@@ -69,6 +69,8 @@ void parseCmd( char chIn ) { // pass chIn == '?' for help
  '?' Help list : A Loop will Create, Extend, or Delete files to verify Integrity" );
       break;
     case 'R':
+      Serial.print(" Copy LFS to SD ...");
+xferSD ( destSD );
       Serial.print(" RESTART Teensy ...");
       delay(100);
       SCB_AIRCR = 0x05FA0004;
