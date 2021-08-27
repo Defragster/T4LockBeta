@@ -43,7 +43,7 @@ void setup() {
   time_now = millis();
   seePi( 200, NULL );
 #if defined(USB_DUAL_SERIAL)
-  MakeCode( 2000 );
+  MakeCode( 4000 );
 #endif
 }
 

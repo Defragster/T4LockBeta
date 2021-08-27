@@ -1,6 +1,7 @@
 
 
 #if defined(USB_DUAL_SERIAL)
+char varHeader[] =   "char szPi[PI_DIGITS_SZ];";
 char FuncHeader[][120] = {
   "DATA_PLACE char szMyPi",
   "[]=\"314159265358979323846264338327950288419716939937510582097494\";",
@@ -9,14 +10,13 @@ char FuncHeader[][120] = {
 };
 char repeatCode[][120] = {
   "( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { ",
-  "  static char szPi[PI_DIGITS_SZ];",
-  "  uint32_t myPi = seePi( PI_DIGITS, szPi );",
   "  uint32_t outVar = ThisFunc", // insert f# here
   ""
 };
 char EndFunc[] = "  uint32_t outVar = 0;";
 char repeatCode2[][120] = {
   "( inVar, priorPiSum, knownPiSum );",
+  "  uint32_t myPi = seePi( PI_DIGITS, szPi );",
   "  if ( strcmp( szPi, szPiDigits ) )",
   "    Serial.printf( \"%cPI FAIL szPiDigits String pi>>%s in %s%c%c\",13, szPi, __FUNCTION__,13,13 );",
   "  if ( strcmp( szPi, szMyPi", // insert f# here
@@ -43,6 +43,8 @@ void MakeCode( uint32_t repeat ) {
     return;
   }
   SerialUSB1.println();
+  SerialUSB1.println();
+  SerialUSB1.println( varHeader );
   SerialUSB1.println();
   for ( uint ii = 1; ii < repeat; ii++ ) {
     jj = 0;
