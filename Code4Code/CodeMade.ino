@@ -15972,10 +15972,16010 @@ DATA_PLACE char szMyPi999[]="314159265358979323846264338327950288419716939937510
 CODE_PLACE uint32_t ThisFunc999( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
   static char szPi[PI_DIGITS_SZ];
   uint32_t myPi = seePi( PI_DIGITS, szPi );
-  uint32_t outVar = ThisFunc0( inVar, priorPiSum, knownPiSum );
+  uint32_t outVar = ThisFunc1000( inVar, priorPiSum, knownPiSum );
   if ( strcmp( szPi, szPiDigits ) )
     Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
   if ( strcmp( szPi, szMyPi999) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1000[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1000( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1001( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1000) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1001[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1001( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1002( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1001) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1002[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1002( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1003( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1002) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1003[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1003( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1004( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1003) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1004[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1004( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1005( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1004) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1005[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1005( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1006( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1005) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1006[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1006( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1007( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1006) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1007[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1007( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1008( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1007) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1008[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1008( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1009( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1008) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1009[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1009( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1010( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1009) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1010[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1010( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1011( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1010) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1011[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1011( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1012( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1011) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1012[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1012( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1013( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1012) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1013[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1013( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1014( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1013) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1014[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1014( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1015( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1014) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1015[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1015( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1016( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1015) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1016[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1016( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1017( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1016) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1017[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1017( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1018( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1017) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1018[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1018( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1019( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1018) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1019[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1019( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1020( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1019) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1020[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1020( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1021( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1020) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1021[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1021( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1022( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1021) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1022[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1022( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1023( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1022) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1023[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1023( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1024( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1023) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1024[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1024( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1025( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1024) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1025[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1025( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1026( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1025) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1026[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1026( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1027( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1026) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1027[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1027( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1028( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1027) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1028[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1028( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1029( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1028) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1029[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1029( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1030( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1029) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1030[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1030( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1031( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1030) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1031[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1031( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1032( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1031) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1032[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1032( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1033( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1032) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1033[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1033( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1034( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1033) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1034[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1034( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1035( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1034) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1035[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1035( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1036( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1035) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1036[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1036( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1037( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1036) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1037[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1037( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1038( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1037) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1038[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1038( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1039( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1038) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1039[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1039( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1040( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1039) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1040[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1040( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1041( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1040) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1041[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1041( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1042( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1041) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1042[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1042( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1043( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1042) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1043[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1043( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1044( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1043) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1044[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1044( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1045( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1044) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1045[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1045( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1046( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1045) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1046[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1046( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1047( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1046) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1047[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1047( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1048( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1047) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1048[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1048( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1049( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1048) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1049[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1049( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1050( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1049) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1050[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1050( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1051( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1050) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1051[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1051( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1052( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1051) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1052[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1052( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1053( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1052) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1053[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1053( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1054( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1053) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1054[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1054( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1055( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1054) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1055[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1055( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1056( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1055) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1056[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1056( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1057( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1056) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1057[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1057( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1058( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1057) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1058[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1058( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1059( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1058) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1059[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1059( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1060( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1059) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1060[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1060( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1061( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1060) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1061[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1061( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1062( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1061) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1062[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1062( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1063( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1062) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1063[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1063( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1064( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1063) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1064[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1064( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1065( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1064) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1065[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1065( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1066( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1065) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1066[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1066( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1067( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1066) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1067[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1067( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1068( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1067) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1068[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1068( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1069( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1068) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1069[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1069( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1070( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1069) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1070[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1070( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1071( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1070) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1071[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1071( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1072( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1071) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1072[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1072( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1073( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1072) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1073[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1073( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1074( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1073) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1074[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1074( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1075( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1074) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1075[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1075( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1076( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1075) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1076[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1076( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1077( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1076) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1077[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1077( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1078( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1077) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1078[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1078( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1079( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1078) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1079[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1079( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1080( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1079) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1080[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1080( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1081( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1080) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1081[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1081( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1082( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1081) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1082[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1082( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1083( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1082) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1083[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1083( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1084( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1083) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1084[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1084( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1085( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1084) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1085[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1085( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1086( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1085) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1086[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1086( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1087( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1086) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1087[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1087( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1088( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1087) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1088[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1088( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1089( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1088) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1089[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1089( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1090( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1089) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1090[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1090( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1091( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1090) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1091[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1091( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1092( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1091) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1092[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1092( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1093( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1092) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1093[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1093( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1094( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1093) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1094[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1094( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1095( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1094) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1095[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1095( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1096( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1095) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1096[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1096( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1097( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1096) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1097[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1097( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1098( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1097) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1098[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1098( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1099( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1098) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1099[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1099( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1100( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1099) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1100[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1100( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1101( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1100) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1101[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1101( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1102( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1101) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1102[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1102( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1103( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1102) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1103[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1103( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1104( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1103) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1104[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1104( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1105( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1104) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1105[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1105( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1106( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1105) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1106[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1106( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1107( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1106) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1107[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1107( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1108( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1107) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1108[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1108( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1109( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1108) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1109[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1109( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1110( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1109) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1110[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1110( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1111( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1110) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1111[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1111( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1112( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1111) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1112[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1112( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1113( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1112) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1113[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1113( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1114( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1113) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1114[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1114( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1115( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1114) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1115[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1115( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1116( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1115) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1116[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1116( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1117( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1116) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1117[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1117( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1118( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1117) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1118[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1118( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1119( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1118) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1119[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1119( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1120( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1119) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1120[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1120( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1121( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1120) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1121[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1121( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1122( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1121) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1122[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1122( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1123( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1122) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1123[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1123( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1124( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1123) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1124[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1124( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1125( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1124) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1125[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1125( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1126( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1125) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1126[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1126( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1127( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1126) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1127[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1127( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1128( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1127) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1128[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1128( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1129( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1128) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1129[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1129( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1130( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1129) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1130[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1130( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1131( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1130) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1131[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1131( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1132( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1131) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1132[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1132( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1133( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1132) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1133[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1133( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1134( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1133) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1134[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1134( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1135( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1134) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1135[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1135( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1136( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1135) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1136[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1136( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1137( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1136) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1137[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1137( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1138( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1137) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1138[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1138( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1139( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1138) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1139[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1139( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1140( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1139) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1140[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1140( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1141( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1140) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1141[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1141( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1142( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1141) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1142[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1142( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1143( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1142) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1143[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1143( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1144( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1143) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1144[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1144( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1145( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1144) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1145[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1145( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1146( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1145) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1146[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1146( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1147( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1146) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1147[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1147( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1148( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1147) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1148[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1148( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1149( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1148) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1149[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1149( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1150( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1149) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1150[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1150( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1151( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1150) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1151[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1151( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1152( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1151) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1152[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1152( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1153( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1152) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1153[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1153( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1154( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1153) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1154[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1154( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1155( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1154) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1155[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1155( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1156( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1155) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1156[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1156( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1157( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1156) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1157[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1157( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1158( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1157) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1158[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1158( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1159( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1158) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1159[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1159( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1160( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1159) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1160[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1160( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1161( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1160) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1161[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1161( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1162( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1161) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1162[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1162( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1163( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1162) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1163[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1163( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1164( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1163) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1164[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1164( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1165( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1164) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1165[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1165( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1166( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1165) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1166[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1166( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1167( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1166) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1167[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1167( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1168( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1167) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1168[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1168( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1169( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1168) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1169[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1169( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1170( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1169) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1170[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1170( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1171( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1170) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1171[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1171( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1172( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1171) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1172[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1172( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1173( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1172) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1173[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1173( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1174( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1173) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1174[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1174( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1175( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1174) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1175[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1175( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1176( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1175) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1176[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1176( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1177( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1176) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1177[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1177( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1178( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1177) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1178[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1178( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1179( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1178) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1179[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1179( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1180( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1179) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1180[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1180( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1181( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1180) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1181[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1181( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1182( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1181) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1182[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1182( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1183( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1182) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1183[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1183( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1184( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1183) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1184[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1184( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1185( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1184) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1185[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1185( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1186( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1185) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1186[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1186( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1187( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1186) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1187[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1187( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1188( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1187) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1188[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1188( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1189( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1188) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1189[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1189( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1190( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1189) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1190[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1190( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1191( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1190) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1191[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1191( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1192( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1191) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1192[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1192( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1193( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1192) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1193[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1193( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1194( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1193) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1194[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1194( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1195( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1194) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1195[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1195( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1196( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1195) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1196[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1196( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1197( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1196) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1197[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1197( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1198( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1197) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1198[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1198( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1199( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1198) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1199[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1199( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1200( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1199) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1200[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1200( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1201( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1200) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1201[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1201( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1202( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1201) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1202[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1202( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1203( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1202) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1203[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1203( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1204( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1203) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1204[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1204( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1205( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1204) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1205[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1205( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1206( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1205) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1206[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1206( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1207( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1206) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1207[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1207( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1208( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1207) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1208[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1208( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1209( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1208) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1209[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1209( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1210( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1209) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1210[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1210( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1211( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1210) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1211[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1211( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1212( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1211) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1212[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1212( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1213( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1212) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1213[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1213( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1214( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1213) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1214[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1214( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1215( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1214) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1215[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1215( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1216( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1215) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1216[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1216( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1217( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1216) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1217[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1217( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1218( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1217) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1218[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1218( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1219( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1218) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1219[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1219( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1220( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1219) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1220[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1220( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1221( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1220) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1221[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1221( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1222( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1221) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1222[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1222( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1223( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1222) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1223[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1223( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1224( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1223) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1224[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1224( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1225( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1224) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1225[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1225( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1226( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1225) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1226[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1226( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1227( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1226) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1227[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1227( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1228( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1227) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1228[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1228( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1229( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1228) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1229[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1229( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1230( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1229) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1230[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1230( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1231( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1230) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1231[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1231( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1232( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1231) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1232[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1232( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1233( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1232) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1233[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1233( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1234( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1233) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1234[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1234( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1235( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1234) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1235[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1235( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1236( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1235) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1236[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1236( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1237( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1236) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1237[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1237( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1238( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1237) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1238[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1238( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1239( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1238) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1239[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1239( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1240( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1239) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1240[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1240( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1241( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1240) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1241[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1241( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1242( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1241) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1242[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1242( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1243( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1242) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1243[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1243( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1244( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1243) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1244[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1244( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1245( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1244) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1245[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1245( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1246( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1245) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1246[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1246( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1247( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1246) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1247[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1247( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1248( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1247) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1248[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1248( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1249( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1248) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1249[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1249( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1250( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1249) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1250[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1250( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1251( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1250) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1251[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1251( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1252( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1251) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1252[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1252( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1253( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1252) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1253[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1253( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1254( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1253) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1254[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1254( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1255( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1254) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1255[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1255( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1256( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1255) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1256[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1256( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1257( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1256) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1257[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1257( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1258( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1257) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1258[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1258( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1259( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1258) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1259[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1259( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1260( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1259) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1260[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1260( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1261( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1260) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1261[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1261( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1262( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1261) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1262[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1262( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1263( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1262) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1263[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1263( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1264( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1263) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1264[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1264( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1265( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1264) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1265[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1265( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1266( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1265) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1266[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1266( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1267( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1266) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1267[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1267( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1268( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1267) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1268[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1268( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1269( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1268) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1269[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1269( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1270( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1269) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1270[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1270( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1271( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1270) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1271[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1271( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1272( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1271) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1272[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1272( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1273( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1272) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1273[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1273( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1274( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1273) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1274[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1274( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1275( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1274) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1275[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1275( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1276( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1275) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1276[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1276( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1277( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1276) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1277[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1277( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1278( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1277) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1278[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1278( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1279( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1278) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1279[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1279( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1280( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1279) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1280[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1280( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1281( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1280) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1281[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1281( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1282( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1281) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1282[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1282( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1283( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1282) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1283[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1283( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1284( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1283) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1284[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1284( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1285( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1284) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1285[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1285( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1286( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1285) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1286[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1286( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1287( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1286) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1287[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1287( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1288( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1287) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1288[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1288( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1289( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1288) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1289[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1289( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1290( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1289) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1290[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1290( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1291( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1290) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1291[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1291( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1292( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1291) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1292[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1292( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1293( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1292) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1293[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1293( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1294( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1293) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1294[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1294( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1295( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1294) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1295[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1295( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1296( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1295) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1296[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1296( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1297( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1296) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1297[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1297( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1298( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1297) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1298[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1298( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1299( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1298) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1299[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1299( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1300( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1299) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1300[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1300( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1301( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1300) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1301[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1301( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1302( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1301) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1302[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1302( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1303( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1302) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1303[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1303( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1304( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1303) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1304[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1304( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1305( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1304) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1305[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1305( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1306( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1305) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1306[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1306( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1307( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1306) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1307[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1307( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1308( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1307) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1308[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1308( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1309( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1308) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1309[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1309( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1310( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1309) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1310[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1310( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1311( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1310) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1311[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1311( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1312( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1311) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1312[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1312( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1313( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1312) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1313[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1313( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1314( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1313) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1314[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1314( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1315( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1314) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1315[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1315( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1316( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1315) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1316[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1316( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1317( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1316) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1317[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1317( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1318( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1317) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1318[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1318( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1319( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1318) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1319[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1319( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1320( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1319) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1320[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1320( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1321( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1320) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1321[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1321( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1322( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1321) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1322[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1322( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1323( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1322) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1323[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1323( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1324( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1323) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1324[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1324( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1325( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1324) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1325[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1325( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1326( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1325) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1326[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1326( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1327( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1326) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1327[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1327( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1328( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1327) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1328[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1328( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1329( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1328) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1329[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1329( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1330( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1329) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1330[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1330( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1331( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1330) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1331[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1331( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1332( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1331) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1332[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1332( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1333( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1332) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1333[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1333( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1334( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1333) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1334[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1334( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1335( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1334) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1335[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1335( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1336( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1335) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1336[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1336( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1337( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1336) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1337[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1337( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1338( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1337) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1338[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1338( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1339( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1338) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1339[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1339( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1340( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1339) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1340[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1340( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1341( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1340) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1341[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1341( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1342( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1341) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1342[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1342( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1343( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1342) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1343[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1343( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1344( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1343) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1344[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1344( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1345( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1344) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1345[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1345( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1346( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1345) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1346[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1346( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1347( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1346) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1347[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1347( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1348( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1347) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1348[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1348( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1349( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1348) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1349[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1349( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1350( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1349) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1350[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1350( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1351( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1350) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1351[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1351( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1352( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1351) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1352[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1352( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1353( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1352) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1353[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1353( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1354( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1353) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1354[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1354( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1355( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1354) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1355[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1355( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1356( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1355) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1356[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1356( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1357( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1356) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1357[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1357( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1358( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1357) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1358[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1358( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1359( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1358) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1359[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1359( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1360( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1359) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1360[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1360( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1361( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1360) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1361[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1361( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1362( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1361) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1362[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1362( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1363( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1362) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1363[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1363( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1364( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1363) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1364[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1364( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1365( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1364) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1365[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1365( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1366( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1365) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1366[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1366( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1367( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1366) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1367[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1367( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1368( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1367) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1368[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1368( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1369( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1368) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1369[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1369( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1370( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1369) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1370[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1370( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1371( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1370) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1371[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1371( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1372( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1371) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1372[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1372( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1373( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1372) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1373[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1373( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1374( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1373) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1374[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1374( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1375( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1374) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1375[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1375( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1376( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1375) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1376[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1376( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1377( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1376) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1377[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1377( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1378( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1377) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1378[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1378( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1379( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1378) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1379[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1379( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1380( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1379) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1380[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1380( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1381( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1380) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1381[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1381( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1382( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1381) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1382[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1382( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1383( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1382) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1383[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1383( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1384( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1383) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1384[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1384( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1385( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1384) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1385[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1385( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1386( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1385) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1386[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1386( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1387( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1386) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1387[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1387( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1388( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1387) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1388[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1388( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1389( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1388) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1389[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1389( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1390( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1389) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1390[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1390( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1391( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1390) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1391[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1391( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1392( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1391) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1392[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1392( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1393( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1392) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1393[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1393( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1394( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1393) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1394[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1394( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1395( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1394) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1395[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1395( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1396( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1395) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1396[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1396( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1397( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1396) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1397[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1397( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1398( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1397) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1398[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1398( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1399( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1398) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1399[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1399( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1400( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1399) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1400[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1400( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1401( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1400) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1401[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1401( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1402( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1401) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1402[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1402( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1403( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1402) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1403[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1403( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1404( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1403) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1404[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1404( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1405( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1404) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1405[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1405( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1406( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1405) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1406[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1406( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1407( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1406) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1407[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1407( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1408( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1407) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1408[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1408( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1409( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1408) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1409[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1409( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1410( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1409) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1410[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1410( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1411( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1410) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1411[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1411( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1412( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1411) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1412[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1412( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1413( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1412) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1413[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1413( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1414( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1413) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1414[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1414( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1415( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1414) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1415[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1415( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1416( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1415) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1416[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1416( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1417( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1416) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1417[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1417( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1418( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1417) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1418[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1418( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1419( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1418) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1419[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1419( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1420( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1419) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1420[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1420( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1421( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1420) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1421[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1421( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1422( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1421) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1422[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1422( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1423( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1422) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1423[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1423( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1424( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1423) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1424[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1424( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1425( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1424) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1425[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1425( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1426( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1425) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1426[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1426( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1427( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1426) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1427[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1427( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1428( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1427) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1428[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1428( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1429( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1428) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1429[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1429( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1430( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1429) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1430[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1430( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1431( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1430) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1431[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1431( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1432( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1431) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1432[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1432( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1433( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1432) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1433[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1433( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1434( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1433) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1434[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1434( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1435( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1434) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1435[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1435( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1436( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1435) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1436[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1436( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1437( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1436) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1437[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1437( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1438( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1437) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1438[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1438( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1439( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1438) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1439[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1439( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1440( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1439) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1440[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1440( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1441( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1440) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1441[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1441( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1442( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1441) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1442[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1442( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1443( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1442) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1443[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1443( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1444( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1443) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1444[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1444( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1445( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1444) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1445[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1445( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1446( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1445) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1446[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1446( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1447( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1446) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1447[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1447( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1448( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1447) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1448[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1448( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1449( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1448) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1449[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1449( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1450( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1449) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1450[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1450( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1451( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1450) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1451[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1451( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1452( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1451) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1452[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1452( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1453( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1452) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1453[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1453( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1454( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1453) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1454[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1454( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1455( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1454) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1455[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1455( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1456( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1455) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1456[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1456( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1457( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1456) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1457[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1457( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1458( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1457) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1458[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1458( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1459( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1458) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1459[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1459( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1460( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1459) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1460[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1460( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1461( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1460) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1461[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1461( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1462( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1461) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1462[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1462( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1463( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1462) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1463[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1463( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1464( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1463) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1464[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1464( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1465( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1464) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1465[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1465( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1466( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1465) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1466[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1466( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1467( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1466) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1467[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1467( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1468( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1467) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1468[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1468( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1469( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1468) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1469[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1469( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1470( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1469) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1470[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1470( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1471( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1470) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1471[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1471( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1472( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1471) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1472[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1472( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1473( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1472) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1473[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1473( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1474( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1473) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1474[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1474( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1475( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1474) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1475[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1475( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1476( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1475) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1476[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1476( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1477( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1476) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1477[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1477( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1478( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1477) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1478[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1478( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1479( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1478) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1479[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1479( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1480( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1479) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1480[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1480( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1481( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1480) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1481[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1481( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1482( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1481) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1482[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1482( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1483( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1482) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1483[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1483( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1484( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1483) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1484[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1484( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1485( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1484) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1485[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1485( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1486( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1485) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1486[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1486( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1487( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1486) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1487[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1487( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1488( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1487) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1488[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1488( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1489( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1488) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1489[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1489( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1490( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1489) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1490[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1490( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1491( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1490) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1491[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1491( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1492( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1491) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1492[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1492( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1493( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1492) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1493[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1493( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1494( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1493) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1494[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1494( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1495( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1494) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1495[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1495( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1496( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1495) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1496[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1496( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1497( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1496) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1497[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1497( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1498( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1497) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1498[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1498( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1499( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1498) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1499[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1499( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1500( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1499) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1500[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1500( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1501( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1500) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1501[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1501( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1502( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1501) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1502[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1502( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1503( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1502) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1503[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1503( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1504( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1503) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1504[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1504( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1505( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1504) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1505[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1505( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1506( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1505) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1506[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1506( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1507( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1506) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1507[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1507( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1508( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1507) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1508[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1508( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1509( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1508) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1509[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1509( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1510( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1509) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1510[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1510( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1511( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1510) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1511[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1511( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1512( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1511) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1512[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1512( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1513( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1512) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1513[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1513( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1514( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1513) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1514[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1514( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1515( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1514) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1515[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1515( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1516( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1515) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1516[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1516( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1517( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1516) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1517[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1517( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1518( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1517) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1518[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1518( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1519( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1518) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1519[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1519( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1520( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1519) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1520[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1520( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1521( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1520) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1521[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1521( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1522( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1521) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1522[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1522( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1523( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1522) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1523[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1523( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1524( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1523) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1524[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1524( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1525( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1524) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1525[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1525( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1526( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1525) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1526[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1526( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1527( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1526) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1527[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1527( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1528( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1527) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1528[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1528( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1529( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1528) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1529[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1529( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1530( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1529) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1530[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1530( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1531( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1530) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1531[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1531( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1532( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1531) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1532[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1532( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1533( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1532) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1533[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1533( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1534( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1533) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1534[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1534( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1535( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1534) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1535[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1535( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1536( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1535) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1536[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1536( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1537( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1536) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1537[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1537( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1538( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1537) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1538[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1538( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1539( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1538) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1539[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1539( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1540( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1539) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1540[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1540( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1541( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1540) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1541[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1541( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1542( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1541) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1542[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1542( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1543( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1542) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1543[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1543( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1544( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1543) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1544[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1544( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1545( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1544) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1545[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1545( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1546( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1545) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1546[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1546( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1547( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1546) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1547[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1547( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1548( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1547) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1548[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1548( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1549( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1548) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1549[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1549( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1550( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1549) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1550[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1550( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1551( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1550) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1551[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1551( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1552( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1551) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1552[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1552( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1553( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1552) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1553[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1553( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1554( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1553) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1554[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1554( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1555( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1554) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1555[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1555( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1556( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1555) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1556[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1556( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1557( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1556) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1557[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1557( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1558( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1557) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1558[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1558( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1559( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1558) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1559[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1559( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1560( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1559) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1560[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1560( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1561( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1560) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1561[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1561( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1562( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1561) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1562[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1562( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1563( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1562) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1563[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1563( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1564( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1563) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1564[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1564( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1565( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1564) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1565[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1565( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1566( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1565) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1566[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1566( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1567( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1566) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1567[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1567( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1568( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1567) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1568[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1568( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1569( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1568) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1569[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1569( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1570( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1569) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1570[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1570( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1571( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1570) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1571[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1571( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1572( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1571) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1572[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1572( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1573( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1572) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1573[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1573( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1574( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1573) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1574[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1574( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1575( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1574) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1575[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1575( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1576( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1575) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1576[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1576( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1577( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1576) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1577[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1577( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1578( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1577) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1578[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1578( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1579( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1578) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1579[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1579( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1580( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1579) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1580[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1580( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1581( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1580) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1581[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1581( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1582( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1581) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1582[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1582( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1583( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1582) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1583[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1583( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1584( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1583) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1584[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1584( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1585( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1584) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1585[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1585( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1586( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1585) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1586[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1586( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1587( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1586) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1587[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1587( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1588( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1587) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1588[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1588( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1589( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1588) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1589[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1589( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1590( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1589) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1590[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1590( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1591( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1590) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1591[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1591( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1592( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1591) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1592[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1592( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1593( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1592) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1593[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1593( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1594( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1593) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1594[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1594( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1595( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1594) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1595[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1595( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1596( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1595) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1596[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1596( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1597( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1596) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1597[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1597( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1598( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1597) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1598[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1598( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1599( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1598) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1599[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1599( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1600( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1599) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1600[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1600( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1601( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1600) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1601[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1601( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1602( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1601) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1602[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1602( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1603( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1602) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1603[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1603( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1604( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1603) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1604[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1604( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1605( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1604) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1605[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1605( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1606( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1605) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1606[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1606( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1607( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1606) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1607[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1607( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1608( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1607) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1608[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1608( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1609( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1608) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1609[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1609( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1610( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1609) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1610[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1610( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1611( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1610) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1611[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1611( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1612( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1611) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1612[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1612( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1613( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1612) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1613[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1613( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1614( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1613) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1614[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1614( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1615( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1614) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1615[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1615( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1616( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1615) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1616[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1616( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1617( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1616) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1617[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1617( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1618( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1617) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1618[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1618( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1619( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1618) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1619[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1619( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1620( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1619) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1620[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1620( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1621( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1620) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1621[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1621( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1622( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1621) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1622[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1622( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1623( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1622) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1623[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1623( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1624( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1623) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1624[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1624( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1625( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1624) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1625[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1625( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1626( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1625) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1626[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1626( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1627( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1626) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1627[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1627( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1628( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1627) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1628[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1628( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1629( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1628) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1629[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1629( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1630( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1629) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1630[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1630( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1631( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1630) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1631[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1631( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1632( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1631) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1632[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1632( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1633( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1632) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1633[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1633( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1634( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1633) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1634[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1634( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1635( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1634) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1635[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1635( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1636( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1635) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1636[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1636( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1637( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1636) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1637[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1637( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1638( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1637) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1638[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1638( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1639( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1638) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1639[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1639( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1640( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1639) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1640[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1640( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1641( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1640) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1641[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1641( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1642( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1641) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1642[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1642( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1643( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1642) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1643[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1643( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1644( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1643) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1644[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1644( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1645( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1644) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1645[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1645( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1646( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1645) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1646[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1646( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1647( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1646) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1647[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1647( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1648( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1647) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1648[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1648( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1649( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1648) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1649[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1649( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1650( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1649) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1650[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1650( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1651( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1650) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1651[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1651( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1652( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1651) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1652[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1652( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1653( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1652) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1653[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1653( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1654( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1653) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1654[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1654( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1655( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1654) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1655[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1655( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1656( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1655) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1656[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1656( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1657( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1656) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1657[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1657( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1658( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1657) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1658[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1658( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1659( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1658) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1659[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1659( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1660( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1659) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1660[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1660( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1661( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1660) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1661[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1661( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1662( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1661) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1662[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1662( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1663( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1662) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1663[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1663( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1664( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1663) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1664[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1664( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1665( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1664) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1665[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1665( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1666( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1665) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1666[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1666( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1667( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1666) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1667[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1667( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1668( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1667) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1668[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1668( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1669( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1668) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1669[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1669( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1670( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1669) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1670[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1670( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1671( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1670) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1671[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1671( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1672( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1671) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1672[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1672( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1673( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1672) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1673[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1673( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1674( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1673) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1674[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1674( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1675( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1674) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1675[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1675( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1676( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1675) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1676[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1676( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1677( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1676) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1677[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1677( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1678( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1677) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1678[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1678( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1679( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1678) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1679[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1679( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1680( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1679) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1680[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1680( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1681( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1680) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1681[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1681( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1682( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1681) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1682[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1682( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1683( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1682) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1683[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1683( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1684( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1683) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1684[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1684( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1685( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1684) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1685[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1685( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1686( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1685) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1686[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1686( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1687( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1686) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1687[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1687( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1688( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1687) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1688[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1688( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1689( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1688) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1689[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1689( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1690( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1689) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1690[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1690( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1691( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1690) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1691[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1691( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1692( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1691) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1692[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1692( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1693( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1692) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1693[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1693( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1694( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1693) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1694[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1694( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1695( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1694) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1695[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1695( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1696( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1695) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1696[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1696( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1697( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1696) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1697[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1697( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1698( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1697) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1698[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1698( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1699( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1698) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1699[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1699( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1700( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1699) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1700[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1700( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1701( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1700) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1701[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1701( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1702( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1701) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1702[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1702( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1703( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1702) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1703[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1703( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1704( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1703) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1704[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1704( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1705( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1704) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1705[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1705( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1706( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1705) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1706[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1706( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1707( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1706) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1707[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1707( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1708( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1707) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1708[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1708( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1709( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1708) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1709[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1709( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1710( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1709) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1710[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1710( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1711( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1710) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1711[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1711( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1712( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1711) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1712[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1712( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1713( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1712) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1713[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1713( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1714( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1713) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1714[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1714( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1715( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1714) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1715[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1715( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1716( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1715) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1716[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1716( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1717( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1716) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1717[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1717( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1718( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1717) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1718[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1718( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1719( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1718) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1719[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1719( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1720( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1719) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1720[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1720( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1721( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1720) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1721[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1721( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1722( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1721) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1722[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1722( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1723( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1722) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1723[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1723( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1724( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1723) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1724[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1724( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1725( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1724) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1725[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1725( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1726( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1725) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1726[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1726( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1727( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1726) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1727[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1727( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1728( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1727) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1728[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1728( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1729( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1728) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1729[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1729( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1730( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1729) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1730[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1730( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1731( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1730) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1731[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1731( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1732( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1731) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1732[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1732( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1733( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1732) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1733[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1733( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1734( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1733) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1734[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1734( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1735( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1734) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1735[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1735( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1736( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1735) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1736[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1736( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1737( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1736) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1737[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1737( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1738( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1737) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1738[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1738( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1739( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1738) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1739[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1739( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1740( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1739) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1740[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1740( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1741( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1740) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1741[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1741( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1742( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1741) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1742[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1742( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1743( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1742) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1743[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1743( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1744( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1743) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1744[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1744( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1745( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1744) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1745[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1745( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1746( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1745) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1746[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1746( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1747( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1746) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1747[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1747( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1748( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1747) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1748[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1748( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1749( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1748) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1749[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1749( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1750( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1749) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1750[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1750( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1751( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1750) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1751[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1751( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1752( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1751) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1752[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1752( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1753( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1752) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1753[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1753( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1754( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1753) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1754[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1754( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1755( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1754) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1755[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1755( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1756( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1755) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1756[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1756( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1757( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1756) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1757[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1757( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1758( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1757) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1758[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1758( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1759( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1758) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1759[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1759( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1760( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1759) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1760[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1760( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1761( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1760) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1761[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1761( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1762( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1761) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1762[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1762( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1763( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1762) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1763[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1763( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1764( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1763) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1764[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1764( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1765( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1764) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1765[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1765( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1766( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1765) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1766[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1766( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1767( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1766) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1767[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1767( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1768( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1767) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1768[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1768( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1769( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1768) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1769[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1769( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1770( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1769) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1770[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1770( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1771( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1770) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1771[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1771( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1772( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1771) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1772[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1772( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1773( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1772) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1773[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1773( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1774( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1773) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1774[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1774( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1775( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1774) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1775[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1775( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1776( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1775) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1776[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1776( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1777( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1776) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1777[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1777( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1778( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1777) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1778[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1778( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1779( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1778) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1779[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1779( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1780( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1779) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1780[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1780( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1781( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1780) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1781[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1781( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1782( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1781) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1782[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1782( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1783( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1782) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1783[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1783( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1784( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1783) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1784[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1784( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1785( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1784) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1785[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1785( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1786( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1785) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1786[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1786( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1787( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1786) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1787[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1787( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1788( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1787) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1788[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1788( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1789( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1788) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1789[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1789( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1790( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1789) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1790[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1790( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1791( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1790) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1791[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1791( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1792( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1791) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1792[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1792( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1793( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1792) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1793[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1793( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1794( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1793) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1794[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1794( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1795( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1794) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1795[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1795( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1796( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1795) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1796[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1796( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1797( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1796) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1797[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1797( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1798( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1797) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1798[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1798( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1799( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1798) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1799[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1799( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1800( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1799) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1800[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1800( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1801( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1800) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1801[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1801( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1802( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1801) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1802[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1802( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1803( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1802) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1803[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1803( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1804( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1803) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1804[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1804( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1805( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1804) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1805[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1805( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1806( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1805) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1806[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1806( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1807( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1806) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1807[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1807( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1808( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1807) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1808[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1808( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1809( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1808) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1809[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1809( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1810( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1809) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1810[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1810( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1811( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1810) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1811[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1811( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1812( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1811) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1812[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1812( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1813( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1812) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1813[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1813( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1814( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1813) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1814[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1814( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1815( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1814) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1815[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1815( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1816( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1815) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1816[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1816( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1817( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1816) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1817[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1817( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1818( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1817) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1818[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1818( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1819( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1818) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1819[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1819( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1820( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1819) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1820[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1820( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1821( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1820) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1821[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1821( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1822( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1821) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1822[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1822( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1823( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1822) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1823[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1823( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1824( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1823) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1824[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1824( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1825( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1824) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1825[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1825( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1826( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1825) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1826[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1826( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1827( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1826) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1827[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1827( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1828( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1827) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1828[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1828( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1829( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1828) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1829[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1829( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1830( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1829) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1830[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1830( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1831( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1830) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1831[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1831( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1832( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1831) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1832[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1832( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1833( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1832) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1833[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1833( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1834( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1833) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1834[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1834( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1835( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1834) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1835[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1835( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1836( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1835) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1836[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1836( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1837( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1836) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1837[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1837( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1838( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1837) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1838[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1838( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1839( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1838) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1839[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1839( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1840( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1839) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1840[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1840( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1841( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1840) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1841[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1841( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1842( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1841) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1842[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1842( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1843( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1842) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1843[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1843( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1844( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1843) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1844[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1844( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1845( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1844) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1845[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1845( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1846( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1845) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1846[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1846( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1847( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1846) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1847[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1847( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1848( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1847) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1848[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1848( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1849( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1848) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1849[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1849( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1850( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1849) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1850[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1850( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1851( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1850) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1851[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1851( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1852( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1851) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1852[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1852( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1853( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1852) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1853[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1853( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1854( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1853) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1854[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1854( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1855( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1854) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1855[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1855( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1856( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1855) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1856[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1856( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1857( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1856) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1857[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1857( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1858( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1857) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1858[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1858( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1859( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1858) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1859[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1859( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1860( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1859) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1860[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1860( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1861( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1860) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1861[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1861( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1862( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1861) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1862[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1862( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1863( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1862) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1863[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1863( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1864( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1863) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1864[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1864( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1865( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1864) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1865[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1865( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1866( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1865) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1866[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1866( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1867( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1866) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1867[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1867( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1868( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1867) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1868[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1868( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1869( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1868) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1869[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1869( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1870( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1869) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1870[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1870( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1871( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1870) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1871[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1871( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1872( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1871) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1872[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1872( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1873( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1872) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1873[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1873( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1874( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1873) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1874[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1874( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1875( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1874) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1875[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1875( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1876( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1875) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1876[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1876( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1877( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1876) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1877[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1877( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1878( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1877) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1878[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1878( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1879( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1878) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1879[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1879( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1880( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1879) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1880[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1880( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1881( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1880) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1881[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1881( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1882( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1881) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1882[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1882( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1883( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1882) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1883[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1883( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1884( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1883) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1884[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1884( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1885( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1884) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1885[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1885( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1886( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1885) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1886[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1886( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1887( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1886) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1887[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1887( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1888( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1887) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1888[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1888( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1889( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1888) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1889[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1889( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1890( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1889) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1890[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1890( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1891( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1890) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1891[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1891( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1892( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1891) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1892[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1892( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1893( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1892) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1893[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1893( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1894( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1893) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1894[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1894( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1895( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1894) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1895[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1895( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1896( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1895) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1896[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1896( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1897( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1896) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1897[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1897( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1898( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1897) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1898[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1898( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1899( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1898) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1899[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1899( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1900( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1899) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1900[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1900( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1901( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1900) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1901[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1901( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1902( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1901) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1902[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1902( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1903( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1902) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1903[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1903( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1904( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1903) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1904[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1904( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1905( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1904) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1905[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1905( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1906( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1905) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1906[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1906( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1907( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1906) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1907[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1907( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1908( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1907) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1908[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1908( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1909( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1908) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1909[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1909( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1910( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1909) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1910[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1910( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1911( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1910) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1911[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1911( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1912( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1911) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1912[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1912( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1913( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1912) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1913[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1913( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1914( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1913) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1914[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1914( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1915( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1914) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1915[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1915( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1916( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1915) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1916[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1916( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1917( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1916) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1917[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1917( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1918( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1917) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1918[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1918( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1919( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1918) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1919[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1919( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1920( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1919) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1920[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1920( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1921( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1920) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1921[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1921( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1922( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1921) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1922[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1922( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1923( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1922) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1923[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1923( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1924( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1923) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1924[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1924( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1925( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1924) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1925[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1925( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1926( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1925) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1926[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1926( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1927( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1926) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1927[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1927( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1928( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1927) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1928[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1928( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1929( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1928) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1929[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1929( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1930( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1929) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1930[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1930( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1931( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1930) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1931[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1931( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1932( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1931) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1932[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1932( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1933( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1932) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1933[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1933( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1934( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1933) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1934[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1934( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1935( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1934) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1935[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1935( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1936( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1935) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1936[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1936( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1937( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1936) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1937[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1937( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1938( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1937) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1938[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1938( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1939( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1938) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1939[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1939( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1940( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1939) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1940[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1940( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1941( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1940) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1941[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1941( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1942( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1941) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1942[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1942( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1943( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1942) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1943[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1943( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1944( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1943) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1944[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1944( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1945( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1944) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1945[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1945( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1946( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1945) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1946[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1946( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1947( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1946) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1947[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1947( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1948( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1947) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1948[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1948( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1949( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1948) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1949[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1949( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1950( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1949) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1950[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1950( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1951( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1950) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1951[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1951( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1952( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1951) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1952[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1952( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1953( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1952) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1953[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1953( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1954( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1953) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1954[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1954( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1955( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1954) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1955[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1955( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1956( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1955) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1956[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1956( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1957( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1956) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1957[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1957( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1958( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1957) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1958[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1958( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1959( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1958) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1959[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1959( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1960( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1959) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1960[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1960( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1961( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1960) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1961[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1961( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1962( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1961) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1962[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1962( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1963( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1962) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1963[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1963( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1964( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1963) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1964[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1964( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1965( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1964) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1965[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1965( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1966( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1965) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1966[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1966( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1967( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1966) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1967[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1967( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1968( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1967) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1968[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1968( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1969( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1968) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1969[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1969( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1970( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1969) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1970[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1970( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1971( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1970) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1971[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1971( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1972( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1971) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1972[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1972( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1973( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1972) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1973[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1973( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1974( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1973) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1974[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1974( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1975( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1974) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1975[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1975( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1976( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1975) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1976[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1976( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1977( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1976) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1977[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1977( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1978( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1977) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1978[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1978( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1979( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1978) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1979[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1979( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1980( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1979) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1980[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1980( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1981( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1980) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1981[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1981( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1982( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1981) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1982[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1982( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1983( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1982) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1983[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1983( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1984( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1983) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1984[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1984( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1985( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1984) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1985[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1985( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1986( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1985) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1986[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1986( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1987( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1986) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1987[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1987( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1988( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1987) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1988[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1988( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1989( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1988) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1989[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1989( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1990( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1989) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1990[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1990( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1991( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1990) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1991[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1991( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1992( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1991) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1992[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1992( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1993( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1992) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1993[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1993( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1994( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1993) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1994[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1994( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1995( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1994) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1995[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1995( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1996( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1995) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1996[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1996( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1997( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1996) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1997[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1997( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1998( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1997) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1998[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1998( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc1999( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1998) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi1999[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1999( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  uint32_t outVar = ThisFunc0( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1999) )
     Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
   if ( myPi == priorPiSum && myPi == *knownPiSum )
     outVar++; 

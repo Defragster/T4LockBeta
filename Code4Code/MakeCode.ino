@@ -1,6 +1,6 @@
 
 
-
+#if defined(USB_DUAL_SERIAL)
 char FuncHeader[][120] = {
   "DATA_PLACE char szMyPi",
   "[]=\"314159265358979323846264338327950288419716939937510582097494\";",
@@ -117,3 +117,4 @@ void MakeCode( uint32_t repeat ) {
   }
   SerialUSB1.println();
 }
+#endif

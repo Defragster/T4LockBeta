@@ -17,23 +17,34 @@ uint32_t time_now;
 uint32_t piCycles;
 void setup() {
   Serial.begin(115200);
-  while (!Serial && millis() < 4000 );
+  while (!Serial && millis() < 2500 );
   if ( CrashReport) Serial.print( CrashReport);
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   isEncrypt();
   static char szPi[PI_DIGITS_SZ];
 
-  piCycles = 0;
   uint32_t piTime;
+  uint32_t theCount;
+  piCycles = 0;
   piTime = micros();
-  Serial.printf( "Complete Count %lu\t", ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig ) );
+  theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
+  Serial.printf( "Completed CASCADE Count %lu\t", theCount );
   piTime = micros() - piTime;
-  Serial.printf("digit  took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
-
-
-  seePi( 200, NULL );
+  Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
+  piCycles = 0;
+  piTime = micros();
+  int seePiStart = seePi( PI_DIGITS, szPi );
+  while ( 0 < theCount ) {
+    ThisFunc0( 0, seePiStart, &sumPi60dig );
+    theCount--;
+  }
+  piTime = micros() - piTime;
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
   time_now = millis();
-  MakeCode( 1000 );
+  seePi( 200, NULL );
+#if defined(USB_DUAL_SERIAL)
+  MakeCode( 2000 );
+#endif
 }
 
 void loop() {
@@ -44,11 +55,22 @@ void loop() {
   delay(500);
   if ( !Serial.available() ) {
     uint32_t piTime;
+    uint32_t theCount;
     piCycles = 0;
     piTime = micros();
-    Serial.printf( "Complete Count %lu\t", ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig ) );
+    theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
+    Serial.printf( "Completed CASCADE Count %lu\t", theCount );
     piTime = micros() - piTime;
-    Serial.printf("digit  took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
+    Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
+    piCycles = 0;
+    piTime = micros();
+    int seePiStart = seePi( PI_DIGITS, szPi );
+    while ( 0 < theCount ) {
+      ThisFunc0( 0, seePiStart, &sumPi60dig );
+      theCount--;
+    }
+    piTime = micros() - piTime;
+    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
     delay(5000);
   }
   if ( Serial.available() ) Serial.read();
@@ -61,24 +83,22 @@ int r[2800 + 1];
 PI_INLINE int seePi( uint maxDigits, char *szPi ) {
   int i, k, b, d;
   int c = 0;
-  uint32_t piTime, piSum = 0;
+  //uint32_t piTime;
+  uint32_t piSum = 0;
   uint jj = 0, vv;
   uint szC = 0;
   uint32_t nowCycles = ARM_DWT_CYCCNT;
-
-  piTime = micros();
+  //piTime = micros();
   for (i = 0; i < 2800; i++) {
     r[i] = 2000;
   }
 
   for (k = 2800; k > 0; k -= 14) {
     d = 0;
-
     i = k;
     for (;;) {
       d += r[i] * 10000;
       b = 2 * i - 1;
-
       r[i] = d % b;
       d /= b;
       i--;
@@ -94,7 +114,7 @@ PI_INLINE int seePi( uint maxDigits, char *szPi ) {
     if ( maxDigits == jj ) break;
     c = d % 10000;
   }
-  piTime = micros() - piTime;
+  //piTime = micros() - piTime;
   // Serial.printf("\n\tdigit Sum = %lu in %lu us\n", piSum, piTime);
   nowCycles = ARM_DWT_CYCCNT - nowCycles;
   piCycles += nowCycles;
