@@ -60,10 +60,30 @@ bool bCheckUsed =  false;  // false CheckUsed
 uint32_t res = 0; // for formatUnused
 File file3; // Single FILE used for all functions
 
+char serNum[18];
+void t4_serialnumber(char * serNum )
+{
+  char buf[11];
+  uint32_t i, num;
+
+  num = HW_OCOTP_MAC0 & 0xFFFFFF;
+  // add extra zero to work around OS-X CDC-ACM driver bug
+  if (num < 10000000) num = num * 10;
+  ultoa(num, buf, 10);
+  for (i=0; i<10; i++) {
+    char c = buf[i];
+    if (!c) break;
+    serNum[i] = c;
+  }
+  serNum[i] = 0;
+}
+
 void setup() {
+  t4_serialnumber( serNum );
   setup1();
   while (!Serial) ; // wait
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
+  Serial.println( serNum );
   Serial.println("LittleFS Test : File Integrity"); delay(5);
 
   if (!myfs.begin(PROG_FLASH_SIZE)) {
@@ -300,8 +320,10 @@ int isEncrypt() {
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
-  } else {
+    strcat( serNum, " ENC" );
+} else {
     Serial.println("Fail: csf not PJRC");
+  strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -320,12 +342,14 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
+  strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
+  strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );
-  
+
   Serial.println();
   if (0 == ok) Serial.println("All Tests Passed.  :-)");
   else printf(" %d Tests failed.  :-(", -ok);

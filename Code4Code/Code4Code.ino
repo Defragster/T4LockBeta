@@ -13,6 +13,24 @@ const uint32_t sumPi60dig = 75967;
 //const char szPiDigits[] = "31415926535897932384626433832795028841971693993751058209749"; // 60 digits ONLY for PI_DIGITS 15
 //const uint32_t sumPi60dig = 42; // bugbug 75967;
 
+char serNum[18];
+void t4_serialnumber(char * serNum )
+{
+  char buf[11];
+  uint32_t i, num;
+
+  num = HW_OCOTP_MAC0 & 0xFFFFFF;
+  // add extra zero to work around OS-X CDC-ACM driver bug
+  if (num < 10000000) num = num * 10;
+  ultoa(num, buf, 10);
+  for (i=0; i<10; i++) {
+    char c = buf[i];
+    if (!c) break;
+    serNum[i] = c;
+  }
+  serNum[i] = 0;
+}
+
 uint32_t time_now;
 uint32_t piCycles;
 void setup() {
@@ -20,7 +38,9 @@ void setup() {
   while (!Serial && millis() < 2500 );
   if ( CrashReport) Serial.print( CrashReport);
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
+  t4_serialnumber( serNum );
   isEncrypt();
+  Serial.println( serNum );
   static char szPi[PI_DIGITS_SZ];
 
   uint32_t piTime;
@@ -28,7 +48,7 @@ void setup() {
   piCycles = 0;
   piTime = micros();
   theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-  Serial.printf( "Completed CASCADE Count %lu\t", theCount );
+  Serial.printf( "%s Completed CASCADE Count %lu\t", serNum, theCount );
   piTime = micros() - piTime;
   Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
   piCycles = 0;
@@ -48,6 +68,31 @@ void setup() {
 }
 
 void loop() {
+  static char szPi[PI_DIGITS_SZ];
+  Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
+  Serial.println(tempmonGetTemp(), 2);
+  for ( int ii=0; ii<3; ii++) {
+    uint32_t piTime;
+    uint32_t theCount;
+    piCycles = 0;
+    piTime = micros();
+    theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
+    Serial.printf( "%s Completed CASCADE Count %lu\t", serNum, theCount );
+    piTime = micros() - piTime;
+    Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
+    piCycles = 0;
+    piTime = micros();
+    int seePiStart = seePi( PI_DIGITS, szPi );
+    while ( 0 < theCount ) {
+      ThisFunc0( 0, seePiStart, &sumPi60dig );
+      theCount--;
+    }
+    piTime = micros() - piTime;
+    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
+  }
+}
+
+void other_loop() {
   static char szPi[PI_DIGITS_SZ];
   //float testTemp = tempmonGetTemp() - myTemp;
   Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
@@ -193,8 +238,10 @@ int isEncrypt() {
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
-  } else {
+    strcat( serNum, " ENC" );
+} else {
     Serial.println("Fail: csf not PJRC");
+  strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -213,8 +260,10 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
+  strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
+  strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );

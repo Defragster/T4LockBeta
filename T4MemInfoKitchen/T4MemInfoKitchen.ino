@@ -2,6 +2,24 @@
 #include <MemoryHexDump.h>  // https://github.com/KurtE/MemoryHexDump
 long time_now;
 
+char serNum[18];
+void t4_serialnumber(char * serNum )
+{
+  char buf[11];
+  uint32_t i, num;
+
+  num = HW_OCOTP_MAC0 & 0xFFFFFF;
+  // add extra zero to work around OS-X CDC-ACM driver bug
+  if (num < 10000000) num = num * 10;
+  ultoa(num, buf, 10);
+  for (i=0; i<10; i++) {
+    char c = buf[i];
+    if (!c) break;
+    serNum[i] = c;
+  }
+  serNum[i] = 0;
+}
+
 uint32_t *ptrFreeITCM;  // Set to Usable ITCM free RAM
 uint32_t  sizeofFreeITCM; // sizeof free RAM in uint32_t units.
 extern unsigned long _stextload;
@@ -29,7 +47,9 @@ void setup() {
   MemoryHexDump(Serial, ptrFreeITCM, sizeofFreeITCM * sizeof(uint32_t), true, "---\tITCM filler to DTCM\t test 3 \n");
   MemoryHexDump(Serial, (uint8_t *)0, 128, true, " ITCM Start: \n");
 
+  t4_serialnumber( serNum );
   isEncrypt();
+  Serial.println( serNum );
   time_now = millis();
 
 }
@@ -194,8 +214,10 @@ int isEncrypt() {
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
-  } else {
+    strcat( serNum, " ENC" );
+} else {
     Serial.println("Fail: csf not PJRC");
+  strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -214,12 +236,14 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
+  strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
+  strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );
-  
+
   Serial.println();
   if (0 == ok) Serial.println("All Tests Passed.  :-)");
   else printf(" %d Tests failed.  :-(", -ok);
