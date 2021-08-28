@@ -1,13 +1,123 @@
 // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=287085&viewfull=1#post287085
 char szTeensy[24];
 
+
+char szAlpha[] [32] = { "PROGMEM char a1[] = \n\t\"",
+                        "PROGMEM char a2[] = \n\t\"",
+                        "PROGMEM char z1[] = \n\t\"",
+                        "PROGMEM char z2[] = \n\t\""
+                      };
+
+void buildAlpha() {
+  int ii, jj;
+  char base = 'A';
+  for ( ii = 0; ii < 2; ii++ ) {
+    Serial.print( szAlpha[ii] );
+    for ( jj = 0; jj < 364; jj++ ) {
+      Serial.print( (char)(base + (jj % 26)) );
+      if ( 77 == (jj % 88) )
+        Serial.print( "\"\n\t\"" );
+    }
+    Serial.println( "123\";" );
+    delayMicroseconds( 200 );
+    base = 'a';
+  }
+  base = 'Z';
+  for ( ii = 2; ii < 4; ii++ ) {
+    Serial.print( szAlpha[ii] );
+    for ( jj = 0; jj < 364; jj++ ) {
+      Serial.print( (char)(base - (jj % 26)) );
+      if ( 77 == (jj % 88) )
+        Serial.print( "\"\n\t\"" );
+    }
+    Serial.println( "456\";" );
+    delayMicroseconds( 200 );
+    base = 'z';
+  }
+}
+//OUTPUT
+PROGMEM char a1[] =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ"
+  "KLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST"
+  "UVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
+  "EFGHIJKLMNOPQRSTUVWXYZ123";
+PROGMEM char a2[] =
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghij"
+  "klmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrst"
+  "uvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd"
+  "efghijklmnopqrstuvwxyz123";
+PROGMEM char z1[] =
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA"
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQ"
+  "PONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHG"
+  "FEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXW"
+  "VUTSRQPONMLKJIHGFEDCBA456";
+PROGMEM char z2[] =
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba"
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrq"
+  "ponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihg"
+  "fedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxw"
+  "vutsrqponmlkjihgfedcba456";
+
+void testAlpha() {
+  static int ii = 0, kk = 1;
+  //  static int ii = 27, kk = 104;
+  int nn, mm = 0;
+  while ( mm < kk ) {
+    nn = mm + ii;
+    if ( a1[nn] != a1[130 + nn] ) errAlpha( " a1 #1 fail ", ii, kk );
+    if ( a2[nn] != a2[130 + nn] ) errAlpha( " a2 #1 fail ", ii, kk );
+    if ( z1[208 - nn] != z1[312 - nn] ) errAlpha( " z1 #1 fail ", ii, kk );
+    if ( z2[208 - nn] != z2[312 - nn] ) errAlpha( " z2 #1 fail ", ii, kk );
+    mm++;
+  }
+  if ( ++kk > 104 ) {
+    kk = 1;
+    if ( ++ii > 104 ) ii = 0;
+  }
+#if 0
+  if ( errAlpha( NULL, 0, 0 ) )
+    Serial.print(" --"); // debug
+  else
+    Serial.print(" +"); // debug
+  Serial.printf("Alpha ii==%d kk==%d\t", ii, kk); // debug
+#endif
+  digitalToggleFast( LED_BUILTIN );
+}
+uint32_t errAlpha( const char *szBad, uint32_t ii, uint32_t kk  ) {
+  static uint32_t errCnt = 0;
+  static int iiE = 0, kkE = 0;
+  if ( NULL != szBad ) {
+    //Serial.print(szBad); // debug
+    delay(10);  // debug
+    errCnt++;
+    if ( iiE == 0 && kkE == 0 ) {
+      iiE = ii;
+      kkE = kk;
+    }
+  }
+  else if ( errCnt ) {
+    Serial.printf("\nAlpha Error @ ii==%d kk==%d\n\n", iiE, kkE );
+    iiE = 0;
+    kkE = 0;
+    delay(100);  // debug
+  }
+  return errCnt;
+}
+#include "IntervalTimer.h"
+IntervalTimer Alpha;
 void setup() {
   Serial.begin(115200);
+  pinMode( LED_BUILTIN, OUTPUT );
   while (!Serial && millis() < 2500 );
   if ( CrashReport) Serial.print( CrashReport);
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   isEncrypt();
   Serial.println( szTeensy );
+  buildAlpha();
+  Alpha.begin( testAlpha, 100 );
 }
 uint32_t lower_init = 2;
 uint32_t higher_init = 6000000;
@@ -18,6 +128,11 @@ void loop() {
   int flag, ii = 0;
   Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
+  // testAlpha();
+  if ( errAlpha( NULL, 0, 0 )) {
+    Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha( NULL, 0, 0 ) ); // debug
+    delay(500);
+  }
   while ( lower < higher_init)
   {
     flag = noSpew;

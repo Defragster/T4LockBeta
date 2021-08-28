@@ -1,6 +1,91 @@
 
+// IntervalTimer EXEC from loop()
+void testAlpha() {
+  static int ii = 0, kk = 1;
+  //  static int ii = 27, kk = 104;
+  int nn, mm = 0;
+  while ( mm < kk ) {
+    nn = mm + ii;
+    if ( a1[nn] != a1[130 + nn] ) errAlpha( " a1 #1 fail ", ii, kk );
+    if ( a2[nn] != a2[130 + nn] ) errAlpha( " a2 #1 fail ", ii, kk );
+    if ( z1[208 - nn] != z1[312 - nn] ) errAlpha( " z1 #1 fail ", ii, kk );
+    if ( z2[208 - nn] != z2[312 - nn] ) errAlpha( " z2 #1 fail ", ii, kk );
+    mm++;
+  }
+  if ( ++kk > 104 ) {
+    kk = 1;
+    if ( ++ii > 104 ) ii = 0;
+  }
+#if 0
+  if ( errAlpha( NULL, 0, 0 ) )
+    Serial.print(" --"); // debug
+  else
+    Serial.print(" +"); // debug
+  Serial.printf("Alpha ii==%d kk==%d\t", ii, kk); // debug
+#endif
+  digitalToggleFast( LED_BUILTIN );
+}
 
 #if defined(USB_DUAL_SERIAL)
+char szAlpha[] [32] = { "PROGMEM char a1[] = \n\t\"",
+                        "PROGMEM char a2[] = \n\t\"",
+                        "PROGMEM char z1[] = \n\t\"",
+                        "PROGMEM char z2[] = \n\t\""
+                      };
+
+void buildAlpha() {
+  int ii, jj;
+  char base = 'A';
+  for ( ii = 0; ii < 2; ii++ ) {
+    SerialUSB1.print( szAlpha[ii] );
+    for ( jj = 0; jj < 364; jj++ ) {
+      SerialUSB1.print( (char)(base + (jj % 26)) );
+      if ( 77 == (jj % 88) )
+        SerialUSB1.print( "\"\n\t\"" );
+    }
+    SerialUSB1.println( "123\";" );
+    delayMicroseconds( 200 );
+    base = 'a';
+  }
+  base = 'Z';
+  for ( ii = 2; ii < 4; ii++ ) {
+    SerialUSB1.print( szAlpha[ii] );
+    for ( jj = 0; jj < 364; jj++ ) {
+      SerialUSB1.print( (char)(base - (jj % 26)) );
+      if ( 77 == (jj % 88) )
+        SerialUSB1.print( "\"\n\t\"" );
+    }
+    SerialUSB1.println( "456\";" );
+    delayMicroseconds( 200 );
+    base = 'z';
+  }
+}
+/* SAMPLE buildALpha Output:
+PROGMEM char a1[] = 
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ"
+  "KLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST"
+  "UVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
+  "EFGHIJKLMNOPQRSTUVWXYZ123";
+PROGMEM char a2[] = 
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghij"
+  "klmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrst"
+  "uvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd"
+  "efghijklmnopqrstuvwxyz123";
+PROGMEM char z1[] = 
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA"
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQ"
+  "PONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHG"
+  "FEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXW"
+  "VUTSRQPONMLKJIHGFEDCBA456";
+PROGMEM char z2[] = 
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba"
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrq"
+  "ponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihg"
+  "fedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxw"
+  "vutsrqponmlkjihgfedcba456";
+ */
 char varHeader[] =   "char szPi[PI_DIGITS_SZ];";
 char FuncHeader[][120] = {
   "DATA_PLACE char szMyPi",
@@ -120,3 +205,39 @@ void MakeCode( uint32_t repeat ) {
   SerialUSB1.println();
 }
 #endif
+
+/* Prototype code for MakeCode - out of date
+  // start Time - call  ThisFunc00001(1, ...)
+  // #define whatMem as NULL or FLASHMEM
+  // Put this code in strings and %5d the func #'s to loop and create code
+  // Repeat with same code recursive single func that will cache
+
+  CODE_PLACE uint32_t ThisFunc00001( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) {
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  // Serial.printf( "\npi>>%s\n\n", szPi );
+  uint32_t outVar = ThisFunc00000( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "\nPI FAIL String pi>>%s in %s\n\n", szPi, __FUNCTION__ );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++;
+  else
+    Serial.printf( "\nPI FAIL pi SUMS >>%lu %lu %lu in %s\n\n", myPi, priorPiSum, *knownPiSum, __FUNCTION__ );
+  return outVar;
+  }
+
+  // FINAL CALL
+  CODE_PLACE uint32_t ThisFunc00000( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) {
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  // Serial.printf( "\npi>>%s\n\n", szPi );
+  uint32_t outVar = 0; //= ThisFunc00002( inVar, priorPiSum, knownPiSum );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "\nPI FAIL String pi>>%s in %s\n\n", szPi, __FUNCTION__ );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++;
+  else
+    Serial.printf( "\nPI FAIL pi SUMS >>%lu %lu %lu in %s\n\n", myPi, priorPiSum, *knownPiSum, __FUNCTION__ );
+  return outVar;
+  }
+*/

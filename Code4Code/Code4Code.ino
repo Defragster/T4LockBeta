@@ -1,6 +1,8 @@
 // TODO - NEED MORE PROGMEM DATA
 // Make unique DATA_PLACE szMyPi#[] ='314...' before each function
 // Count cycles used in seePi()
+#include "IntervalTimer.h"
+IntervalTimer Alpha;
 
 #define PI_DIGITS 15 // sets of 4
 #define PI_DIGITS_SZ  (PI_DIGITS*4) + 4 // compare string
@@ -23,7 +25,7 @@ void t4_serialnumber(char * serNum )
   // add extra zero to work around OS-X CDC-ACM driver bug
   if (num < 10000000) num = num * 10;
   ultoa(num, buf, 10);
-  for (i=0; i<10; i++) {
+  for (i = 0; i < 10; i++) {
     char c = buf[i];
     if (!c) break;
     serNum[i] = c;
@@ -63,15 +65,18 @@ void setup() {
   time_now = millis();
   seePi( 200, NULL );
 #if defined(USB_DUAL_SERIAL)
+  buildAlpha();
   MakeCode( 4000 );
 #endif
+  pinMode( LED_BUILTIN, OUTPUT ); // testAlpha blinks to show running
+  Alpha.begin( testAlpha, 100 );
 }
 
 void loop() {
   static char szPi[PI_DIGITS_SZ];
   Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
-  for ( int ii=0; ii<3; ii++) {
+  for ( int ii = 0; ii < 3; ii++) {
     uint32_t piTime;
     uint32_t theCount;
     piCycles = 0;
@@ -89,36 +94,32 @@ void loop() {
     }
     piTime = micros() - piTime;
     Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
+    if ( errAlpha( NULL, 0, 0 )) { // from ::   // testAlpha();
+      Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha( NULL, 0, 0 ) ); // debug
+      delay(500);
+    }
   }
 }
 
-void other_loop() {
-  static char szPi[PI_DIGITS_SZ];
-  //float testTemp = tempmonGetTemp() - myTemp;
-  Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
-  Serial.println(tempmonGetTemp(), 2);
-  delay(500);
-  if ( !Serial.available() ) {
-    uint32_t piTime;
-    uint32_t theCount;
-    piCycles = 0;
-    piTime = micros();
-    theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-    Serial.printf( "Completed CASCADE Count %lu\t", theCount );
-    piTime = micros() - piTime;
-    Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
-    piCycles = 0;
-    piTime = micros();
-    int seePiStart = seePi( PI_DIGITS, szPi );
-    while ( 0 < theCount ) {
-      ThisFunc0( 0, seePiStart, &sumPi60dig );
-      theCount--;
+uint32_t errAlpha( const char *szBad, uint32_t ii, uint32_t kk  ) {
+  static uint32_t errCnt = 0;
+  static int iiE = 0, kkE = 0;
+  if ( NULL != szBad ) {
+    //Serial.print(szBad); // debug
+    delay(10);  // debug
+    errCnt++;
+    if ( iiE == 0 && kkE == 0 ) {
+      iiE = ii;
+      kkE = kk;
     }
-    piTime = micros() - piTime;
-    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
-    delay(5000);
   }
-  if ( Serial.available() ) Serial.read();
+  else if ( errCnt ) {
+    Serial.printf("\nAlpha Error @ ii==%d kk==%d\n\n", iiE, kkE );
+    iiE = 0;
+    kkE = 0;
+    delay(100);  // debug
+  }
+  return errCnt;
 }
 
 uint16_t piComp[] = {3141, 5926, 5358, 9793, 2384, 6264, 3383, 2795, 288, 4197, 1693, 9937, 5105, 8209, 7494, 4592, 3078, 1640, 6286, 2089, 9862, 8034, 8253, 4211, 7067, 9821, 4808, 6513, 2823, 664, 7093, 8446, 955, 582, 2317, 2535, 9408, 1284, 8111, 7450, 2841, 270, 1938, 5211, 555, 9644, 6229, 4895, 4930, 3819, 6442, 8810, 9756, 6593, 3446, 1284, 7564, 8233, 7867, 8316, 5271, 2019, 914, 5648, 5669, 2346, 348, 6104, 5432, 6648, 2133, 9360, 7260, 2491, 4127, 3724, 5870, 660, 6315, 5881, 7488, 1520, 9209, 6282, 9254, 917, 1536, 4367, 8925, 9036, 11, 3305, 3054, 8820, 4665, 2138, 4146, 9519, 4151, 1609, 4330, 5727, 365, 7595, 9195, 3092, 1861, 1738, 1932, 6117, 9310, 5118, 5480, 7446, 2379, 9627, 4956, 7351, 8857, 5272, 4891, 2279, 3818, 3011, 9491, 2983, 3673, 3624, 4065, 6643, 860, 2139, 4946, 3952, 2473, 7190, 7021, 7986, 943, 7027, 7053, 9217, 1762, 9317, 6752, 3846, 7481, 8467, 6694, 513, 2000, 5681, 2714, 5263, 5608, 2778, 5771, 3427, 5778, 9609, 1736, 3717, 8721, 4684, 4090, 1224, 9534, 3014, 6549, 5853, 7105, 792, 2796, 8925, 8923, 5420, 1995, 6112, 1290, 2196, 864, 344, 1815, 9813, 6297, 7477, 1309, 9605, 1870, 7211, 3499, 9999, 8372, 9780, 4995, 1059, 7317, 3281, 6096, 3185 };
@@ -239,9 +240,9 @@ int isEncrypt() {
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
     strcat( serNum, " ENC" );
-} else {
+  } else {
     Serial.println("Fail: csf not PJRC");
-  strcat( serNum, " nor" );
+    strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -260,10 +261,10 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
-  strcat( serNum, " SM:" );
+    strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
-  strcat( serNum, " ns:" );
+    strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );
@@ -273,39 +274,3 @@ int isEncrypt() {
   else printf(" %d Tests failed.  :-(", -ok);
   return ok;
 }
-
-/* Prototype code for MakeCode - out of date
-  // start Time - call  ThisFunc00001(1, ...)
-  // #define whatMem as NULL or FLASHMEM
-  // Put this code in strings and %5d the func #'s to loop and create code
-  // Repeat with same code recursive single func that will cache
-
-  CODE_PLACE uint32_t ThisFunc00001( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) {
-  static char szPi[PI_DIGITS_SZ];
-  uint32_t myPi = seePi( PI_DIGITS, szPi );
-  // Serial.printf( "\npi>>%s\n\n", szPi );
-  uint32_t outVar = ThisFunc00000( inVar, priorPiSum, knownPiSum );
-  if ( strcmp( szPi, szPiDigits ) )
-    Serial.printf( "\nPI FAIL String pi>>%s in %s\n\n", szPi, __FUNCTION__ );
-  if ( myPi == priorPiSum && myPi == *knownPiSum )
-    outVar++;
-  else
-    Serial.printf( "\nPI FAIL pi SUMS >>%lu %lu %lu in %s\n\n", myPi, priorPiSum, *knownPiSum, __FUNCTION__ );
-  return outVar;
-  }
-
-  // FINAL CALL
-  CODE_PLACE uint32_t ThisFunc00000( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) {
-  static char szPi[PI_DIGITS_SZ];
-  uint32_t myPi = seePi( PI_DIGITS, szPi );
-  // Serial.printf( "\npi>>%s\n\n", szPi );
-  uint32_t outVar = 0; //= ThisFunc00002( inVar, priorPiSum, knownPiSum );
-  if ( strcmp( szPi, szPiDigits ) )
-    Serial.printf( "\nPI FAIL String pi>>%s in %s\n\n", szPi, __FUNCTION__ );
-  if ( myPi == priorPiSum && myPi == *knownPiSum )
-    outVar++;
-  else
-    Serial.printf( "\nPI FAIL pi SUMS >>%lu %lu %lu in %s\n\n", myPi, priorPiSum, *knownPiSum, __FUNCTION__ );
-  return outVar;
-  }
-*/
