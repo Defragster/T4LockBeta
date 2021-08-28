@@ -68,7 +68,7 @@ void setup() {
   buildAlpha();
   MakeCode( 4000 );
 #endif
-  pinMode( LED_BUILTIN, OUTPUT ); // testAlpha blinks to show running
+  pinMode( LED_BUILTIN, OUTPUT ); // testAlpha Toggles on call to show running
   Alpha.begin( testAlpha, 100 );
 }
 
@@ -106,6 +106,7 @@ uint32_t errAlpha( const char *szBad, uint32_t ii, uint32_t kk  ) {
   static int iiE = 0, kkE = 0;
   if ( NULL != szBad ) {
     //Serial.print(szBad); // debug
+    digitalToggleFast( LED_BUILTIN ); // double toggle will emphsize error pulse
     delay(10);  // debug
     errCnt++;
     if ( iiE == 0 && kkE == 0 ) {

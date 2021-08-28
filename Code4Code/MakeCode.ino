@@ -1,5 +1,5 @@
 
-// IntervalTimer EXEC from loop()
+// IntervalTimer EXEC - this tests for problems (after the fact) from loop() - LED will pulse with delay(10) on error
 void testAlpha() {
   static int ii = 0, kk = 1;
   //  static int ii = 27, kk = 104;
