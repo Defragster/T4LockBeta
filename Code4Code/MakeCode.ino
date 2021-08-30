@@ -1,9 +1,12 @@
+extern char a1[368];
+extern char a2[368];
+extern char z1[368];
+extern char z2[368];
 
 // IntervalTimer EXEC - this tests for problems (after the fact) from loop() - LED will pulse with delay(10) on error
 void testAlpha() {
-  static int ii = 0, kk = 1;
-  //  static int ii = 27, kk = 104;
-  int nn, mm = 0;
+  static uint32_t ii = 0, kk = 1;
+  uint32_t nn, mm = 0;
   while ( mm < kk ) {
     nn = mm + ii;
     if ( a1[nn] != a1[130 + nn] ) errAlpha( " a1 #1 fail ", ii, kk );
@@ -14,16 +17,22 @@ void testAlpha() {
   }
   if ( ++kk > 104 ) {
     kk = 1;
-    if ( ++ii > 104 ) ii = 0;
+    if ( ++ii > 104 ) {
+      ii = 0;
+    }
   }
-#if 0
+#if 0 // debug : DANGER _isr() code
   if ( errAlpha( NULL, 0, 0 ) )
     Serial.print(" --"); // debug
   else
     Serial.print(" +"); // debug
-  Serial.printf("Alpha ii==%d kk==%d\t", ii, kk); // debug
+  // Serial.printf("Alpha ii==%d kk==%d\t", ii, kk); // debug : DANGER _isr() code
 #endif
   digitalToggleFast( LED_BUILTIN );
+  arm_dcache_flush_delete( a1, sizeof( a1 ) );
+  arm_dcache_flush_delete( a2, sizeof( a2 ) );
+  arm_dcache_flush_delete( z1, sizeof( z1 ) );
+  arm_dcache_flush_delete( z2, sizeof( z2 ) );
 }
 
 #if defined(USB_DUAL_SERIAL)
@@ -61,31 +70,31 @@ void buildAlpha() {
   }
 }
 /* SAMPLE buildALpha Output:
-PROGMEM char a1[] = 
+  PROGMEM char a1[] =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
   "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ"
   "KLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST"
   "UVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
   "EFGHIJKLMNOPQRSTUVWXYZ123";
-PROGMEM char a2[] = 
+  PROGMEM char a2[] =
   "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
   "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghij"
   "klmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrst"
   "uvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd"
   "efghijklmnopqrstuvwxyz123";
-PROGMEM char z1[] = 
+  PROGMEM char z1[] =
   "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA"
   "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQ"
   "PONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHG"
   "FEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXW"
   "VUTSRQPONMLKJIHGFEDCBA456";
-PROGMEM char z2[] = 
+  PROGMEM char z2[] =
   "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba"
   "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrq"
   "ponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihg"
   "fedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxw"
   "vutsrqponmlkjihgfedcba456";
- */
+*/
 char varHeader[] =   "char szPi[PI_DIGITS_SZ];";
 char FuncHeader[][120] = {
   "DATA_PLACE char szMyPi",

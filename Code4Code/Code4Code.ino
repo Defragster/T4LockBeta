@@ -107,12 +107,13 @@ uint32_t errAlpha( const char *szBad, uint32_t ii, uint32_t kk  ) {
   if ( NULL != szBad ) {
     //Serial.print(szBad); // debug
     digitalToggleFast( LED_BUILTIN ); // double toggle will emphsize error pulse
-    delay(10);  // debug
     errCnt++;
     if ( iiE == 0 && kkE == 0 ) {
       iiE = ii;
       kkE = kk;
     }
+    // Serial.printf("\nAlpha Error %s @ ii==%d kk==%d\n\n", szBad, iiE, kkE ); // DEBUG - UNDER _ISR()
+    delay(10);  // debug - makes LED toggle flicker
   }
   else if ( errCnt ) {
     Serial.printf("\nAlpha Error @ ii==%d kk==%d\n\n", iiE, kkE );
@@ -237,6 +238,38 @@ int isEncrypt() {
     Serial.println("Fail: title_text[] is not in encrypted region");
     ok--;
   }
+
+extern char a1[368];
+extern char a2[368];
+extern char z1[368];
+extern char z2[368];
+  if ((uint32_t)a1 >= begin_address && (uint32_t)a1 < end_address) {
+    Serial.println("Pass: a1[] is within encrypted region");
+  } else {
+    Serial.println("Fail: a1 is not in encrypted region");
+    ok--;
+  }
+  if ((uint32_t)a2 >= begin_address && (uint32_t)a2 < end_address) {
+    Serial.println("Pass: a2[] is within encrypted region");
+  } else {
+    Serial.println("Fail: a2 is not in encrypted region");
+    ok--;
+  }
+  if ((uint32_t)z1 >= begin_address && (uint32_t)z1 < end_address) {
+    Serial.println("Pass: z1[] is within encrypted region");
+  } else {
+    Serial.println("Fail: z1 is not in encrypted region");
+    ok--;
+  }
+  if ((uint32_t)z2 >= begin_address && (uint32_t)z2 < end_address) {
+    Serial.println("Pass: z2[] is within encrypted region");
+  } else {
+    Serial.println("Fail: z2 is not in encrypted region");
+    ok--;
+  }
+
+
+
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
