@@ -3,6 +3,9 @@
 // Count cycles used in seePi()
 #include "IntervalTimer.h"
 IntervalTimer Alpha;
+char szTeensy[24];
+extern char _stext[], _etext[], _sbss[], _ebss[], _sdata[], _edata[],
+       _estack[], _heap_start[], _heap_end[], _itcm_block_count[], *__brkval;
 
 #define PI_DIGITS 15 // sets of 4
 #define PI_DIGITS_SZ  (PI_DIGITS*4) + 4 // compare string
@@ -43,6 +46,7 @@ void setup() {
   t4_serialnumber( serNum );
   isEncrypt();
   Serial.println( serNum );
+  Serial.println( szTeensy );
   static char szPi[PI_DIGITS_SZ];
 
   uint32_t piTime;
@@ -50,7 +54,7 @@ void setup() {
   piCycles = 0;
   piTime = micros();
   theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-  Serial.printf( "%s Completed CASCADE Count %lu\t", serNum, theCount );
+  Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
   piTime = micros() - piTime;
   Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
   piCycles = 0;
@@ -82,7 +86,7 @@ void loop() {
     piCycles = 0;
     piTime = micros();
     theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-    Serial.printf( "%s Completed CASCADE Count %lu\t", serNum, theCount );
+    Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
     piTime = micros() - piTime;
     Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
     piCycles = 0;
@@ -186,19 +190,26 @@ PI_INLINE int seePi( uint maxDigits, char *szPi ) {
 // 480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465
 // 495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185
 
+extern "C" uint32_t  _sdataload; /* special linker symbols */
+extern const uint32_t hab_csf[]; // placeholder for HAB signature
 PROGMEM char title_text[] = "Verify secure code is running properly";
-
-FLASHMEM void title_function() {
+FLASHMEM int isEncrypt() {
+  int ok = 0;
   Serial.println( title_text );
   Serial.println();
-}
+  char buf[11];
+  uint32_t i, num;
 
-extern "C" uint32_t _sdata, _edata, _sdataload; /* special linker symbols */
-extern const uint32_t hab_csf[]; // placeholder for HAB signature
-
-int isEncrypt() {
-  int ok = 0;
-  title_function();
+  num = HW_OCOTP_MAC0 & 0xFFFFFF;
+  // add extra zero to work around OS-X CDC-ACM driver bug
+  if (num < 10000000) num = num * 10;
+  ultoa(num, buf, 10);
+  for (i = 0; i < 10; i++) {
+    char c = buf[i];
+    if (!c) break;
+    szTeensy[i] = c;
+  }
+  szTeensy[i] = 0;
 
   if ((IOMUXC_GPR_GPR11 & 0x100) == 0x100) {
     Serial.println("Pass: Bus Encryption Engine is active");
@@ -224,11 +235,11 @@ int isEncrypt() {
     ok--;
   }
 
-  uint32_t title_address = ((uint32_t)&title_function) & ~1;
+  uint32_t title_address = ((uint32_t)&isEncrypt) & ~1;
   if (title_address >= begin_address && title_address < end_address) {
-    Serial.println("Pass: title_function() is within encrypted region");
+    Serial.println("Pass: isEncrypt() is within encrypted region");
   } else {
-    Serial.println("Fail: title_function() is not in encrypted region");
+    Serial.println("Fail: isEncrypt() is not in encrypted region");
     ok--;
   }
 
@@ -238,45 +249,13 @@ int isEncrypt() {
     Serial.println("Fail: title_text[] is not in encrypted region");
     ok--;
   }
-
-extern char a1[368];
-extern char a2[368];
-extern char z1[368];
-extern char z2[368];
-  if ((uint32_t)a1 >= begin_address && (uint32_t)a1 < end_address) {
-    Serial.println("Pass: a1[] is within encrypted region");
-  } else {
-    Serial.println("Fail: a1 is not in encrypted region");
-    ok--;
-  }
-  if ((uint32_t)a2 >= begin_address && (uint32_t)a2 < end_address) {
-    Serial.println("Pass: a2[] is within encrypted region");
-  } else {
-    Serial.println("Fail: a2 is not in encrypted region");
-    ok--;
-  }
-  if ((uint32_t)z1 >= begin_address && (uint32_t)z1 < end_address) {
-    Serial.println("Pass: z1[] is within encrypted region");
-  } else {
-    Serial.println("Fail: z1 is not in encrypted region");
-    ok--;
-  }
-  if ((uint32_t)z2 >= begin_address && (uint32_t)z2 < end_address) {
-    Serial.println("Pass: z2[] is within encrypted region");
-  } else {
-    Serial.println("Fail: z2 is not in encrypted region");
-    ok--;
-  }
-
-
-
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
     Serial.println("Pass: csf is PJRC");
-    strcat( serNum, " ENC" );
+    strcat( szTeensy, " ENC" );
   } else {
     Serial.println("Fail: csf not PJRC");
-    strcat( serNum, " nor" );
+    strcat( szTeensy, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -295,12 +274,14 @@ extern char z2[368];
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
-    strcat( serNum, " SM:" );
+    strcat( szTeensy, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
-    strcat( serNum, " ns:" );
+    strcat( szTeensy, " ns:" );
     ok--;
   }
+  i = F_CPU_ACTUAL / 1000000;
+  sprintf( &szTeensy[15], " @%lu", i );
   Serial.println( HW_OCOTP_CFG5, HEX );
 
   Serial.println();

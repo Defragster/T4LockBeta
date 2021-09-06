@@ -21,7 +21,7 @@ void testAlpha() {
       ii = 0;
     }
   }
-#if 0 // debug : DANGER _isr() code
+#if 0 // debug : DANGER _isr() code!
   if ( errAlpha( NULL, 0, 0 ) )
     Serial.print(" --"); // debug
   else
