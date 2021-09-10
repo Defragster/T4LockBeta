@@ -2,11 +2,15 @@ extern char a1[368];
 extern char a2[368];
 extern char z1[368];
 extern char z2[368];
+extern uint32_t isrCycles;
 
 // IntervalTimer EXEC - this tests for problems (after the fact) from loop() - LED will pulse with delay(10) on error
-void testAlpha() {
+void testAlpha() { // Called as _isr() does PROGMEM char[] compares forward and backward - deleted from cache between calls
   static uint32_t ii = 0, kk = 1;
   uint32_t nn, mm = 0;
+  uint32_t nowCycles;
+
+  nowCycles = ARM_DWT_CYCCNT;
   while ( mm < kk ) {
     nn = mm + ii;
     if ( a1[nn] != a1[130 + nn] ) errAlpha( " a1 #1 fail ", ii, kk );
@@ -21,6 +25,7 @@ void testAlpha() {
       ii = 0;
     }
   }
+  isrCycles += ARM_DWT_CYCCNT - nowCycles;
 #if 0 // debug : DANGER _isr() code!
   if ( errAlpha( NULL, 0, 0 ) )
     Serial.print(" --"); // debug
@@ -29,10 +34,10 @@ void testAlpha() {
   // Serial.printf("Alpha ii==%d kk==%d\t", ii, kk); // debug : DANGER _isr() code
 #endif
   digitalToggleFast( LED_BUILTIN );
-  arm_dcache_flush_delete( a1, sizeof( a1 ) );
-  arm_dcache_flush_delete( a2, sizeof( a2 ) );
-  arm_dcache_flush_delete( z1, sizeof( z1 ) );
-  arm_dcache_flush_delete( z2, sizeof( z2 ) );
+  arm_dcache_delete( a1, sizeof( a1 ) );
+  arm_dcache_delete( a2, sizeof( a2 ) );
+  arm_dcache_delete( z1, sizeof( z1 ) );
+  arm_dcache_delete( z2, sizeof( z2 ) );
 }
 
 #if defined(USB_DUAL_SERIAL)

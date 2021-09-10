@@ -3,9 +3,7 @@
 // Count cycles used in seePi()
 #include "IntervalTimer.h"
 IntervalTimer Alpha;
-char szTeensy[24];
-extern char _stext[], _etext[], _sbss[], _ebss[], _sdata[], _edata[],
-       _estack[], _heap_start[], _heap_end[], _itcm_block_count[], *__brkval;
+char szTeensy[24] = "";
 
 #define PI_DIGITS 15 // sets of 4
 #define PI_DIGITS_SZ  (PI_DIGITS*4) + 4 // compare string
@@ -18,67 +16,106 @@ const uint32_t sumPi60dig = 75967;
 //const char szPiDigits[] = "31415926535897932384626433832795028841971693993751058209749"; // 60 digits ONLY for PI_DIGITS 15
 //const uint32_t sumPi60dig = 42; // bugbug 75967;
 
-char serNum[18];
-void t4_serialnumber(char * serNum )
-{
-  char buf[11];
-  uint32_t i, num;
-
-  num = HW_OCOTP_MAC0 & 0xFFFFFF;
-  // add extra zero to work around OS-X CDC-ACM driver bug
-  if (num < 10000000) num = num * 10;
-  ultoa(num, buf, 10);
-  for (i = 0; i < 10; i++) {
-    char c = buf[i];
-    if (!c) break;
-    serNum[i] = c;
-  }
-  serNum[i] = 0;
-}
-
 uint32_t time_now;
 uint32_t piCycles;
+uint32_t isrCycles, allCycles;
 void setup() {
   Serial.begin(115200);
   while (!Serial && millis() < 2500 );
   if ( CrashReport) Serial.print( CrashReport);
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
-  t4_serialnumber( serNum );
   isEncrypt();
-  Serial.println( serNum );
   Serial.println( szTeensy );
+  Serial.println( );
   static char szPi[PI_DIGITS_SZ];
 
+#if defined(USB_DUAL_SERIAL)  // Send the Cascade code created to Second Serial for the indicated MakeCode( COUNT )
+  buildAlpha();
+  MakeCode( 4000 );
+  delay(500);
+#endif
+
   uint32_t piTime;
-  uint32_t theCount;
+  uint32_t theCount,iiCnt;
   piCycles = 0;
+  // seePi( 200, NULL ); // Just for fun to see 800 Pi digits takes 9.1ms
+  Serial.printf("\n\tNot enabled _isr() char[] Testing.\n");
   piTime = micros();
-  theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-  Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
+  iiCnt = theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
   piTime = micros() - piTime;
-  Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
+  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net %lu us\n", theCount, piTime, piCycles, piTime - piCycles / 600);
   piCycles = 0;
   piTime = micros();
   int seePiStart = seePi( PI_DIGITS, szPi );
-  while ( 0 < theCount ) {
+  while ( 0 < iiCnt ) {
     ThisFunc0( 0, seePiStart, &sumPi60dig );
-    theCount--;
+    iiCnt--;
   }
   piTime = micros() - piTime;
-  Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
   time_now = millis();
-  seePi( 200, NULL );
-#if defined(USB_DUAL_SERIAL)
-  buildAlpha();
-  MakeCode( 4000 );
-#endif
+
   pinMode( LED_BUILTIN, OUTPUT ); // testAlpha Toggles on call to show running
-  Alpha.begin( testAlpha, 100 );
+  uint32_t isrRate = 50; // microseconds between string test _isr
+  for ( int ii = 0; ii < 3; ii++ ) {
+    Serial.printf("\tENABLED _isr() char[] Test @%lu us", isrRate);
+    isrRate *= 2;
+    isrCycles = 0;
+    allCycles = ARM_DWT_CYCCNT;
+    Alpha.begin( testAlpha, isrRate );
+    while ( ARM_DWT_CYCCNT - allCycles < F_CPU_ACTUAL );
+    Alpha.end( );
+    allCycles = ARM_DWT_CYCCNT - allCycles;
+    Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+  }
+
+  piCycles = 0;
+  isrCycles = 0;
+  allCycles = ARM_DWT_CYCCNT;
+  Alpha.begin( testAlpha, isrRate );
+  piTime = micros();
+  theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
+  piTime = micros() - piTime;
+  Alpha.end( );
+  allCycles = ARM_DWT_CYCCNT - allCycles;
+  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", theCount, piTime, piCycles / 600, piTime - piCycles / 600);
+  Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+  Serial.printf("Cascading %lu calls took %lu us : net {less isr} %lu us\n", theCount, piTime, piCycles, piTime - isrCycles / 600);
+  Serial.printf("Cascading %lu calls took %lu us : Cycles/call %lu\n", theCount, piTime, piTime/theCount);
+  piCycles = 0;
+  piTime = micros();
+  piCycles = 0;
+  isrCycles = 0;
+  allCycles = ARM_DWT_CYCCNT;
+  Alpha.begin( testAlpha, isrRate );
+  seePiStart = seePi( PI_DIGITS, szPi );
+  iiCnt = theCount;
+  while ( 0 < iiCnt ) {
+    ThisFunc0( 0, seePiStart, &sumPi60dig );
+    iiCnt--;
+  }
+  Alpha.end( );
+  allCycles = ARM_DWT_CYCCNT - allCycles;
+  piTime = micros() - piTime;
+  Serial.printf("\nDirect calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", piTime, piCycles / 600, piTime - piCycles / 600);
+  Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : net {less isr} %lu us\n", piTime, piCycles, piTime - isrCycles / 600);
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : Cycles/call %lu\n", piTime, piCycles, piTime/theCount);
+  time_now = millis(); // for time measure in loop on TEMP
+
+
+  Serial.printf("\n\nEnd of setup() tests, send USB char for repeating loop() testing with temp display ...\n");
+  while (!Serial.available())yield();
+  Serial.printf("\tENABLED _isr() char[] Test @%lu us", isrRate);
+  piCycles = 0;
+  isrCycles = 0;
+  allCycles = ARM_DWT_CYCCNT;
+  Alpha.begin( testAlpha, isrRate );
 }
 
 void loop() {
   static char szPi[PI_DIGITS_SZ];
-  Serial.print((millis() - time_now) * 0.00001667, 4); Serial.print(", ");
+  Serial.printf("\t%4.4f",(millis() - time_now) * 0.00001667); Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
   for ( int ii = 0; ii < 3; ii++) {
     uint32_t piTime;
@@ -88,7 +125,7 @@ void loop() {
     theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
     Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
     piTime = micros() - piTime;
-    Serial.printf("Cascading took %lu us [%lu piCycles] : net %lu\n", piTime, piCycles, piTime - piCycles / 600);
+    Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / 600);
     piCycles = 0;
     piTime = micros();
     int seePiStart = seePi( PI_DIGITS, szPi );
@@ -97,7 +134,7 @@ void loop() {
       theCount--;
     }
     piTime = micros() - piTime;
-    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu\n\n", piTime, piCycles, piTime - piCycles / 600);
+    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
     if ( errAlpha( NULL, 0, 0 )) { // from ::   // testAlpha();
       Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha( NULL, 0, 0 ) ); // debug
       delay(500);
@@ -133,14 +170,14 @@ uint16_t piComp[] = {3141, 5926, 5358, 9793, 2384, 6264, 3383, 2795, 288, 4197, 
 
 int r[2800 + 1];
 PI_INLINE int seePi( uint maxDigits, char *szPi ) {
-  int i, k, b, d;
+  int i, k, b, d, pp = 0;
   int c = 0;
-  //uint32_t piTime;
+  uint32_t piTime;
   uint32_t piSum = 0;
   uint jj = 0, vv;
   uint szC = 0;
   uint32_t nowCycles = ARM_DWT_CYCCNT;
-  //piTime = micros();
+  piTime = micros();
   for (i = 0; i < 2800; i++) {
     r[i] = 2000;
   }
@@ -157,17 +194,23 @@ PI_INLINE int seePi( uint maxDigits, char *szPi ) {
       if (i == 0) break;
       d *= i;
     }
-    // Serial.printf("%.4d,", c + d / 10000);
-    if ( NULL != szPi )
+    if ( NULL != szPi ) {
       szC += sprintf( &szPi[szC], "%.4d", c + d / 10000);
+    }
+    else { // Show Pi 800 digits
+      Serial.printf("%.4d", c + d / 10000);
+      if ( !(++pp % 16) ) Serial.print("\n\t");
+    }
     vv = c + d / 10000;
     piSum += vv;
     if ( vv != piComp[jj++] ) Serial.printf("\nmismatch at %lu : %lu != %lu \n", jj , vv, piComp[jj - 1]);
     if ( maxDigits == jj ) break;
     c = d % 10000;
   }
-  //piTime = micros() - piTime;
-  // Serial.printf("\n\tdigit Sum = %lu in %lu us\n", piSum, piTime);
+  if ( NULL == szPi ) {
+    piTime = micros() - piTime;
+    Serial.printf("\n\tdigit Sum = %lu in %lu us\n", piSum, piTime);
+  }
   nowCycles = ARM_DWT_CYCCNT - nowCycles;
   piCycles += nowCycles;
   return piSum;
@@ -190,6 +233,8 @@ PI_INLINE int seePi( uint maxDigits, char *szPi ) {
 // 480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465
 // 495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185
 
+extern char _stext[], _etext[], _sbss[], _ebss[], _sdata[], _edata[],
+       _estack[], _heap_start[], _heap_end[], _itcm_block_count[], *__brkval;
 extern "C" uint32_t  _sdataload; /* special linker symbols */
 extern const uint32_t hab_csf[]; // placeholder for HAB signature
 PROGMEM char title_text[] = "Verify secure code is running properly";
@@ -197,7 +242,7 @@ FLASHMEM int isEncrypt() {
   int ok = 0;
   Serial.println( title_text );
   Serial.println();
-  char buf[11];
+  char buf[21];
   uint32_t i, num;
 
   num = HW_OCOTP_MAC0 & 0xFFFFFF;
@@ -249,12 +294,16 @@ FLASHMEM int isEncrypt() {
     Serial.println("Fail: title_text[] is not in encrypted region");
     ok--;
   }
-  uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
-  if ( hab_PJRC == hab_csf[0] ) {
-    Serial.println("Pass: csf is PJRC");
+  // deprecitated :: uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
+  // https://forum.pjrc.com/threads/68121-Teensyduino-1-55-Beta-2?p=288055&viewfull=1#post288055
+  if ((hab_csf[0] & 0xF80000FF) == 0x400000D4) {
+    uint16_t hab_size = (hab_csf[0] >> 16) & 0xFF;
+    hab_size |= ((hab_csf[0] >> 8) & 0xFF) << 8;
+    uint8_t hab_minor = (hab_csf[0] >> 24) & 7;
+    Serial.printf("Pass: CSF is %u bytes with HAB version 4.%u\n", hab_size, hab_minor);
     strcat( szTeensy, " ENC" );
   } else {
-    Serial.println("Fail: csf not PJRC");
+    Serial.println("Fail: csf not HAB 4.0");
     strcat( szTeensy, " nor" );
     ok--;
   }
@@ -281,7 +330,8 @@ FLASHMEM int isEncrypt() {
     ok--;
   }
   i = F_CPU_ACTUAL / 1000000;
-  sprintf( &szTeensy[15], " @%lu", i );
+  sprintf( buf, " @%lu", i );
+  strcat( szTeensy, buf );
   Serial.println( HW_OCOTP_CFG5, HEX );
 
   Serial.println();
