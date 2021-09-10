@@ -66,7 +66,7 @@ void setup() {
     while ( ARM_DWT_CYCCNT - allCycles < F_CPU_ACTUAL );
     Alpha.end( );
     allCycles = ARM_DWT_CYCCNT - allCycles;
-    Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+    Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
   }
 
   piCycles = 0;
@@ -79,7 +79,7 @@ void setup() {
   Alpha.end( );
   allCycles = ARM_DWT_CYCCNT - allCycles;
   Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", theCount, piTime, piCycles / 600, piTime - piCycles / 600);
-  Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+  Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
   Serial.printf("Cascading %lu calls took %lu us : net {less isr} %lu us\n", theCount, piTime, piCycles, piTime - isrCycles / 600);
   Serial.printf("Cascading %lu calls took %lu us : Cycles/call %lu\n", theCount, piTime, piTime/theCount);
   piCycles = 0;
@@ -98,7 +98,7 @@ void setup() {
   allCycles = ARM_DWT_CYCCNT - allCycles;
   piTime = micros() - piTime;
   Serial.printf("\nDirect calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", piTime, piCycles / 600, piTime - piCycles / 600);
-  Serial.printf("\t_isr Cycles %lu of %lu : CPU \%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+  Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
   Serial.printf("Direct calls took %lu us [%lu piCycles] : net {less isr} %lu us\n", piTime, piCycles, piTime - isrCycles / 600);
   Serial.printf("Direct calls took %lu us [%lu piCycles] : Cycles/call %lu\n", piTime, piCycles, piTime/theCount);
   time_now = millis(); // for time measure in loop on TEMP
