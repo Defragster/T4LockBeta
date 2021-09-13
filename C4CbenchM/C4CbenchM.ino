@@ -23,21 +23,24 @@ bool bPrintExtra = false;
 uint32_t time_now;
 uint32_t piCycles;
 uint32_t isrCycles, allCycles;
-float thisISR[4], knownISR[4] = { 0.9578, 0.746, 0.385, 0.1873 };
+#define _ISR_RATE 12
+uint32_t isrRate = _ISR_RATE; // microseconds between string test _isr : Doubled before first use
+//float thisISR[4], knownISR[4] = { 0.9578, 0.746, 0.385, 0.1873 };
+float thisISR[4], knownISR[4] = { 0.969472, 0.855462, 0.483440, 0.256808 }; // this controls the %PROD reported for ISR
 int usISR[4];
-//float thisNet[2], knownNet[2] = { 12.8, 8.806 }; // { 13.847, 9.156 };
-float thisNet[2], knownNet[2] = { 14.01, 18 };
+float thisNet[2], knownNet[2] = { 12.8, 8.806 }; // { 13.847, 9.156 };  // this controls the %PROD reported for char[]
+//float thisNet[2], knownNet[2] = { 14.01, 18 };
 void setup() {
   Serial.begin(115200);
+  pinMode( LED_BUILTIN, OUTPUT ); // testAlpha Toggles on call to show running
   while (!Serial && millis() < 2500 );
   if ( CrashReport) Serial.print( CrashReport);
   isEncrypt( bPrintExtra );
+  Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   if ( bPrintExtra ) {
-    Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
     Serial.println( szTeensy );
     Serial.println( );
   }
-  static char szPi[PI_DIGITS_SZ];
 
 #if defined(USB_DUAL_SERIAL)  // Send the Cascade code created to Second Serial for the indicated MakeCode( COUNT )
   buildAlpha();
@@ -45,13 +48,23 @@ void setup() {
   delay(500);
 #endif
 
-  uint32_t piTime;
-  uint32_t theCount, iiCnt;
-  piCycles = 0;
   //seePi( 200, NULL ); // Just for fun to see 800 Pi digits takes 9.1ms : digit Sum = 1006062
   //seePi( 15, NULL ); // 60 Pi digits : digit Sum = 75967 in 1301 us
   //seePi( 5, NULL ); // 20 Pi digits : digit Sum = 26602 in 453 us
   //seePi( 3, NULL ); // 12 Pi digits : digit Sum = 14425 in 275 us
+  c4cBench();
+  time_now = millis(); // for time measure in loop on TEMP
+  Serial.printf("\n\nEnd of setup() tests, send USB char for repeating loop() testing with temp display ...\n");
+  while (!Serial.available())yield();
+  Serial.printf("\tENABLED _isr() char[] Test @%lu us", isrRate);
+}
+
+void c4cBench() {
+  static char szPi[PI_DIGITS_SZ];
+  uint32_t piTime;
+  uint32_t theCount, iiCnt;
+  piCycles = 0;
+
   if ( bPrintExtra )
     Serial.printf("\n\tNot enabled _isr() char[] Testing.\n");
   piTime = micros();
@@ -73,8 +86,7 @@ void setup() {
   thisNet[0] = thisNet[0] / (piTime - piCycles / 600); // cascade/direct
   time_now = millis();
 
-  pinMode( LED_BUILTIN, OUTPUT ); // testAlpha Toggles on call to show running
-  uint32_t isrRate = 12; // microseconds between string test _isr
+  isrRate = _ISR_RATE;
   for ( int ii = 0; ii < 4; ii++ ) {
     isrRate *= 2;
     //Serial.printf("\tENABLED _isr() char[] Test @%lu us", isrRate);
@@ -84,8 +96,8 @@ void setup() {
     while ( ARM_DWT_CYCCNT - allCycles < F_CPU_ACTUAL );
     Alpha.end( );
     allCycles = ARM_DWT_CYCCNT - allCycles;
-  if ( bPrintExtra )
-  Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
+    if ( bPrintExtra )
+      Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles );
     usISR[ii] = isrRate;
     thisISR[ii] = (float)isrCycles / allCycles;
   }
@@ -137,10 +149,10 @@ void setup() {
   thisNet[1] = thisNet[1] / (piTime - piCycles / 600); // cascade/direct with ISR
 
 
-  Serial.printf("\n%s PERF Cascade .vs. Direct Func#()'s Test :\n", szTeensy);
+  Serial.printf("\n%s PERF Cascade .vs. Direct Func%u()'s Test :\n", szTeensy, theCount );
   Serial.printf("\t Test Diff of %5.3f\n",  thisNet[0]);
   Serial.printf("\t%% Diff to Production of %5.3f\n", knownNet[0] / thisNet[0]);
-  Serial.printf("\n%s PERF with ISR Cascade .vs. Direct Func#()'s Test :\n", szTeensy);
+  Serial.printf("\n%s PERF with ISR Cascade .vs. Direct Func%u()'s Test :\n", szTeensy, theCount );
   Serial.printf("\t Test Diff of %5.3f  {this is most nebulous}\n",  thisNet[1]);
   Serial.printf("\t%% Diff to Production of %5.3f\n", knownNet[1] / thisNet[1]);
 
@@ -157,45 +169,43 @@ void setup() {
     thisISR[ii] = (float)isrCycles / allCycles;
   }
 
-
-
-  time_now = millis(); // for time measure in loop on TEMP
-  Serial.printf("\n\nEnd of setup() tests, send USB char for repeating loop() testing with temp display ...\n");
-  while (!Serial.available())yield();
-  Serial.printf("\tENABLED _isr() char[] Test @%lu us", isrRate);
-  piCycles = 0;
-  isrCycles = 0;
-  allCycles = ARM_DWT_CYCCNT;
-  Alpha.begin( testAlpha, isrRate );
 }
 
+elapsedMillis waitTemp;
 void loop() {
-  static char szPi[PI_DIGITS_SZ];
-  Serial.printf("\t%4.4f", (millis() - time_now) * 0.00001667); Serial.print(", ");
-  Serial.println(tempmonGetTemp(), 2);
-  for ( int ii = 0; ii < 3; ii++) {
-    uint32_t piTime;
-    uint32_t theCount;
-    piCycles = 0;
-    piTime = micros();
-    theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
-    Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
-    piTime = micros() - piTime;
-    Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / 600);
-    piCycles = 0;
-    piTime = micros();
-    int seePiStart = seePi( PI_DIGITS, szPi );
-    while ( 0 < theCount ) {
-      ThisFunc0( 0, seePiStart, &sumPi60dig );
-      theCount--;
-    }
-    piTime = micros() - piTime;
-    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
-    if ( errAlpha( NULL, 0, 0 )) { // from ::   // testAlpha();
-      Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha( NULL, 0, 0 ) ); // debug
-      delay(500);
-    }
+  if ( waitTemp > 3000 ) {
+    waitTemp = 0;
+    Serial.printf("\nRun Time %4.4f", (millis() - time_now) * 0.00001667); Serial.print(", Temp C=");
+    Serial.println(tempmonGetTemp(), 2);
   }
+  bPrintExtra = false;
+  c4cBench();
+
+  /*
+  static char szPi[PI_DIGITS_SZ];
+  for ( int ii = 0; ii < 3; ii++) {
+      uint32_t piTime;
+      uint32_t theCount;
+      piCycles = 0;
+      piTime = micros();
+      theCount = ThisFunc1( 0, seePi( PI_DIGITS, szPi ), &sumPi60dig );
+      Serial.printf( "%s Completed CASCADE Count %lu\t", szTeensy, theCount );
+      piTime = micros() - piTime;
+      Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / 600);
+      piCycles = 0;
+      piTime = micros();
+      int seePiStart = seePi( PI_DIGITS, szPi );
+      while ( 0 < theCount ) {
+        ThisFunc0( 0, seePiStart, &sumPi60dig );
+        theCount--;
+      }
+      piTime = micros() - piTime;
+      Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
+      if ( errAlpha( NULL, 0, 0 )) { // from ::   // testAlpha();
+        Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha( NULL, 0, 0 ) ); // debug
+        delay(500);
+      }
+    } */
 }
 
 uint32_t errAlpha( const char *szBad, uint32_t ii, uint32_t kk  ) {
