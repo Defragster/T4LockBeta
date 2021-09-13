@@ -1,0 +1,89 @@
+
+PROGMEM char a1[] = 
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJ"
+  "KLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRST"
+  "UVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCD"
+  "EFGHIJKLMNOPQRSTUVWXYZ123";
+PROGMEM char a2[] = 
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+  "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghij"
+  "klmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrst"
+  "uvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd"
+  "efghijklmnopqrstuvwxyz123";
+PROGMEM char z1[] = 
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBA"
+  "ZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQ"
+  "PONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHG"
+  "FEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXWVUTSRQPONMLKJIHGFEDCBAZYXW"
+  "VUTSRQPONMLKJIHGFEDCBA456";
+PROGMEM char z2[] = 
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba"
+  "zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrq"
+  "ponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihg"
+  "fedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcbazyxw"
+  "vutsrqponmlkjihgfedcba456";
+
+char szPi[PI_DIGITS_SZ];
+
+DATA_PLACE char szMyPi1[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc1( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  uint32_t outVar = ThisFunc2( inVar, priorPiSum, knownPiSum );
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi1) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi2[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc2( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  uint32_t outVar = ThisFunc3( inVar, priorPiSum, knownPiSum );
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi2) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+DATA_PLACE char szMyPi3[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc3( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  uint32_t outVar = ThisFunc0( inVar, priorPiSum, knownPiSum );
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi3) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
+
+// Terminate Function Here
+DATA_PLACE char szMyPi0[]="314159265358979323846264338327950288419716939937510582097494";
+CODE_PLACE uint32_t ThisFunc0( uint32_t inVar, uint32_t priorPiSum, const uint32_t *knownPiSum ) { 
+  uint32_t outVar = 0;
+
+  uint32_t myPi = seePi( PI_DIGITS, szPi );
+  if ( strcmp( szPi, szPiDigits ) )
+    Serial.printf( "%cPI FAIL szPiDigits String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( strcmp( szPi, szMyPi0) )
+    Serial.printf( "%cPI FAIL szMyPi String pi>>%s in %s%c%c",13, szPi, __FUNCTION__,13,13 );
+  if ( myPi == priorPiSum && myPi == *knownPiSum )
+    outVar++; 
+  else
+    Serial.printf( "%cPI FAIL pi SUMS >>%lu %lu %lu in %s%c%c",13, myPi, priorPiSum, *knownPiSum, __FUNCTION__,13,13 );
+  return outVar;
+}
