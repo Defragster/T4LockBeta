@@ -42,7 +42,7 @@ void setup()
   }
 #ifdef USB_MTPDISK
   else {
-    MTP.addFilesystem(SD, "SD Card");
+    MTP.addFilesystem(DISK, "MakeFiles 2203");
     Serial.println("Added SD card using built in SDIO, or given SPI CS");
   }
   MTP.begin();
@@ -52,18 +52,17 @@ void setup()
   Serial.println("\nSetup done");
 }
 
-void notSetup() {
-  char szStart[][8] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD", "Ascii", "Other" };
+void notSetup() { // delay print feedback for MTP init
+  char szStart[][8] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD", "Ascii", "4K" };
 
   showMediaSpace();
+  //return;
+  // EDIT HERE - for more files, Dirs, larger or alternate file sizes
   MakeDeepDirs( szStart[0], 1, 4, 2048, 0 );
+  showMediaSpace();
   MakeDeepDirs( szStart[0], 1, 8, 100, 400 ); // Multiple use of same FOLDER will mess up the file count - if they have same # files
-  MakeDeepDirs( szStart[6], 1, 6, 4096, 0 );
-
   showMediaSpace();
   MakeData( szStart[0] );
-  return;
-  // EDIT HERE - for more files, Dirs, larger or alternate file sizes
   showMediaSpace();
   MakeDataFiles( szStart[1], 1024, 400, 1 );
   showMediaSpace();
@@ -75,6 +74,9 @@ void notSetup() {
   showMediaSpace();
   MakeNames( szStart[5] );
   showMediaSpace();
+  MakeDeepDirs( szStart[6], 1, 6, 4096, 0 );
+  showMediaSpace();
+
   Serial.println("MakeData done.");
 }
 
@@ -87,19 +89,20 @@ void loop() {
     while ( Serial.available() ) Serial.read();
     printDirectory();
   }
-  if ( runOnce && millis() > 15000 ) {
+#ifdef USB_MTPDISK
+  if ( runOnce && millis() > 20000 ) { // wait for SerMon connect w/MTP
+#else
+  if ( runOnce && millis() > 2000 ) {
+#endif
     notSetup();
     runOnce = false;
   }
 }
 
-uint32_t gNumFiles = 0;
-uint32_t gNumBlocks = 0;
-
 uint32_t startSize = 244;
 uint32_t growSize = 256;
 char dirL[3][4] = {"111", "222", "333"};
-char fileL[3][8] = {"aaa.txt", "bbb.txt", "ccc.txt"};
+char fileL[3][8] = {"aaa", "bbb", "ccc"};
 #define BLOCK_SIZE 16
 char dataL[4][BLOCK_SIZE + 1] = { "zaaa567890!@#$%^", "zbbbefghijklmnop", "zcccEFGHIJKLMNOP", "zDDdEFGHIJKLMNOP"};
 void MakeData( char* szRoot ) {
@@ -122,7 +125,7 @@ void MakeData( char* szRoot ) {
       strcat( szPath, szTmp );
       strcat( szPath, "/" );
       strcat( szPath, fileL[jj] );
-      Serial.print("Make File:");
+      Serial.print("MakeD File:");
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx );
       xx += growSize;
@@ -162,7 +165,7 @@ void MakeNames( char* szRoot ) {
       strcpy( szPath, szRoot );
       strcat( szPath, "/" );
       strcat( szPath, jj );
-      Serial.print("Make File:");
+      Serial.print("MakeN File:");
       Serial.print(szPath);
 
       // Run Once - don't delete to show file name re-use
@@ -205,9 +208,11 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
       strcpy( szPath, szRoot );
       strcat( szPath, "/" );
       strcat( szPath, dirL[ii] );
+      sprintf( szTmp, ".%d", numFiles);
+      strcat( szPath, szTmp );
       strcat( szPath, "/" );
       strcat( szPath, szFile );
-      Serial.print("Make File:");
+      Serial.print("Make DF File:");
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx, growSize == 0 );
       xx += growSize;
@@ -253,6 +258,9 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
 
 void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum )
 {
+  static uint32_t gNumFiles = 0;
+  static uint32_t gNumBlocks = 0;
+
   File myFile;
   char writeData[ 2 * BLOCK_SIZE + 10 ];
   char szPath[256];
@@ -266,7 +274,7 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   if (DISK.exists(szPath)) DISK.remove(szPath);
   myFile = DISK.open(szPath, FILE_WRITE);
   if ( !myFile ) {
-    Serial.print(" >> Fail Open << ");
+    Serial.print(" >> Fail Open << \n");
     gNumFiles--;
     return;
   }
@@ -308,7 +316,7 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   Serial.print(myFile.size());
   Serial.print(" end:");
   if ( xx != myFile.size() ) Serial.print(" >> WRONG << ");
-  Serial.println(writeData);
+  Serial.print(writeData);
   myFile.close();
   if (!DISK.exists(szPath)) Serial.print("\tFile WRITE failed!\n");
 }
@@ -320,13 +328,16 @@ void showMediaSpace()
   Serial.print(DISK.totalSize());
   Serial.print("\tUsed Size=");
   Serial.println(DISK.usedSize());
+#ifdef USB_MTPDISK
+  MTP.loop();  //This is mandatory to be placed in the loop code.
+#endif
 }
 
 uint32_t fTot, totSize;
 void printDirectory() {
   fTot = 0, totSize = 0;
   printDirectory(DISK.open("/"), 0);
-  Serial.printf(" %Total %u files of Size %u Bytes\n", fTot, totSize);
+  Serial.printf("\n%Total %u files of Size %u Bytes\n", fTot, totSize);
   Serial.printf("Bytes Used: %llu, Bytes Total:%llu\n", DISK.usedSize(), DISK.totalSize());
 }
 
@@ -352,7 +363,6 @@ void printDirectory(File dir, int numTabs) {
     for (uint8_t i = 0; i < numTabs; i++) {
       Serial.print("    ");
     }
-
     if (entry.isDirectory()) {
       Serial.print("DIR    ");
       dCnt++;
@@ -365,6 +375,9 @@ void printDirectory(File dir, int numTabs) {
     if (entry.isDirectory()) {
       Serial.println(" / ");
       printDirectory(entry, numTabs + 1);
+      for (uint8_t i = 0; i < numTabs; i++) {
+        Serial.print("    ");
+      }
     } else {
       // files have sizes, directories do not
       Serial.print("\t");
