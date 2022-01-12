@@ -64,7 +64,7 @@ void notSetup() { // delay print feedback for MTP init
   showMediaSpace();
   MakeData( szStart[0] );
   showMediaSpace();
-  MakeDataFiles( szStart[1], 1024, 400, 1 );
+  //MakeDataFiles( szStart[1], 1024, 400, 1 );
   showMediaSpace();
   MakeDeepDirs( szStart[2], 10, 5, 500, 512 );
   showMediaSpace();
@@ -72,8 +72,8 @@ void notSetup() { // delay print feedback for MTP init
   showMediaSpace();
   MakeDeepDirs( szStart[4], 4, 6, 125, 250, 8 ); // LAST PARAM is 'GROW factor' Good for arbitrarily LARGE files
   showMediaSpace();
-  MakeNames( szStart[5] );
-  showMediaSpace();
+  //MakeNames( szStart[5] ); // ASCII filename char list
+  //showMediaSpace();
   MakeDeepDirs( szStart[6], 1, 6, 4096, 0 );
   showMediaSpace();
 
@@ -81,6 +81,7 @@ void notSetup() { // delay print feedback for MTP init
 }
 
 bool runOnce = true;
+bool runOnceSer = true;
 void loop() {
 #ifdef USB_MTPDISK
   MTP.loop();  //This is mandatory to be placed in the loop code.
@@ -96,6 +97,11 @@ void loop() {
 #endif
     notSetup();
     runOnce = false;
+  }
+  if ( runOnceSer && Serial ) {
+    runOnceSer = false;
+    Serial.print("Serial online : ");
+    Serial.println(millis());
   }
 }
 
@@ -342,6 +348,7 @@ void printDirectory() {
 }
 
 void printDirectory(File dir, int numTabs) {
+  static char szTmp[100];
   uint64_t fSize = 0;
   uint32_t dCnt = 0, fCnt = 0;
   if ( 0 == dir ) {
@@ -374,10 +381,18 @@ void printDirectory(File dir, int numTabs) {
     Serial.print(entry.name());
     if (entry.isDirectory()) {
       Serial.println(" / ");
-      printDirectory(entry, numTabs + 1);
-      for (uint8_t i = 0; i < numTabs; i++) {
-        Serial.print("    ");
+      uint32_t cntF = 0;
+      {
+        snprintf( szTmp, 99, "%s", entry.name());
+        int ii = 0;
+        while ( szTmp[ii] != 0 && szTmp[ii] != '.' && ii < 99 ) ii++;
+        if ( szTmp[ii] == '.' ) {
+          ii++;
+          cntF = atoi( &szTmp[ii] );
+        }
       }
+      if ( 0 != cntF ) printDirectoryVerify(entry, numTabs + 1, cntF);
+      printDirectory(entry, numTabs + 1);
     } else {
       // files have sizes, directories do not
       Serial.print("\t");
@@ -389,3 +404,63 @@ void printDirectory(File dir, int numTabs) {
   }
 }
 
+void printDirectoryVerify(File dir, int numTabs, int numFiles) {
+  static char szTmp[100];
+  uint64_t fSize = 0;
+  int fCnt = 0;
+  uint32_t fErrs = 0;
+  if ( 0 == dir ) {
+    Serial.printf( "\t>>>\t>>>>> No Dir\n" );
+    return;
+  }
+  while (true) {
+    File entry =  dir.openNextFile();
+    if (! entry) {        // no more files
+      entry.close();
+      break;
+    }
+    if (entry.isDirectory()) {
+      entry.close();
+      break;
+    } else {
+      fCnt++; // Will miss count if a #size file is renamed, or replaced with am alternate file not #size
+      fSize = entry.size();
+      snprintf( szTmp, 99, "%s", entry.name());
+      uint32_t cntF = 0;
+      if ( '0' >= szTmp[0] || '9' <= szTmp[0] ) // some files are NOT size# named
+        cntF = fSize;
+      else
+        cntF = atoi( szTmp ); // Expected files GENERALLY had #size filenames like 1024.txt
+      if ( cntF == fSize ) {
+        // Serial.print(".");          if ( !(fCnt % 101) ) Serial.println();
+        // TODO Read verify file here
+      } else {
+        fErrs++;
+        Serial.println();
+        Serial.print(entry.name());
+        Serial.print("\tXXXX\t File Size MISMATCH :");
+        Serial.println(cntF);
+      }
+    }
+    if (entry.isDirectory()) {
+      entry.close();
+      break;
+    }
+    entry.close();
+  }
+  if ( numFiles == fCnt && 0 == fErrs )
+    Serial.printf("\n  DONE RESULTS GOOD HERE %u Files(s) ", fCnt);
+  else {
+    Serial.print("\n  DONE RESULTS BAD HERE  \tXXXXXX\t");
+    if ( numFiles > fCnt ) {
+      Serial.printf("  MISSING %u FILE(S)  ", numFiles - fCnt);
+    fErrs++;
+    }
+    else if ( numFiles < fCnt ) {
+      Serial.printf("  %u EXTRA FILE(S)  ", numFiles - fCnt);
+    fErrs++;
+    }
+    if ( 0 != fErrs )
+      Serial.printf(" %u File Error(s)  ", fErrs);
+  }
+}
