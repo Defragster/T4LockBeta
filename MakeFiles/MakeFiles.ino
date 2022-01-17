@@ -71,7 +71,7 @@ void setup()
 }
 
 void notSetup() { // delay print feedback for MTP init
-  char szStart[][8] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD", "Ascii", "4K" };
+  char szStart[][32] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD", "Ascii", "4K", "россиянин" };
 
   showMediaSpace();
   //MakeDataFiles( szStart[1], 1024, 400, 1 );
@@ -84,6 +84,8 @@ void notSetup() { // delay print feedback for MTP init
   MakeDeepDirs( szStart[0], 1, 30, 31 * 1024, 0 );
   showMediaSpace();
   MakeDeepDirs( szStart[2], 10, 5, 500, 512 );
+  showMediaSpace();
+  dbMakeNames( szStart[7] ); // UTF8 filename char list
   showMediaSpace();
   return;
   // EDIT HERE - for more files, Dirs, larger or alternate file sizes
@@ -225,6 +227,46 @@ void MakeNames( char* szRoot ) {
       Serial.println();
       myFile.close();
     }
+  }
+}
+
+void dbMakeNames( char* szRoot ) {
+  char szPath[128];
+  strcpy( szPath, szRoot );
+  DISK.mkdir( szPath );
+  const char *jj;
+  for ( int ii = 0; ii < 4; ii++ ) {
+    if ( 0 == ii ) jj = "😀";
+    if ( 1 == ii ) jj = "👍";
+    if ( 2 == ii ) jj = "α";
+    if ( 3 == ii ) jj = "β";
+    strcpy( szPath, szRoot );
+    strcat( szPath, "/" );
+    strcat( szPath, jj );
+    strcat( szPath, ".txt" );
+    Serial.print("dbMakeN File:");
+    Serial.print(szPath);
+
+    // Run Once - don't delete to show file name re-use
+    File myFile;
+    if (DISK.exists(szPath)) DISK.remove(szPath);
+    myFile = DISK.open(szPath, FILE_WRITE);
+    if ( !myFile ) {
+      Serial.print(" >> Fail Open << \t <<<<<<");
+      break;
+    }
+    uint32_t kk = 0;
+    if ( 2 > ii ) kk = 8; // emoji's are 4 byte
+    for ( ; kk < 16; kk++ ) {
+      myFile.print( jj );
+    }
+    Serial.print("=");
+    Serial.print(myFile.size());
+    totBWrite += 32;
+    if ( 32 != myFile.size() )
+      Serial.print(" >> NAME REUSED << ");
+    Serial.println();
+    myFile.close();
   }
 }
 
