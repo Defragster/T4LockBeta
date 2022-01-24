@@ -49,8 +49,6 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
 void indexedDataWrite( char *szBlock, char* szPath, uint32_t xx, bool addFNum = false );
 void directoryVerify(File dir, int numTabs, uint32_t numFiles = 0);
 
-bool runOnce = true;
-bool runOnceSer = true;
 elapsedMillis seeSer;
 void setup()
 {
@@ -76,15 +74,14 @@ void setup()
   Serial.println("initialization done.");
   seeSer = 101;
   while ( millis() < 2500) {
-    if ( runOnceSer && seeSer > 100 ) {
-      Serial.print("  SerOn: ");
+    if ( seeSer > 100 ) {
+      Serial.print(" SerOn: ");
       Serial.print(millis());
-      if ( millis() > 2000 && millis() < 2100 )
-        Serial.println();
       seeSer = 0;
     }
   }
   Serial.println("\nSetup done");
+  menu();
 }
 
 void makeSome( int ii ) {
@@ -166,21 +163,6 @@ void loop() {
 
     }
 
-  }
-
-  if ( runOnceSer && seeSer > 500 ) {
-    Serial.print("Serial online : ");
-    Serial.println(millis());
-    seeSer = 0;
-  }
-#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
-  if ( runOnce && millis() > 4000 ) { // wait for SerMon connect w/MTP
-#else
-  if ( runOnce && millis() > 2000 ) {
-#endif
-    //notSetup();
-    runOnce = false;
-    runOnceSer = false;
   }
 }
 
@@ -702,11 +684,12 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
 int fileVerify( File entry ) {
   char fBuf[64] = "";
   char errBuf[256] = "";
+  char szFile[16];
   int ebI;
   int retVal = 1;
   uint32_t ii, jj;
   uint32_t totRd = 0;
-  uint32_t firstFID = 0, CurrBID = 0;
+  uint32_t CurrBID = 0;
   uint32_t idFile = 0; // DEC File ID in each Block : 4 DEC chars
   uint32_t idBlk = 0; // Incrementing HEX Block ID in each Block : 7 HEX chars
 
@@ -716,16 +699,22 @@ int fileVerify( File entry ) {
   for ( ii = 0; ii < jj - 2; ii++ ) {
     // 16 byte Blocks read here for duration of the file to the tail
     totRd += entry.read( fBuf, 16 );
-    idFile = atoi( &fBuf[3] ); // Expected files GENERALLY had #size filenames like 1024.txt
     idBlk = strtoul( &fBuf[8], nullptr, 16 );
     if ( 0 == ii ) {
-      firstFID = idFile;
+      idFile = atoi( &fBuf[3] ); // Expected files GENERALLY had #size filenames like 1024.txt
       CurrBID = idBlk;
       // TODO BUGBUG:: strcmp after first file Num check : "zE. 257x"
+      for ( int yy = 0; yy < 8; yy++) {
+        szFile[yy] = fBuf[yy];
+      }
+      szFile[8] = 0;
     }
-    if ( firstFID != idFile ) {
+    fBuf[15] = '_'; // replace newline : DEBUG PRINT
+    fBuf[16] = 0; // DEBUG PRINT
+    if ( 0 !=strncmp( szFile, fBuf, 8 ) ) {
       retVal++;
-      ebI += sprintf( &errBuf[ebI], "\nXfid:%lu@%lu", idFile, totRd );
+      ebI += sprintf( &errBuf[ebI], "\nX_fid:%s@%lu", fBuf, totRd );
+      Serial.printf( "\nX_fid:%s@%lu", fBuf, totRd );
     }
     if ( CurrBID != idBlk ) {
       retVal++;
@@ -733,16 +722,14 @@ int fileVerify( File entry ) {
     }
     CurrBID++; // Next Block ID expected
   }
-  // zD. 196x  980F7_.5/D8.5/D9.5/500.txt #2204
+  // zD. 196x  980F7_.5/D8.5/D9.5/500.txt #2204 // Ver >= 2204
   // zDDd. 196x980F7_.5/D8.5/D9.5/500.txt #2203 : defunct
-  fBuf[15] = '_'; // replace newline : DEBUG PRINT
-  fBuf[16] = 0; // DEBUG PRINT
   ebI += sprintf( &errBuf[ebI], "%s", fBuf );
-  ii = entry.size() - (jj - 2) * 16;
+  ii = entry.size() - (jj - 2) * 16; // Last 2 blocks and 'filler' are 
   totRd += entry.read( fBuf, ii );
 
   fBuf[ii] = 0; // DEBUG PRINT
-  while ( ii >= 0 && fBuf[ii] != '/' ) {
+  while ( ii >= 0 && fBuf[ii] != '/' ) { // find file name for size
     ii--;
   }
   jj = ii;
