@@ -584,8 +584,8 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
       uint32_t cntF = 0;
       if ( '0' >= szTmp[0] || '9' <= szTmp[0] ) // some files are NOT size# named
       {
-        Serial.print("FILE    ");
-        Serial.println(entry.name());
+        //Serial.print("FILE    ");
+        //Serial.println(entry.name());
         cntF = fSize;
       }
       else {
@@ -650,8 +650,7 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
       //    directoryVerify(entry, numTabs + 1);
     }
     else if ( numFiles == 0 ) {
-      Serial.printf("\n°%s", entry.name());
-
+      Serial.printf("\n°FILE: %s sz=%llu", entry.name(), entry.size()); // Unchecked File
     }
     entry.close();
     //Serial.flush();
