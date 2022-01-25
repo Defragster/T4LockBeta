@@ -45,10 +45,6 @@ const int chipSelect = 4;
 #endif
 
 
-void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, uint32_t growSize, int compoundGrow = 1 );
-void indexedDataWrite( char *szBlock, char* szPath, uint32_t xx, bool addFNum = false );
-void directoryVerify(File dir, int numTabs, uint32_t numFiles = 0);
-
 elapsedMillis seeSer;
 void setup()
 {
@@ -80,57 +76,69 @@ void setup()
       seeSer = 0;
     }
   }
+  Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   Serial.println("\nSetup done");
   menu();
 }
 
+void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, uint32_t growSize, int compoundGrow = 1 );
+void indexedDataWrite( char *szBlock, char* szPath, uint32_t xx, bool addFNum = false );
+void directoryVerify(File dir, int numTabs, uint32_t numFiles = 0);
+void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize );
+void MakeData( char* szRoot );
+void MakeNames( char* szRoot );
+
 void makeSome( int ii ) {
-  char szStart[][32] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD",
-                         "Ascii", "4K", "россиянин", "Huge", "TEST"
+  char szStart[][32] = { "", "ManyF", "ManyD10", "ManyD8", "MoreFD", // 0,1,2,3,4
+                         "Ascii", "4K", "россиянин", "Huge", "TEST",  // 5,6,7,8,9
+                         "User"   // 10,
                        };
-  if ( ii == 1 ) {
-    showMediaSpace();
-    //MakeDataFiles( szStart[1], 1024, 400, 1 );
-    MakeDeepDirs( szStart[0], 1, 20, 4096, 0 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 40, 122 * 1024, 0 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 60, 63 * 1024, 0 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 30, 31 * 1024, 0 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[2], 10, 5, 500, 512 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[9], 1, 28, 495, 1 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 28, 495, 1 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 25, 500, 1 );
-    // showMediaSpace();   dbMakeNames( szStart[7] ); // UTF8 filename char list
-    showMediaSpace();
-    MakeDeepDirs( szStart[8], 1, 10, 400000, 0 );
+  // MAKE YOUR OWN - add a szStart name as desired and index it - only each ONCE or with unique file count
+  // prototypes above
+  if ( ii == 1 ) { // 2204 : as posted ~1/24/22
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 20, 4096, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 40, 122 * 1024, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 60, 63 * 1024, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 30, 31 * 1024, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[2], 10, 5, 500, 512 );
+    showMediaSpace(); MakeDeepDirs( szStart[9], 1, 28, 495, 1 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 28, 495, 1 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 25, 500, 1 );
+    showMediaSpace(); MakeDeepDirs( szStart[8], 1, 10, 400000, 0 );
     showMediaSpace();
   }
-  else {
+  else if ( ii == 2 ) { // SMALL
     // EDIT HERE - for more files, Dirs, larger or alternate file sizes
-    // void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, uint32_t growSize, int compoundGrow = 1 );
-    MakeDeepDirs( szStart[0], 1, 4, 2048, 0 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[0], 1, 8, 100, 400 ); // Multiple use of same FOLDER will mess up the file count - if they have same # files
-    showMediaSpace();
-    MakeData( szStart[0] );
-    showMediaSpace();
-    MakeDataFiles( szStart[1], 1024, 400, 1 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[3], 8, 6, 100, 400 );
-    showMediaSpace();
-    MakeDeepDirs( szStart[4], 4, 6, 125, 250, 8 ); // LAST PARAM is 'GROW factor' Good for arbitrarily LARGE files
-    showMediaSpace();
-    //MakeNames( szStart[5] ); // ASCII filename char list
-    //showMediaSpace();
-    MakeDeepDirs( szStart[6], 1, 6, 4096, 0 );
+    // Multiple use of same FOLDER will mess up the file count - if they have same # files
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 3, 2048, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 4, 100, 400 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 5, 100, 400 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 6, 4096, 0 );
     showMediaSpace();
   }
+  else if ( ii == 3 ) { // BIG
+    // EDIT HERE - for more files, Dirs, larger or alternate file sizes
+    showMediaSpace(); MakeDataFiles( szStart[1], 128, 100, 1 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 7, 2048, 0 );
+    showMediaSpace(); MakeDeepDirs( szStart[0], 1, 8, 100, 400 ); // Multiple use of same FOLDER will mess up the file count - if they have same # files
+    showMediaSpace(); MakeData( szStart[0] );
+    showMediaSpace(); MakeDataFiles( szStart[1], 124, 200, 1 );
+    showMediaSpace(); MakeDeepDirs( szStart[3], 8, 6, 100, 400 );
+    showMediaSpace(); MakeDeepDirs( szStart[4], 4, 6, 125, 250, 8 ); // LAST PARAM is 'GROW factor' Good for arbitrarily LARGE files
+    showMediaSpace(); MakeDeepDirs( szStart[6], 1, 6, 4096, 0 );
+    showMediaSpace();
+  }
+  else if ( ii == 4 ) { // NAME TEST
+    showMediaSpace(); MakeNames( szStart[5] ); // ASCII filename char list
+    showMediaSpace(); dbMakeNames( szStart[7] ); // UTF8 filename char list
+  }
+  else if ( ii == 5 ) { // USER
+    // EDIT HERE - for more files, Dirs, larger or alternate file sizes
+    // Multiple use of same FOLDER will mess up the file count - if they have same # files
+    showMediaSpace(); MakeDataFiles( szStart[0], 2, 100, 100 );
+    showMediaSpace(); MakeDataFiles( szStart[10], 2, 100, 100 );
+  }
+
   Serial.println("MakeData done.");
 }
 
@@ -140,6 +148,7 @@ void loop() {
   MTP.loop();  //This is mandatory to be placed in the loop code.
 #endif
   char CLRC;
+  char szNone[] = "";
   if ( Serial.available() ) {
     CLRC = CommandLineReadChar();
     switch ( CLRC ) {
@@ -152,6 +161,21 @@ void loop() {
     case 't':
       makeSome( 1 );
       break;
+    case 's':
+      makeSome( 2 );
+      break;
+    case 'b':
+      makeSome( 3 );
+      break;
+    case 'n':
+      makeSome( 4 );
+      break;
+    case 'u': // USER
+      makeSome( 5 );
+      break;
+    case 'W':
+      deleteAllDirectory(DISK.open("/"), szNone );
+      break;
     case 'R':
       Serial.print(" RESTART Teensy ...");
       delay(100);
@@ -159,7 +183,11 @@ void loop() {
       break;
     default:
       menu();
+      CLRC = 0;
       break;
+    }
+    if ( CLRC != 0 ) {
+      Serial.printf("\nTask '%c' complete!\n", CLRC );
 
     }
 
@@ -182,10 +210,15 @@ void menu()
 {
   Serial.println();
   Serial.println("Menu Options:");
-  Serial.println("\tt - Test Files Small");
+  Serial.println("\tt - Test Files write 2204");
+  Serial.println("\tb - Test Files write BIG");
+  Serial.println("\ts - Test Files write small");
+  Serial.println("\tu - Test Files write USER edit");
+  Serial.println("\tn - Test ASCII and UTF8 Filenames");
   Serial.println("\tv - Verify Files");
-  Serial.println("\tl - List files on disk");
-  Serial.printf("\n\t%s", "R - Restart Teensy");
+  Serial.println("\tl - List files on media");
+  Serial.printf("\n\t%s\n", "R - Restart Teensy");
+  Serial.println("\tW - Remove ALL media content");
   Serial.println();
 }
 
@@ -221,6 +254,12 @@ void MakeData( char* szRoot ) {
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx );
       xx += growSize;
+      if ( Serial.available() ) {
+        while ( Serial.available() ) {
+          Serial.read();
+        }
+        return;
+      }
     }
   }
 }
@@ -257,6 +296,8 @@ void MakeNames( char* szRoot ) {
     if ( ok ) {
       strcpy( szPath, szRoot );
       strcat( szPath, "/" );
+      if ( *jj >= '0' && *jj <= '9')
+        strcat( szPath, "_" );
       strcat( szPath, jj );
       Serial.print("MakeN File:");
       Serial.print(szPath);
@@ -351,6 +392,12 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx, growSize == 0 );
       xx += growSize;
+      if ( Serial.available() ) {
+        while ( Serial.available() ) {
+          Serial.read();
+        }
+        return;
+      }
     }
   }
 }
@@ -388,6 +435,12 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
       Serial.print(szPath);
       indexedDataWrite( dataL[4], szPath, xx, growSize == 0 );
       xx += growSize * compoundGrow;
+      if ( Serial.available() ) {
+        while ( Serial.available() ) {
+          Serial.read();
+        }
+        return;
+      }
     }
   }
 }
@@ -502,6 +555,39 @@ void directoryVerify() {
   directoryVerify(DISK.open("/"), 0);
   Serial.printf("\n%Total %u files of Size %u Bytes\n", fTot, totSize);
   Serial.printf("Bytes Used: %llu, Bytes Total:%llu\n", DISK.usedSize(), DISK.totalSize());
+}
+
+void deleteAllDirectory(File dir, char *fullPath ) {
+  char myPath[ 256 ] = "";
+  while (true) {
+    File entry =  dir.openNextFile();
+    if (! entry) {
+      // no more files
+      break;
+    }
+    if (entry.isDirectory()) {
+      strcpy( myPath, fullPath);
+      strcat( myPath, entry.name());
+      strcat( myPath, "/");
+      deleteAllDirectory(entry, myPath);
+      entry.close();
+      if ( !DISK.rmdir( myPath ) )
+        Serial.print( "  Fail remove DIR>\t");
+      else
+        Serial.print( "  Removed DIR>\t");
+      Serial.println( myPath );
+
+    } else {
+      strcpy( myPath, fullPath);
+      strcat( myPath, entry.name());
+      entry.close();
+      if ( !DISK.remove( myPath ) )
+        Serial.print( "\tFail remove>\t");
+      else
+        Serial.print( "\tRemoved>\t");
+      Serial.println( myPath );
+    }
+  }
 }
 
 void printDirectory(File dir, int numTabs) {
@@ -710,7 +796,7 @@ int fileVerify( File entry ) {
     }
     fBuf[15] = '_'; // replace newline : DEBUG PRINT
     fBuf[16] = 0; // DEBUG PRINT
-    if ( 0 !=strncmp( szFile, fBuf, 8 ) ) {
+    if ( 0 != strncmp( szFile, fBuf, 8 ) ) {
       retVal++;
       ebI += sprintf( &errBuf[ebI], "\nX_fid:%s@%lu", fBuf, totRd );
       Serial.printf( "\nX_fid:%s@%lu", fBuf, totRd );
@@ -724,7 +810,7 @@ int fileVerify( File entry ) {
   // zD. 196x  980F7_.5/D8.5/D9.5/500.txt #2204 // Ver >= 2204
   // zDDd. 196x980F7_.5/D8.5/D9.5/500.txt #2203 : defunct
   ebI += sprintf( &errBuf[ebI], "%s", fBuf );
-  ii = entry.size() - (jj - 2) * 16; // Last 2 blocks and 'filler' are 
+  ii = entry.size() - (jj - 2) * 16; // Last 2 blocks and 'filler' are
   totRd += entry.read( fBuf, ii );
 
   fBuf[ii] = 0; // DEBUG PRINT
