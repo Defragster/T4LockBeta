@@ -18,14 +18,6 @@
 
  */
 
-
-// X: FIX Verify Dir Parse order
-// Add file content read verify
-// Time the Verify reading
-// Count Bytes written - show B/sec in Media Size report w/us, zero count with media report
-// Add menu options from post
-
-
 #include <SD.h>
 #include <SPI.h>
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
@@ -37,6 +29,7 @@
 #ifdef USE_SDIO_SD
 #define DISK SD
 const int chipSelect = BUILTIN_SDCARD;
+//const int chipSelect = 10;  // SFUN T_MM Carriers
 #else
 #include "LittleFS.h"
 #define DISK myfs
@@ -55,6 +48,7 @@ void setup()
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   Serial.print("Initializing SD card...");
   if (!DISK.begin(chipSelect)) {
+    while (!Serial && millis() < 3000 );
     Serial.println("\ninitialization failed!");
     Serial.println("\ninitialization failed!");
     Serial.println("\ninitialization failed!");
@@ -69,7 +63,7 @@ void setup()
 #endif
   Serial.println("initialization done.");
   seeSer = 101;
-  while ( millis() < 2500) {
+  while ( millis() < 2000) {
     if ( seeSer > 100 ) {
       Serial.print(" SerOn: ");
       Serial.print(millis());
@@ -77,6 +71,7 @@ void setup()
     }
   }
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
+  //Serial.println("\n2204: " __FILE__ " " __DATE__ " " __TIME__);
   Serial.println("\nSetup done");
   menu();
 }
@@ -94,7 +89,7 @@ void makeSome( int ii ) {
                          "User"   // 10,
                        };
   // MAKE YOUR OWN - add a szStart name as desired and index it - only each ONCE or with unique file count
-  // prototypes above
+  // prototypes above :: EDIT #5 'USER' to maintain the known tests.
   if ( ii == 1 ) { // 2204 : as posted ~1/24/22
     showMediaSpace(); MakeDeepDirs( szStart[0], 1, 20, 4096, 0 );
     showMediaSpace(); MakeDeepDirs( szStart[0], 1, 40, 122 * 1024, 0 );
@@ -187,26 +182,13 @@ void loop() {
       break;
     }
     if ( CLRC != 0 ) {
-      Serial.printf("\nTask '%c' complete!\n", CLRC );
-
+      Serial.printf("\n----\tTask '%c' complete!\t----\n", CLRC );
     }
-
   }
-}
+} // end loop()
 
 
-char CommandLineReadChar() {
-  uint32_t return_value = 0;
-  char ch;
-  while ( Serial.available() ) {
-    ch = Serial.read();
-    if ( ((ch >= '0') && (ch <= '9')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) )
-      return_value = ch;
-  }
-  return return_value;
-}
-
-void menu()
+void menu() // any single alpha or numeral char
 {
   Serial.println();
   Serial.println("Menu Options:");
@@ -222,6 +204,16 @@ void menu()
   Serial.println();
 }
 
+char CommandLineReadChar() {
+  uint32_t return_value = 0;
+  char ch;
+  while ( Serial.available() ) {
+    ch = Serial.read();
+    if ( ((ch >= '0') && (ch <= '9')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')) )
+      return_value = ch;
+  }
+  return return_value;
+}
 
 
 uint32_t startSize = 244;
@@ -262,7 +254,7 @@ void MakeData( char* szRoot ) {
       }
     }
   }
-}
+} // end MakeData()
 
 void MakeNames( char* szRoot ) {
   char szPath[128];
@@ -322,9 +314,9 @@ void MakeNames( char* szRoot ) {
       myFile.close();
     }
   }
-}
+} // end MakeNames()
 
-void dbMakeNames( char* szRoot ) {
+void dbMakeNames( char* szRoot ) { // Double Byte content names
   char szPath[128];
   strcpy( szPath, szRoot );
   if ( 0 != szPath[0] )
@@ -363,7 +355,7 @@ void dbMakeNames( char* szRoot ) {
     Serial.println();
     myFile.close();
   }
-}
+} // dbMakeNames()
 
 // void MakeDataFiles( "ManyF", 1024, 400, 1 );
 void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
@@ -400,7 +392,7 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
       }
     }
   }
-}
+} // end MakeDataFiles()
 
 // void MakeDeepDirs( "ManyD", 10, 5, 500, 512, [1] );
 void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, uint32_t growSize, int compoundGrow ) {
@@ -443,7 +435,7 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
       }
     }
   }
-}
+} // end MakeDeepDirs()
 
 void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum )
 {
@@ -493,7 +485,6 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
     uint32_t ii = strlen( szPath );
     uint32_t jj = xx - kk;
     while ( jj > ii ) {
-// BUGBUG      too many stars??? //
       myFile.print( '*' );
       jj--;
       kk++;
@@ -515,7 +506,7 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   myFile.close();
   timeHere = micros() - timeHere;
   if (!DISK.exists(szPath)) Serial.print("\tFile WRITE failed!\n");
-}
+} // end indexedDataWrite()
 
 void showMediaSpace()
 {
@@ -540,9 +531,9 @@ void showMediaSpace()
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
   MTP.loop();  //This is mandatory to be placed in the loop code.
 #endif
-}
+} // end showMediaSpace())
 
-uint32_t fTot, totSize;
+uint32_t fTot, totSize, errTot;
 void printDirectory() {
   fTot = 0, totSize = 0;
   printDirectory(DISK.open("/"), 0);
@@ -551,13 +542,15 @@ void printDirectory() {
 }
 
 void directoryVerify() {
-  fTot = 0, totSize = 0;
+  fTot = 0, totSize = 0, errTot = 0;
+  double verCyc = ARM_DWT_CYCCNT;
   directoryVerify(DISK.open("/"), 0);
-  Serial.printf("\n%Total %u files of Size %u Bytes\n", fTot, totSize);
+  verCyc = 1000.0 * (ARM_DWT_CYCCNT - verCyc) / F_CPU_ACTUAL;
+  Serial.printf("\n%Total %u files of Size %u Bytes\t Verify Errors %u\t%lf msec\n", fTot, totSize, errTot, verCyc);
   Serial.printf("Bytes Used: %llu, Bytes Total:%llu\n", DISK.usedSize(), DISK.totalSize());
 }
 
-void deleteAllDirectory(File dir, char *fullPath ) {
+void deleteAllDirectory( File dir, char *fullPath ) {
   char myPath[ 256 ] = "";
   while (true) {
     File entry =  dir.openNextFile();
@@ -588,9 +581,9 @@ void deleteAllDirectory(File dir, char *fullPath ) {
       Serial.println( myPath );
     }
   }
-}
+} // deleteAllDirectory()
 
-void printDirectory(File dir, int numTabs) {
+void printDirectory( File dir, int numTabs) {
   uint64_t fSize = 0;
   uint32_t dCnt = 0, fCnt = 0;
   if ( 0 == dir ) {
@@ -634,15 +627,16 @@ void printDirectory(File dir, int numTabs) {
     //Serial.flush();
     delay(1);
   }
-}
+} // end printDirectory()
 
-void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
+void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
   static char szTmp[100];
   uint64_t fSize = 0;
   uint64_t fSizeDir = 0;
   uint32_t dCnt = 0, fCnt = 0;
   uint32_t fErrs = 0;
   uint32_t verCnt = 0;
+  double verCyc = ARM_DWT_CYCCNT;
 
   if ( 0 == dir ) {
     Serial.printf( "\t>>>\t>>>>> No Dir\n" );
@@ -689,7 +683,7 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
       }
       if ( cntF != fSize ) {
         fErrs++;
-        Serial.printf( "\n%s\tXXXX\t File Size MISMATCH %llu:", entry.name(), fSize);
+        Serial.printf( "\n%s\tXXXX\t File name Size %lu MISMATCH != size of %llu:", entry.name(), cntF, fSize);
       }
     }
     if (entry.isDirectory()) {
@@ -712,7 +706,9 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
           if ( 0 != fErrs )
             Serial.printf(" %u File Error(s)  \n", fErrs);
         }
-        Serial.printf("\t with %u files of Size %llu Bytes\t#1\n", fCnt, fSizeDir);
+        verCyc = 1000.0 * (ARM_DWT_CYCCNT - verCyc) / F_CPU_ACTUAL;
+        errTot += fErrs;
+        Serial.printf("\t with %u files of Size %llu Bytes\t%lf msec\n", fCnt, fSizeDir, verCyc);
         verCnt = 0;
       }
     }
@@ -761,10 +757,12 @@ void directoryVerify(File dir, int numTabs, uint32_t numFiles) {
       if ( 0 != fErrs )
         Serial.printf(" %u File Error(s)  \n", fErrs);
     }
-    Serial.printf("\t with %u files of Size %llu Bytes\t#2\n", fCnt, fSizeDir);
+    verCyc = 1000.0 * (ARM_DWT_CYCCNT - verCyc) / F_CPU_ACTUAL;
+    errTot += fErrs;
+    Serial.printf("\t with %u files of Size %llu Bytes\t%lf ms\n", fCnt, fSizeDir, verCyc);
     verCnt = 0;
   }
-}
+} // end directoryVerify()
 
 int fileVerify( File entry ) {
   char fBuf[64] = "";
@@ -788,7 +786,6 @@ int fileVerify( File entry ) {
     if ( 0 == ii ) {
       idFile = atoi( &fBuf[3] ); // Expected files GENERALLY had #size filenames like 1024.txt
       CurrBID = idBlk;
-      // TODO BUGBUG:: strcmp after first file Num check : "zE. 257x"
       for ( int yy = 0; yy < 8; yy++) {
         szFile[yy] = fBuf[yy];
       }
@@ -841,4 +838,4 @@ int fileVerify( File entry ) {
     retVal++;
   }
   return retVal;
-}
+} // end fileVerify()
