@@ -63,7 +63,7 @@ void setup()
 #endif
   Serial.println("initialization done.");
   seeSer = 101;
-  while ( millis() < 2000) {
+  while ( millis() < 2500) {
     if ( seeSer > 100 ) {
       Serial.print(" SerOn: ");
       Serial.print(millis());
@@ -176,11 +176,17 @@ void loop() {
       delay(100);
       SCB_AIRCR = 0x05FA0004;
       break;
+    case 'C': // Copy LFS Media to SD
+      xferSD( );
+      break;
     default:
       menu();
       CLRC = 0;
       break;
     }
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+    MTP.loop();  //This is mandatory to be placed in the loop code.
+#endif
     if ( CLRC != 0 ) {
       Serial.printf("\n----\tTask '%c' complete!\t----\n", CLRC );
     }
@@ -201,6 +207,7 @@ void menu() // any single alpha or numeral char
   Serial.println("\tl - List files on media");
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
   Serial.println("\tW - Remove ALL media content");
+  Serial.println("\tC - Copy LFS media content to SD");
   Serial.println();
 }
 
@@ -552,6 +559,9 @@ void directoryVerify() {
 
 void deleteAllDirectory( File dir, char *fullPath ) {
   char myPath[ 256 ] = "";
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+  MTP.loop();  //This is mandatory to be placed in the loop code.
+#endif
   while (true) {
     File entry =  dir.openNextFile();
     if (! entry) {
@@ -586,6 +596,9 @@ void deleteAllDirectory( File dir, char *fullPath ) {
 void printDirectory( File dir, int numTabs) {
   uint64_t fSize = 0;
   uint32_t dCnt = 0, fCnt = 0;
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+  MTP.loop();  //This is mandatory to be placed in the loop code.
+#endif
   if ( 0 == dir ) {
     Serial.printf( "\t>>>\t>>>>> No Dir\n" );
     return;
@@ -629,6 +642,84 @@ void printDirectory( File dir, int numTabs) {
   }
 } // end printDirectory()
 
+
+void xferSD( ) { // do MediaTransfer to SD
+#ifndef USE_SDIO_SD
+  static bool initSD = true;
+  if ( initSD && !SD.begin(BUILTIN_SDCARD)) { // see if the card is present and can be initialized:
+    Serial.println("\n\n SD Card failed, or not present - Cannot do Xfer\n");
+    return;
+  }
+  else {
+    if ( initSD )  Serial.print("Initialized SD card.\n");
+    initSD = false;
+    // char szSDdir[] = "/"; // COPY to SD ROOT
+    char szSDdir[16] = "LFS_CPY0/"; // COPY to SD subdirectory
+    char fileID = '0';;
+    if ( '/' != szSDdir[0] ) {
+      do {
+        szSDdir[7] = fileID;
+        File fDir =  SD.open( szSDdir );
+        if ( !fDir )
+          break;
+        fDir.close();
+        fileID++;
+      } while ( fileID < '9' );
+      if ( fileID == '9' ) {
+        Serial.print( "Disk has 9 folders 0-8! DO :: clean the SD card");
+        return;
+      }
+      SD.mkdir( szSDdir );
+    }
+    Serial.println("\n STARTING :: LittleFS copy to SD card XFER ...\n\n");
+    mediaTransfer( myfs.open("/"), szSDdir ); // TO SD
+    Serial.printf("\n LittleFS copy to SD card XFER COMPLETE in folder: %s\n\n", szSDdir);
+  }
+#endif
+} // end xferSD()
+
+void mediaTransfer(File dir, char* szDir) {
+  char szNewDir[36];
+  while (true) {
+    File entry =  dir.openNextFile();
+    if (! entry) {
+      break;
+    }
+    if (entry.isDirectory()) {
+      strcpy( szNewDir, szDir);
+      SD.mkdir( szNewDir );
+      strcat( szNewDir, entry.name());
+      SD.mkdir( szNewDir );
+      strcat( szNewDir, "/");
+      mediaTransfer(entry, szNewDir);
+    } else {
+      uint64_t fileSize, sizeCnt = 0, xfSize = 1;
+      char mm[512];
+      strcpy( szNewDir, szDir);
+      strcat( szNewDir, entry.name() );
+      File dataFile;
+      dataFile = SD.open(szNewDir, FILE_WRITE_BEGIN);
+      if ( !dataFile )
+        Serial.print("\td_FILE: NOT open\n");
+      fileSize = entry.size();
+      while ( entry.available() ) {
+        if ( fileSize < sizeCnt ) break;
+        if ( fileSize - sizeCnt >= sizeof(mm) ) xfSize = sizeof(mm);
+        else xfSize = fileSize - sizeCnt;
+        entry.read( &mm , xfSize );
+        dataFile.write( &mm , xfSize );
+        sizeCnt += xfSize;
+      }
+      if (fileSize != sizeCnt ) {
+        Serial.print("\n File Size Error:: ");
+        Serial.println( entry.name() );
+      }
+      dataFile.close();
+    }
+    entry.close();
+  }
+} // end mediaTransfer()
+
 void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
   static char szTmp[100];
   uint64_t fSize = 0;
@@ -638,6 +729,9 @@ void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
   uint32_t verCnt = 0;
   double verCyc = ARM_DWT_CYCCNT;
 
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+  MTP.loop();  //This is mandatory to be placed in the loop code.
+#endif
   if ( 0 == dir ) {
     Serial.printf( "\t>>>\t>>>>> No Dir\n" );
     return;
@@ -645,16 +739,13 @@ void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
   while (true) {
     File entry =  dir.openNextFile();
     Serial.print("    ");
-    if (! entry) {
-      // no more files
-      //if ( 0 != fSizeDir)         Serial.printf("\n %u Dirs with %u Files of Size %llu Bytes\n", dCnt, fCnt, fSizeDir);
+    if (! entry) {        // no more files
       fTot += fCnt;
       totSize += fSizeDir;
       break;
     }
     Serial.print("    ");
     if (entry.isDirectory()) {
-      //XXX Serial.print("DIR  ??  ");
       dCnt++;
     } else {
       fCnt++; // Will miss count if a #size file is renamed, or replaced with am alternate file not #size
@@ -662,10 +753,9 @@ void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
       fSizeDir += fSize;
       snprintf( szTmp, 99, "%s", entry.name());
       uint32_t cntF = 0;
-      if ( '0' >= szTmp[0] || '9' <= szTmp[0] ) // some files are NOT size# named
+      if ( '0' > szTmp[0] || '9' < szTmp[0] ) // some files are NOT size# named
       {
-        //Serial.print("FILE    ");
-        //Serial.println(entry.name());
+        Serial.printf("\n°FILE: %s sz=%llu", entry.name(), entry.size()); // Unchecked File by #name
         cntF = fSize;
       }
       else {
@@ -711,8 +801,6 @@ void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
         Serial.printf("\t with %u files of Size %llu Bytes\t%lf msec\n", fCnt, fSizeDir, verCyc);
         verCnt = 0;
       }
-    }
-    if (entry.isDirectory()) {
       Serial.printf("\n%s /", entry.name());
       uint32_t cntF = 0;
       snprintf( szTmp, 99, "%s", entry.name());
@@ -722,25 +810,19 @@ void directoryVerify( File dir, int numTabs, uint32_t numFiles) {
         ii++;
         cntF = atoi( &szTmp[ii] );
       }
-      if ( 0 != cntF ) {
-//        directoryVerify(entry, numTabs + 1, cntF);
-      }
-      else {
+      if ( 0 == cntF ) {
         Serial.print("no count DIR\n");
       }
       directoryVerify(entry, numTabs + 1, cntF);
-      //    directoryVerify(entry, numTabs + 1);
-    }
-    else if ( numFiles == 0 ) {
-      Serial.printf("\n°FILE: %s sz=%llu", entry.name(), entry.size()); // Unchecked File
     }
     entry.close();
     //Serial.flush();
-    delayMicroseconds(100);
+    delayMicroseconds(20);
   }
   if ( verCnt > 0 ) {
-    if ( numFiles == 0 && 0 != verCnt ) // Dir not '.#' numbered - but file# name matches size
+    if ( numFiles == 0 && 0 != verCnt ) { // Dir not '.#' numbered - but file# name matches size
       Serial.printf("\t  %u File(s) tested GOOD HERE", fCnt);
+    }
     else if ( numFiles == fCnt && 0 == fErrs ) {
       Serial.printf("\nDONE RESULTS GOOD HERE %u Files(s)", fCnt);
     }
