@@ -168,6 +168,15 @@ void loop() {
     case 'u': // USER
       makeSome( 5 );
       break;
+    case 'U': // USB Reset
+      Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
+      delay(100);
+      usb_init();  // shuts down USB if already started, then restarts
+      delay(200);
+      Serial.begin(9600);
+      delay(200);
+      Serial.println("USB reset Completed.");
+      break;
     case 'W':
       deleteAllDirectory(DISK.open("/"), szNone );
       break;
@@ -206,6 +215,7 @@ void menu() // any single alpha or numeral char
   Serial.println("\tv - Verify Files");
   Serial.println("\tl - List files on media");
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
+  Serial.println("\tU - USB reset");
   Serial.println("\tW - Remove ALL media content");
   Serial.println("\tC - Copy LFS media content to SD");
   Serial.println();
