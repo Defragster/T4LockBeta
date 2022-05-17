@@ -171,7 +171,9 @@ void loop() {
     case 'U': // USB Reset
       Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
       delay(100);
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
       usb_init();  // shuts down USB if already started, then restarts
+#endif
       delay(200);
       Serial.begin(9600);
       delay(200);
