@@ -1,22 +1,28 @@
 /*
   SD card basic file example
 
- This example shows how to create and destroy an SD card file
- The circuit:
- * SD card attached to SPI bus as follows:
+  This example shows how to create and destroy an SD card file
+  The circuit:
+   SD card attached to SPI bus as follows:
  ** MOSI - pin 11, pin 7 on Teensy with audio board
  ** MISO - pin 12
  ** CLK - pin 13, pin 14 on Teensy with audio board
  ** CS - pin 4, pin 10 on Teensy with audio board
 
- created   Nov 2010
- by David A. Mellis
- modified 9 Apr 2012
- by Tom Igoe
+  created   Nov 2010
+  by David A. Mellis
+  modified 9 Apr 2012
+  by Tom Igoe
 
- This example code is in the public domain.
+  This example code is in the public domain.
 
- */
+*/
+
+
+#include "LittleFS.h" // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
+LittleFS_Program lfsProg; // Used to create FS on the Flash memory of the chip
+static const uint32_t file_system_size = 1024 * 1024 * 1;
+
 
 #include <SD.h>
 #include <SPI.h>
@@ -41,7 +47,15 @@ const int chipSelect = 4;
 elapsedMillis seeSer;
 void setup()
 {
-#ifdef USB_MTPDISK
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+  // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
+  // Lets add the Program memory version:
+  // checks that the LittFS program has started with the disk size specified
+  if (lfsProg.begin(file_system_size)) {
+    MTP.addFilesystem(lfsProg, "PgmIndx");
+  } else {
+    Serial.println("Error starting Program Flash storage");
+  }
   MTP.begin();
 #endif
   while (!Serial && millis() < 400 );
@@ -147,53 +161,53 @@ void loop() {
   if ( Serial.available() ) {
     CLRC = CommandLineReadChar();
     switch ( CLRC ) {
-    case 'v':
-      directoryVerify();
-      break;
-    case 'l':
-      printDirectory();
-      break;
-    case 't':
-      makeSome( 1 );
-      break;
-    case 's':
-      makeSome( 2 );
-      break;
-    case 'b':
-      makeSome( 3 );
-      break;
-    case 'n':
-      makeSome( 4 );
-      break;
-    case 'u': // USER
-      makeSome( 5 );
-      break;
-    case 'U': // USB Reset
-      Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
-      delay(100);
+      case 'v':
+        directoryVerify();
+        break;
+      case 'l':
+        printDirectory();
+        break;
+      case 't':
+        makeSome( 1 );
+        break;
+      case 's':
+        makeSome( 2 );
+        break;
+      case 'b':
+        makeSome( 3 );
+        break;
+      case 'n':
+        makeSome( 4 );
+        break;
+      case 'u': // USER
+        makeSome( 5 );
+        break;
+      case 'U': // USB Reset
+        Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
+        delay(100);
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
-      usb_init();  // shuts down USB if already started, then restarts
+        usb_init();  // shuts down USB if already started, then restarts
 #endif
-      delay(200);
-      Serial.begin(9600);
-      delay(200);
-      Serial.println("USB reset Completed.");
-      break;
-    case 'W':
-      deleteAllDirectory(DISK.open("/"), szNone );
-      break;
-    case 'R':
-      Serial.print(" RESTART Teensy ...");
-      delay(100);
-      SCB_AIRCR = 0x05FA0004;
-      break;
-    case 'C': // Copy LFS Media to SD
-      xferSD( );
-      break;
-    default:
-      menu();
-      CLRC = 0;
-      break;
+        delay(200);
+        Serial.begin(9600);
+        delay(200);
+        Serial.println("USB reset Completed.");
+        break;
+      case 'W':
+        deleteAllDirectory(DISK.open("/"), szNone );
+        break;
+      case 'R':
+        Serial.print(" RESTART Teensy ...");
+        delay(100);
+        SCB_AIRCR = 0x05FA0004;
+        break;
+      case 'C': // Copy LFS Media to SD
+        xferSD( );
+        break;
+      default:
+        menu();
+        CLRC = 0;
+        break;
     }
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
     MTP.loop();  //This is mandatory to be placed in the loop code.
@@ -284,25 +298,25 @@ void MakeNames( char* szRoot ) {
   for ( jj[0] = 33; jj[0] < 127; jj[0]++ ) {
     bool ok;
     switch ( jj[0] ) { // Compiler take these away
-    case '=':
-    case ';':
-    case ',':
-    case '.':
-    case '>':
-    case '<':
-    case '\"':
-    case '|':
-    case ':':
-    case '*':
-    case '%':
-    case '?':
-    case '\\':
-    case '/':
-      ok = false;
-      break;
-    default:
-      ok = true;
-      break;
+      case '=':
+      case ';':
+      case ',':
+      case '.':
+      case '>':
+      case '<':
+      case '\"':
+      case '|':
+      case ':':
+      case '*':
+      case '%':
+      case '?':
+      case '\\':
+      case '/':
+        ok = false;
+        break;
+      default:
+        ok = true;
+        break;
     }
     if ( ok ) {
       strcpy( szPath, szRoot );
