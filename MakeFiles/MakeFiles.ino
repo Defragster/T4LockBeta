@@ -56,7 +56,7 @@ void setup()
   } else {
     Serial.println("Error starting Program Flash storage");
   }
-  MTP.begin();
+  // MTP.begin();
 #endif
   while (!Serial && millis() < 400 );
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
