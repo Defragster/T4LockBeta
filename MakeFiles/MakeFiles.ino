@@ -18,11 +18,12 @@
 
 */
 
-
+#define LFS_MTPINDEX
+#ifdef LFS_MTPINDEX
 #include "LittleFS.h" // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
 LittleFS_Program lfsProg; // Used to create FS on the Flash memory of the chip
 static const uint32_t file_system_size = 1024 * 1024 * 1;
-
+#endif
 
 #include <SD.h>
 #include <SPI.h>
@@ -30,24 +31,40 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-#define USE_SDIO_SD
+//#define USE_SDIO_SD
+//#define USE_PSRAM
+#define TEST_QSPI // Typical NOR FLASH
+//#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
 #define DISK SD
 const int chipSelect = BUILTIN_SDCARD;
 //const int chipSelect = 10;  // SFUN T_MM Carriers
-#else
+#else // LittleFS
 #include "LittleFS.h"
 #define DISK myfs
+#if defined TEST_QSPI
+LittleFS_QSPIFlash myfs;
+#elif defined(TEST_QSPI_NAND)
+LittleFS_QPINAND myfs;
+#elif defined USE_PSRAM
+LittleFS_RAM myfs;
+#define MYPSRAM 8 // compile time PSRAM size and is T_4.1 specific either 8 or 16, or smaller portion
+EXTMEM char buf[MYPSRAM * 1024 * 1024];
+#else
 LittleFS_SPINAND myfs;
 const int chipSelect = 4;
+#endif
 #endif
 
 
 elapsedMillis seeSer;
 void setup()
 {
+  Serial.begin( 9600);
+  while (!Serial && millis() < 3000 );
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+#ifdef LFS_MTPINDEX
   // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
   // Lets add the Program memory version:
   // checks that the LittFS program has started with the disk size specified
@@ -58,11 +75,17 @@ void setup()
   }
   // MTP.begin();
 #endif
-  while (!Serial && millis() < 400 );
+#endif
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   Serial.print("Initializing SD card...");
+#ifdef USE_SDIO_SD
   if (!DISK.begin(chipSelect)) {
-    while (!Serial && millis() < 3000 );
+#elif defined USE_PSRAM
+  if (!DISK.begin(buf, sizeof(buf))) {
+#else
+  if (!DISK.begin()) {
+#endif
+    while (!Serial && millis() < 5000 );
     Serial.println("\ninitialization failed!");
     Serial.println("\ninitialization failed!");
     Serial.println("\ninitialization failed!");
@@ -705,7 +728,7 @@ void xferSD( ) { // do MediaTransfer to SD
 } // end xferSD()
 
 void mediaTransfer(File dir, char* szDir) {
-  char szNewDir[36];
+  char szNewDir[256];
   while (true) {
     File entry =  dir.openNextFile();
     if (! entry) {
@@ -725,8 +748,9 @@ void mediaTransfer(File dir, char* szDir) {
       strcat( szNewDir, entry.name() );
       File dataFile;
       dataFile = SD.open(szNewDir, FILE_WRITE_BEGIN);
-      if ( !dataFile )
-        Serial.print("\td_FILE: NOT open\n");
+      if ( !dataFile ) {
+        Serial.printf("\td_FILE: NOT open : %s [d:%s :: f:%s]\n", szNewDir, szDir, entry.name() );
+      }
       fileSize = entry.size();
       while ( entry.available() ) {
         if ( fileSize < sizeCnt ) break;
