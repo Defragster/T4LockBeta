@@ -31,9 +31,9 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-//#define USE_SDIO_SD
+#define USE_SDIO_SD
 //#define USE_PSRAM
-#define TEST_QSPI // Typical NOR FLASH
+//#define TEST_QSPI // Typical NOR FLASH
 //#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
@@ -170,6 +170,9 @@ void makeSome( int ii ) {
     showMediaSpace(); MakeDataFiles( szStart[0], 2, 100, 100 );
     showMediaSpace(); MakeDataFiles( szStart[10], 2, 100, 100 );
   }
+  else if ( ii == 6 ) { // ROOT MANY
+    showMediaSpace(); MakeDataFiles( szStart[0], 2, 100, 100 );
+  }
 
   Serial.println("MakeData done.");
 }
@@ -193,6 +196,9 @@ void loop() {
       case 't':
         makeSome( 1 );
         break;
+      case 'r': // make many on root
+        MakeRoot( "", 490, 48 );
+        break;
       case 's':
         makeSome( 2 );
         break;
@@ -205,6 +211,12 @@ void loop() {
       case 'u': // USER
         makeSome( 5 );
         break;
+      /*
+            case 'r':
+              Serial.println("Send Device Reset Event");
+              MTP.send_DeviceResetEvent();
+              break;
+      */
       case 'U': // USB Reset
         Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
         delay(100);
@@ -251,6 +263,7 @@ void menu() // any single alpha or numeral char
   Serial.println("\ts - Test Files write small");
   Serial.println("\tu - Test Files write USER edit");
   Serial.println("\tn - Test ASCII and UTF8 Filenames");
+  Serial.println("\tr - Root files - make Many");
   Serial.println("\tv - Verify Files");
   Serial.println("\tl - List files on media");
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
@@ -277,7 +290,7 @@ uint32_t growSize = 256;
 char dirL[3][4] = {"111", "222", "333"};
 char fileL[3][8] = {"aaa", "bbb", "ccc"};
 #define BLOCK_SIZE 16
-char dataL[5][BLOCK_SIZE + 1] = { "zaaa567890!@#$%^", "zbbbefghijklmnop", "zcccEFGHIJKLMNOP", "zDDdEFGHIJKLMNOP", "zE123456789LMNOP"};
+char dataL[6][BLOCK_SIZE + 1] = { "zaaa567890!@#$%^", "zbbbefghijklmnop", "zcccEFGHIJKLMNOP", "zDDdEFGHIJKLMNOP", "zE123456789LMNOP", "zRootFileManyxyz"};
 void MakeData( char* szRoot ) {
   char szPath[128];
   char szTmp[128];
@@ -311,6 +324,33 @@ void MakeData( char* szRoot ) {
     }
   }
 } // end MakeData()
+
+void MakeRoot( char* szRoot, int numFiles, int startSize ) {
+  char szPath[128];
+  char szFile[12];
+  int ii = 0;
+  Serial.print("Make Root File:");
+  while ( ii <= numFiles ) {
+    ii++;
+    strcpy( szPath, szRoot );
+    strcat( szPath, "/" );
+        sprintf( szFile, "Mrt_%3d", ii);
+        strcat( szPath, szFile );
+    //    sprintf( szTmp, ".%d", 3);
+    //    strcat( szPath, szTmp );
+    //    DISK.mkdir( szPath );
+//    Serial.printf("%d.", ii);
+//    if (!(ii % 80))
+//      Serial.println();
+    indexedDataWrite( dataL[5], szPath, 48 );
+    if ( Serial.available() ) {
+      while ( Serial.available() ) {
+        Serial.read();
+      }
+      return;
+    }
+  }
+} // end MakeRoot()
 
 void MakeNames( char* szRoot ) {
   char szPath[128];
