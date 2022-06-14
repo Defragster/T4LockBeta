@@ -330,18 +330,12 @@ void MakeRoot( char* szRoot, int numFiles, int startSize ) {
   char szFile[12];
   int ii = 0;
   Serial.print("Make Root File:");
-  while ( ii <= numFiles ) {
+  while ( ii < numFiles ) {
     ii++;
     strcpy( szPath, szRoot );
     strcat( szPath, "/" );
-        sprintf( szFile, "Mrt_%3d", ii);
-        strcat( szPath, szFile );
-    //    sprintf( szTmp, ".%d", 3);
-    //    strcat( szPath, szTmp );
-    //    DISK.mkdir( szPath );
-//    Serial.printf("%d.", ii);
-//    if (!(ii % 80))
-//      Serial.println();
+    sprintf( szFile, "Mrt_%3d", ii);
+    strcat( szPath, szFile );
     indexedDataWrite( dataL[5], szPath, 48 );
     if ( Serial.available() ) {
       while ( Serial.available() ) {
