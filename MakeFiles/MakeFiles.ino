@@ -1017,7 +1017,7 @@ void timeOWC() {
   uint32_t printTime = 0;
   uint32_t closeTime = 0;
   uint32_t totalTime = 0;
-  Serial.print("Completed 100 open/write/close in a total of ... ");
+  Serial.print("starting 100 open/write/close ... ");
   startTime = millis();
   for(int n=0; n < 100; n++) {
     goTime = micros();
@@ -1033,9 +1033,10 @@ void timeOWC() {
     }
   }
   totalTime = millis() - startTime;
+  Serial.print("Completed in a total of ");
   Serial.print(totalTime);
   Serial.print(" ms - avg tx/ms = ");
-  Serial.println(totalTime/100);
+  Serial.println(totalTime/100.0);
   Serial.print("Per Tx in Micros:  Avg open: ");Serial.print(openTime/100);Serial.print("    Avg print: ");
-  Serial.print(printTime/100);Serial.print("    Avg close: ");Serial.println(closeTime/100);
+  Serial.print(printTime/100.0);Serial.print("    Avg close: ");Serial.println(closeTime/100.0);
 }
