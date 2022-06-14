@@ -197,7 +197,7 @@ void loop() {
         makeSome( 1 );
         break;
       case 'r': // make many on root
-        MakeRoot( "", 490, 48 );
+        MakeRoot( szNone, 490, 48 );
         break;
       case 's':
         makeSome( 2 );
@@ -207,6 +207,9 @@ void loop() {
         break;
       case 'n':
         makeSome( 4 );
+        break;
+      case 'o': // Open Write Close timed test
+        timeOWC();
         break;
       case 'u': // USER
         makeSome( 5 );
@@ -264,6 +267,7 @@ void menu() // any single alpha or numeral char
   Serial.println("\tu - Test Files write USER edit");
   Serial.println("\tn - Test ASCII and UTF8 Filenames");
   Serial.println("\tr - Root files - make Many");
+  Serial.println("\to - OpenWriteClose timed test");
   Serial.println("\tv - Verify Files");
   Serial.println("\tl - List files on media");
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
@@ -1005,3 +1009,33 @@ int fileVerify( File entry ) {
   }
   return retVal;
 } // end fileVerify()
+
+void timeOWC() {
+  uint32_t startTime = 0;
+  uint32_t goTime = 0;
+  uint32_t openTime = 0;
+  uint32_t printTime = 0;
+  uint32_t closeTime = 0;
+  uint32_t totalTime = 0;
+  Serial.print("Completed 100 open/write/close in a total of ... ");
+  startTime = millis();
+  for(int n=0; n < 100; n++) {
+    goTime = micros();
+    File myfile = DISK.open("stest.txt", FILE_WRITE);
+    if(myfile) {
+      openTime += (micros() - goTime);
+      goTime = micros();
+      myfile.println("12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890");
+      printTime += (micros() - goTime);
+      goTime = micros();
+      myfile.close();
+      closeTime += (micros() - goTime);
+    }
+  }
+  totalTime = millis() - startTime;
+  Serial.print(totalTime);
+  Serial.print(" ms - avg tx/ms = ");
+  Serial.println(totalTime/100);
+  Serial.print("Per Tx in Micros:  Avg open: ");Serial.print(openTime/100);Serial.print("    Avg print: ");
+  Serial.print(printTime/100);Serial.print("    Avg close: ");Serial.println(closeTime/100);
+}
