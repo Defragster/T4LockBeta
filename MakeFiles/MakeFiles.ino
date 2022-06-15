@@ -18,7 +18,7 @@
 
 */
 
-#define LFS_MTPINDEX
+//#define LFS_MTPINDEX
 #ifdef LFS_MTPINDEX
 #include "LittleFS.h" // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
 LittleFS_Program lfsProg; // Used to create FS on the Flash memory of the chip
@@ -62,7 +62,6 @@ elapsedMillis seeSer;
 void setup()
 {
   Serial.begin( 9600);
-  while (!Serial && millis() < 3000 );
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
 #ifdef LFS_MTPINDEX
   // MJS513 :: https://forum.pjrc.com/threads/68139-Teensyduino-File-System-Integration-including-MTP-and-MSC?p=306205&viewfull=1#post306205
@@ -76,6 +75,7 @@ void setup()
   // MTP.begin();
 #endif
 #endif
+  while (!Serial && millis() < 5000 );
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   Serial.print("Initializing SD card...");
 #ifdef USE_SDIO_SD
@@ -94,10 +94,11 @@ void setup()
   }
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
   else {
-    MTP.addFilesystem(DISK, "MakeFiles 2204");
+    MTP.addFilesystem(DISK, "MakeFiles 2206");
     Serial.println("Added SD card using built in SDIO, or given SPI CS");
   }
 #endif
+  delay(2000);
   Serial.println("initialization done.");
   seeSer = 101;
   while ( millis() < 2500) {
@@ -108,7 +109,7 @@ void setup()
     }
   }
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
-  //Serial.println("\n2204: " __FILE__ " " __DATE__ " " __TIME__);
+  //Serial.println("\n2206: " __FILE__ " " __DATE__ " " __TIME__);
   Serial.println("\nSetup done");
   menu();
 }
@@ -127,7 +128,7 @@ void makeSome( int ii ) {
                        };
   // MAKE YOUR OWN - add a szStart name as desired and index it - only each ONCE or with unique file count
   // prototypes above :: EDIT #5 'USER' to maintain the known tests.
-  if ( ii == 1 ) { // 2204 : as posted ~1/24/22
+  if ( ii == 1 ) { // 2206 : as posted 6/14/22 (2204: ~1/24/22)
     showMediaSpace(); MakeDeepDirs( szStart[0], 1, 20, 4096, 0 );
     showMediaSpace(); MakeDeepDirs( szStart[0], 1, 40, 122 * 1024, 0 );
     showMediaSpace(); MakeDeepDirs( szStart[0], 1, 60, 63 * 1024, 0 );
@@ -197,7 +198,7 @@ void loop() {
         makeSome( 1 );
         break;
       case 'r': // make many on root
-        MakeRoot( szNone, 490, 48 );
+        MakeRoot( szNone, 490, 992 );
         break;
       case 's':
         makeSome( 2 );
@@ -261,7 +262,7 @@ void menu() // any single alpha or numeral char
 {
   Serial.println();
   Serial.println("Menu Options:");
-  Serial.println("\tt - Test Files write 2204");
+  Serial.println("\tt - Test Files write 2206");
   Serial.println("\tb - Test Files write BIG");
   Serial.println("\ts - Test Files write small");
   Serial.println("\tu - Test Files write USER edit");
@@ -338,9 +339,9 @@ void MakeRoot( char* szRoot, int numFiles, int startSize ) {
     ii++;
     strcpy( szPath, szRoot );
     strcat( szPath, "/" );
-    sprintf( szFile, "Mrt_%3d", ii);
+    sprintf( szFile, "%d_Mrt%3d", startSize, ii);
     strcat( szPath, szFile );
-    indexedDataWrite( dataL[5], szPath, 48 );
+    indexedDataWrite( dataL[5], szPath, startSize );
     if ( Serial.available() ) {
       while ( Serial.available() ) {
         Serial.read();
@@ -1019,10 +1020,10 @@ void timeOWC() {
   uint32_t totalTime = 0;
   Serial.print("starting 100 open/write/close ... ");
   startTime = millis();
-  for(int n=0; n < 100; n++) {
+  for (int n = 0; n < 100; n++) {
     goTime = micros();
     File myfile = DISK.open("stest.txt", FILE_WRITE);
-    if(myfile) {
+    if (myfile) {
       openTime += (micros() - goTime);
       goTime = micros();
       myfile.println("12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890");
@@ -1036,7 +1037,7 @@ void timeOWC() {
   Serial.print("Completed in a total of ");
   Serial.print(totalTime);
   Serial.print(" ms - avg tx/ms = ");
-  Serial.println(totalTime/100.0);
-  Serial.print("Per Tx in Micros:  Avg open: ");Serial.print(openTime/100);Serial.print("    Avg print: ");
-  Serial.print(printTime/100.0);Serial.print("    Avg close: ");Serial.println(closeTime/100.0);
+  Serial.println(totalTime / 100.0);
+  Serial.print("Per Tx in Micros:  Avg open: "); Serial.print(openTime / 100); Serial.print("    Avg print: ");
+  Serial.print(printTime / 100.0); Serial.print("    Avg close: "); Serial.println(closeTime / 100.0);
 }
