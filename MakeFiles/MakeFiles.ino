@@ -31,9 +31,9 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-#define USE_SDIO_SD
+//#define USE_SDIO_SD
 //#define USE_PSRAM
-//#define TEST_QSPI // Typical NOR FLASH
+#define TEST_QSPI // Typical NOR FLASH
 //#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
@@ -178,6 +178,7 @@ void makeSome( int ii ) {
   Serial.println("MakeData done.");
 }
 
+bool Abort = false;
 uint32_t totBWrite = 0;
 void loop() {
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
@@ -185,6 +186,7 @@ void loop() {
 #endif
   char CLRC;
   char szNone[] = "";
+  uint32_t nextBlock = 0;
   if ( Serial.available() ) {
     CLRC = CommandLineReadChar();
     switch ( CLRC ) {
@@ -240,9 +242,24 @@ void loop() {
         delay(100);
         SCB_AIRCR = 0x05FA0004;
         break;
+#ifndef USE_SDIO_SD
       case 'C': // Copy LFS Media to SD
         xferSD( );
         break;
+      case 'F': // Low Level Format Disk
+        Serial.print("Starting Format Low Level:\n\t>");
+        DISK.lowLevelFormat('.');
+        Serial.println();
+        break;
+      case 'S': // Unused block Format
+        Serial.print("Starting SAFE Format of unused blocks:\n\t>");
+        do {
+          nextBlock = DISK.formatUnused( 10, nextBlock ); // COUNT, where to start
+          Serial.print('.');
+        } while ( 0 != nextBlock );
+        Serial.println();
+        break;
+#endif
       default:
         menu();
         CLRC = 0;
@@ -254,6 +271,7 @@ void loop() {
     if ( CLRC != 0 ) {
       Serial.printf("\n----\tTask '%c' complete!\t----\n", CLRC );
     }
+    if ( (DISK.totalSize() - DISK.usedSize()) <2048)       Serial.printf("\n DISK FULL?\n" );
   }
 } // end loop()
 
@@ -274,7 +292,11 @@ void menu() // any single alpha or numeral char
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
   Serial.println("\tU - USB reset");
   Serial.println("\tW - Remove ALL media content");
+#ifndef USE_SDIO_SD
   Serial.println("\tC - Copy LFS media content to SD");
+  Serial.println("\tF - Format Disk Low Level");
+  Serial.println("\tS - SAFE Unused block Format");
+#endif
   Serial.println();
 }
 
@@ -300,7 +322,9 @@ void MakeData( char* szRoot ) {
   char szPath[128];
   char szTmp[128];
 
+  Abort = false;
   for ( int ii = 0; ii < 3; ii++ ) {
+    if ( Abort ) break;
     strcpy( szPath, szRoot );
     strcat( szPath, "/" );
     strcat( szPath, dirL[ii] );
@@ -319,6 +343,7 @@ void MakeData( char* szRoot ) {
       Serial.print("MakeD File:");
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx );
+      if ( Abort ) break;
       xx += growSize;
       if ( Serial.available() ) {
         while ( Serial.available() ) {
@@ -335,7 +360,8 @@ void MakeRoot( char* szRoot, int numFiles, int startSize ) {
   char szFile[12];
   int ii = 0;
   Serial.print("Make Root File:");
-  while ( ii < numFiles ) {
+  Abort = false;
+  while ( ii < numFiles && !Abort ) {
     ii++;
     strcpy( szPath, szRoot );
     strcat( szPath, "/" );
@@ -458,7 +484,9 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
   char szFile[128];
   char szTmp[128];
 
+  Abort = false;
   for ( int ii = 0; ii < 3; ii++ ) {
+    if ( Abort ) break;
     strcpy( szPath, szRoot );
     strcat( szPath, "/" );
     strcat( szPath, dirL[ii] );
@@ -478,6 +506,7 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
       Serial.print("Make DF File:");
       Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx, growSize == 0 );
+      if ( Abort ) break;
       xx += growSize;
       if ( Serial.available() ) {
         while ( Serial.available() ) {
@@ -501,7 +530,9 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
     DISK.mkdir( szCurPath );
   Serial.print("\tMake DeepDir :");
   Serial.println(szCurPath);
+  Abort = false;
   for ( int ii = 0; ii < numDirs; ii++ ) {
+    if ( Abort ) break;
     sprintf( szTmp, "/D%d", ii);
     strcat( szCurPath, szTmp );
     sprintf( szTmp, ".%d", numFiles);
@@ -521,6 +552,7 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
       Serial.print("Make DD File:");
       Serial.print(szPath);
       indexedDataWrite( dataL[4], szPath, xx, growSize == 0 );
+      if ( Abort ) break;
       xx += growSize * compoundGrow;
       if ( Serial.available() ) {
         while ( Serial.available() ) {
@@ -594,13 +626,19 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   Serial.print("=");
   Serial.print(myFile.size());
   Serial.print("\t us=");
-  Serial.print(timeHere);
+  Serial.print(micros()-timeHere);
   Serial.print("    end:");
-  if ( xx != myFile.size() ) Serial.print(" >> WRONG << ");
+  if ( xx != myFile.size() ) {
+    Abort = true;
+    Serial.print(" >> WRONG << ");
+  }
   Serial.print(writeData);
   myFile.close();
   timeHere = micros() - timeHere;
-  if (!DISK.exists(szPath)) Serial.print("\tFile WRITE failed!\n");
+  if (!DISK.exists(szPath)) {
+    Abort = true;
+    Serial.print("\tFile WRITE failed!\n");
+  }
 } // end indexedDataWrite()
 
 void showMediaSpace()
@@ -656,6 +694,7 @@ void deleteAllDirectory( File dir, char *fullPath ) {
       // no more files
       break;
     }
+    uint32_t tRem = micros();
     if (entry.isDirectory()) {
       strcpy( myPath, fullPath);
       strcat( myPath, entry.name());
@@ -666,7 +705,7 @@ void deleteAllDirectory( File dir, char *fullPath ) {
         Serial.print( "  Fail remove DIR>\t");
       else
         Serial.print( "  Removed DIR>\t");
-      Serial.println( myPath );
+      Serial.printf( "%s in %d us\n", myPath, micros() - tRem );
 
     } else {
       strcpy( myPath, fullPath);
@@ -676,7 +715,7 @@ void deleteAllDirectory( File dir, char *fullPath ) {
         Serial.print( "\tFail remove>\t");
       else
         Serial.print( "\tRemoved>\t");
-      Serial.println( myPath );
+      Serial.printf( "%s in %d us\n", myPath, micros() - tRem );
     }
   }
 } // deleteAllDirectory()
