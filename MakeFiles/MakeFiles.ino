@@ -31,9 +31,9 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-//#define USE_SDIO_SD
+#define USE_SDIO_SD
 //#define USE_PSRAM
-#define TEST_QSPI // Typical NOR FLASH
+//#define TEST_QSPI // Typical NOR FLASH
 //#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
@@ -77,12 +77,14 @@ void setup()
 #endif
   while (!Serial && millis() < 5000 );
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
-  Serial.print("Initializing SD card...");
 #ifdef USE_SDIO_SD
+  Serial.print("Initializing MEDIA... SD CARD ... ");
   if (!DISK.begin(chipSelect)) {
 #elif defined USE_PSRAM
+  Serial.print("Initializing MEDIA... PSRAM ... ");
   if (!DISK.begin(buf, sizeof(buf))) {
 #else
+  Serial.print("Initializing MEDIA... LFS DRIVE ... ");
   if (!DISK.begin()) {
 #endif
     while (!Serial && millis() < 5000 );
@@ -200,7 +202,7 @@ void loop() {
         makeSome( 1 );
         break;
       case 'r': // make many on root
-        MakeRoot( szNone, 490, 992 );
+        MakeRoot( szNone, 490, 100 );
         break;
       case 's':
         makeSome( 2 );
@@ -504,7 +506,7 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
       strcat( szPath, "/" );
       strcat( szPath, szFile );
       Serial.print("Make DF File:");
-      Serial.print(szPath);
+      // Serial.print(szPath);
       indexedDataWrite( dataL[ii], szPath, xx, growSize == 0 );
       if ( Abort ) break;
       xx += growSize;
@@ -550,7 +552,7 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
       sprintf( szFile, "%lu", xx);
       strcat( szPath, szFile );
       Serial.print("Make DD File:");
-      Serial.print(szPath);
+      // Serial.print(szPath);
       indexedDataWrite( dataL[4], szPath, xx, growSize == 0 );
       if ( Abort ) break;
       xx += growSize * compoundGrow;
@@ -589,6 +591,8 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
     return;
   }
   strncpy( writeData, szBlock, BLOCK_SIZE + 1 );
+  Serial.print("  ");
+  Serial.print(szPath);
   Serial.print("\tFile size=");
   Serial.print(xx);
   uint32_t kk;
