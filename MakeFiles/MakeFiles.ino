@@ -102,6 +102,13 @@ void setup()
 #endif
   delay(2000);
   Serial.println("initialization done.");
+#ifdef USE_SDIO_SD
+  Serial.print("Initialized MEDIA... SD CARD ... ");
+#elif defined USE_PSRAM
+  Serial.print("Initialized MEDIA... PSRAM ... ");
+#else
+  Serial.print("Initialized MEDIA... LFS DRIVE ... ");
+#endif
   seeSer = 101;
   while ( millis() < 2500) {
     if ( seeSer > 100 ) {
@@ -192,80 +199,80 @@ void loop() {
   if ( Serial.available() ) {
     CLRC = CommandLineReadChar();
     switch ( CLRC ) {
-      case 'v':
-        directoryVerify();
-        break;
-      case 'l':
-        printDirectory();
-        break;
-      case 't':
-        makeSome( 1 );
-        break;
-      case 'r': // make many on root
-        MakeRoot( szNone, 490, 100 );
-        break;
-      case 's':
-        makeSome( 2 );
-        break;
-      case 'b':
-        makeSome( 3 );
-        break;
-      case 'n':
-        makeSome( 4 );
-        break;
-      case 'o': // Open Write Close timed test
-        timeOWC();
-        break;
-      case 'u': // USER
-        makeSome( 5 );
-        break;
-      /*
-            case 'r':
-              Serial.println("Send Device Reset Event");
-              MTP.send_DeviceResetEvent();
-              break;
-      */
-      case 'U': // USB Reset
-        Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
-        delay(100);
+    case 'v':
+      directoryVerify();
+      break;
+    case 'l':
+      printDirectory();
+      break;
+    case 't':
+      makeSome( 1 );
+      break;
+    case 'r': // make many on root
+      MakeRoot( szNone, 490, 100 );
+      break;
+    case 's':
+      makeSome( 2 );
+      break;
+    case 'b':
+      makeSome( 3 );
+      break;
+    case 'n':
+      makeSome( 4 );
+      break;
+    case 'o': // Open Write Close timed test
+      timeOWC();
+      break;
+    case 'u': // USER
+      makeSome( 5 );
+      break;
+    /*
+          case 'r':
+            Serial.println("Send Device Reset Event");
+            MTP.send_DeviceResetEvent();
+            break;
+    */
+    case 'U': // USB Reset
+      Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
+      delay(100);
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
-        usb_init();  // shuts down USB if already started, then restarts
+      usb_init();  // shuts down USB if already started, then restarts
 #endif
-        delay(200);
-        Serial.begin(9600);
-        delay(200);
-        Serial.println("USB reset Completed.");
-        break;
-      case 'W':
-        deleteAllDirectory(DISK.open("/"), szNone );
-        break;
-      case 'R':
-        Serial.print(" RESTART Teensy ...");
-        delay(100);
-        SCB_AIRCR = 0x05FA0004;
-        break;
+      delay(200);
+      Serial.begin(9600);
+      delay(200);
+      Serial.println("USB reset Completed.");
+      break;
+    case 'W':
+      deleteAllDirectory(DISK.open("/"), szNone );
+      break;
+    case 'R':
+      Serial.print(" RESTART Teensy ...");
+      delay(100);
+      SCB_AIRCR = 0x05FA0004;
+      break;
 #ifndef USE_SDIO_SD
-      case 'C': // Copy LFS Media to SD
-        xferSD( );
-        break;
-      case 'F': // Low Level Format Disk
-        Serial.print("Starting Format Low Level:\n\t>");
-        DISK.lowLevelFormat('.');
-        Serial.println();
-        break;
-      case 'S': // Unused block Format
-        Serial.print("Starting SAFE Format of unused blocks:\n\t>");
-        do {
-          nextBlock = DISK.formatUnused( 10, nextBlock ); // COUNT, where to start
-          Serial.print('.');
-        } while ( 0 != nextBlock );
-        Serial.println();
-        break;
+    case 'C': // Copy LFS Media to SD
+      xferSD( );
+      break;
+    case 'F': // Low Level Format Disk
+      Serial.print("Starting Format Low Level:\n\t>");
+      DISK.lowLevelFormat('.');
+      Serial.println();
+      break;
+    case 'S': // Unused block Format
+      Serial.print("Starting SAFE Format of unused blocks:\n\t>");
+      do {
+        nextBlock = DISK.formatUnused( 10, nextBlock ); // COUNT, where to start
+        Serial.print('.');
+      } while ( 0 != nextBlock );
+      Serial.println();
+      break;
 #endif
-      default:
-        menu();
-        CLRC = 0;
-        break;
+    default:
+      menu();
+      CLRC = 0;
+      break;
     }
 #if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
     MTP.loop();  //This is mandatory to be placed in the loop code.
@@ -273,7 +280,9 @@ void loop() {
     if ( CLRC != 0 ) {
       Serial.printf("\n----\tTask '%c' complete!\t----\n", CLRC );
     }
-    if ( (DISK.totalSize() - DISK.usedSize()) <2048)       Serial.printf("\n DISK FULL?\n" );
+    if ( (DISK.totalSize() - DISK.usedSize()) < 2048)       Serial.printf("\n DISK FULL?\n" );
+    if ( Abort ) Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
+    Abort = false;
   }
 } // end loop()
 
@@ -324,6 +333,10 @@ void MakeData( char* szRoot ) {
   char szPath[128];
   char szTmp[128];
 
+  if ( Abort ) {
+    Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
+    return;
+  }
   Abort = false;
   for ( int ii = 0; ii < 3; ii++ ) {
     if ( Abort ) break;
@@ -362,6 +375,10 @@ void MakeRoot( char* szRoot, int numFiles, int startSize ) {
   char szFile[12];
   int ii = 0;
   Serial.print("Make Root File:");
+  if ( Abort ) {
+    Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
+    return;
+  }
   Abort = false;
   while ( ii < numFiles && !Abort ) {
     ii++;
@@ -388,25 +405,25 @@ void MakeNames( char* szRoot ) {
   for ( jj[0] = 33; jj[0] < 127; jj[0]++ ) {
     bool ok;
     switch ( jj[0] ) { // Compiler take these away
-      case '=':
-      case ';':
-      case ',':
-      case '.':
-      case '>':
-      case '<':
-      case '\"':
-      case '|':
-      case ':':
-      case '*':
-      case '%':
-      case '?':
-      case '\\':
-      case '/':
-        ok = false;
-        break;
-      default:
-        ok = true;
-        break;
+    case '=':
+    case ';':
+    case ',':
+    case '.':
+    case '>':
+    case '<':
+    case '\"':
+    case '|':
+    case ':':
+    case '*':
+    case '%':
+    case '?':
+    case '\\':
+    case '/':
+      ok = false;
+      break;
+    default:
+      ok = true;
+      break;
     }
     if ( ok ) {
       strcpy( szPath, szRoot );
@@ -421,7 +438,8 @@ void MakeNames( char* szRoot ) {
       File myFile;
       myFile = DISK.open(szPath, FILE_WRITE);
       if ( !myFile ) {
-        Serial.print(" >> Fail Open << \t <<<<<<");
+        Serial.print(" >> MN Fail Open << \t");
+        Serial.println(szPath);
         break;
       }
       uint32_t kk;
@@ -462,7 +480,8 @@ void dbMakeNames( char* szRoot ) { // Double Byte content names
     if (DISK.exists(szPath)) DISK.remove(szPath);
     myFile = DISK.open(szPath, FILE_WRITE);
     if ( !myFile ) {
-      Serial.print(" >> Fail Open << \t <<<<<<");
+      Serial.print(" >> db Fail Open << \t");
+      Serial.println(szPath);
       break;
     }
     uint32_t kk = 0;
@@ -486,6 +505,10 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
   char szFile[128];
   char szTmp[128];
 
+  if ( Abort ) {
+    Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
+    return;
+  }
   Abort = false;
   for ( int ii = 0; ii < 3; ii++ ) {
     if ( Abort ) break;
@@ -495,6 +518,15 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
     sprintf( szTmp, ".%d", numFiles);
     strcat( szPath, szTmp );
     DISK.mkdir( szPath );
+      if (!DISK.exists(szPath)) {
+        Serial.print("\tMake Dir failed!");
+        Serial.println(szPath);
+        return;
+      }
+      else {
+        Serial.print("\tMade DF Dir:");
+        Serial.println(szPath);
+      }
     int xx = startSize;
     for ( int jj = 0; jj < numFiles; jj++ ) {
       sprintf( szFile, "%d", xx);
@@ -532,6 +564,10 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
     DISK.mkdir( szCurPath );
   Serial.print("\tMake DeepDir :");
   Serial.println(szCurPath);
+  if ( Abort ) {
+    Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
+    return;
+  }
   Abort = false;
   for ( int ii = 0; ii < numDirs; ii++ ) {
     if ( Abort ) break;
@@ -586,7 +622,8 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   if (DISK.exists(szPath)) DISK.remove(szPath);
   myFile = DISK.open(szPath, FILE_WRITE);
   if ( !myFile ) {
-    Serial.print(" >> Fail Open << \n");
+    Serial.print(" >> iDW Fail Open << \t");
+    Serial.println(szPath);
     gNumFiles--;
     return;
   }
@@ -630,7 +667,7 @@ void indexedDataWrite( char *szBlock, char* szInPath, uint32_t xx, bool addFNum 
   Serial.print("=");
   Serial.print(myFile.size());
   Serial.print("\t us=");
-  Serial.print(micros()-timeHere);
+  Serial.print(micros() - timeHere);
   Serial.print("    end:");
   if ( xx != myFile.size() ) {
     Abort = true;
