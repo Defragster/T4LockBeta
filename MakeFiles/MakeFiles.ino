@@ -195,7 +195,9 @@ void loop() {
 #endif
   char CLRC;
   char szNone[] = "";
+#ifndef USE_SDIO_SD
   uint32_t nextBlock = 0;
+#endif
   if ( Serial.available() ) {
     CLRC = CommandLineReadChar();
     switch ( CLRC ) {
@@ -269,6 +271,9 @@ void loop() {
       Serial.println();
       break;
 #endif
+    case 'L': // Copy LFS Media to SD
+      logCMD( 0 );
+      break;
     default:
       menu();
       CLRC = 0;
@@ -278,7 +283,9 @@ void loop() {
     MTP.loop();  //This is mandatory to be placed in the loop code.
 #endif
     if ( CLRC != 0 ) {
-      Serial.printf("\n----\tTask '%c' complete!\t----\n", CLRC );
+      Serial.printf("\n----\tTask '%c' complete!", CLRC );
+      showMediaSpace();
+      logCMD( CLRC );
     }
     if ( (DISK.totalSize() - DISK.usedSize()) < 2048)       Serial.printf("\n DISK FULL?\n" );
     if ( Abort ) Serial.printf("\n\n\t!!!!  PRIOR OPERATION WAS ABORTED !!!!!!!\n" );
@@ -308,6 +315,8 @@ void menu() // any single alpha or numeral char
   Serial.println("\tF - Format Disk Low Level");
   Serial.println("\tS - SAFE Unused block Format");
 #endif
+  Serial.println("\tL - List cmd log file");
+  showMediaSpace();
   Serial.println();
 }
 
@@ -457,6 +466,30 @@ void MakeNames( char* szRoot ) {
   }
 } // end MakeNames()
 
+void logCMD( char theCMD ) {
+  File myFile;
+  if ( 0 == theCMD ) {
+    myFile = DISK.open("mfLog.txt", FILE_READ);
+    if ( myFile ) {
+      char chRd;
+      while ( myFile.available() ) {
+        myFile.read( &chRd , 1 );
+        Serial.print( chRd );
+      }
+      myFile.close();
+    }
+  }
+  else {
+    myFile = DISK.open("mfLog.txt", FILE_WRITE);
+    if ( myFile ) {
+      myFile.print( "theCMD: " );
+      myFile.print( theCMD );
+      myFile.print( "\n" );
+    }
+    myFile.close();
+  }
+}
+
 void dbMakeNames( char* szRoot ) { // Double Byte content names
   char szPath[128];
   strcpy( szPath, szRoot );
@@ -518,15 +551,15 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
     sprintf( szTmp, ".%d", numFiles);
     strcat( szPath, szTmp );
     DISK.mkdir( szPath );
-      if (!DISK.exists(szPath)) {
-        Serial.print("\tMake Dir failed!");
-        Serial.println(szPath);
-        return;
-      }
-      else {
-        Serial.print("\tMade DF Dir:");
-        Serial.println(szPath);
-      }
+    if (!DISK.exists(szPath)) {
+      Serial.print("\tMake Dir failed!");
+      Serial.println(szPath);
+      return;
+    }
+    else {
+      Serial.print("\tMade DF Dir:");
+      Serial.println(szPath);
+    }
     int xx = startSize;
     for ( int jj = 0; jj < numFiles; jj++ ) {
       sprintf( szFile, "%d", xx);
@@ -686,7 +719,7 @@ void showMediaSpace()
 {
   static uint32_t timeHere = micros();
   timeHere = micros() - timeHere;
-  Serial.print("\n ================================ ");
+  Serial.print("\t========================= ");
   Serial.print("Media Size=");
   Serial.print(DISK.totalSize());
   Serial.print("\tUsed Size=");
@@ -694,10 +727,12 @@ void showMediaSpace()
   if ( timeHere > 5 ) {
     Serial.print("\t us=");
     Serial.print(timeHere);
-    Serial.print("   KB/sec=");
-    Serial.print((totBWrite / 1024.0) / (timeHere / 1000000.0));
-    Serial.print("   Bytes written=");
-    Serial.print(totBWrite);
+    if ( totBWrite > 0 ) {
+      Serial.print("   KB/sec=");
+      Serial.print((totBWrite / 1024.0) / (timeHere / 1000000.0));
+      Serial.print("   Bytes written=");
+      Serial.print(totBWrite);
+    }
   }
   Serial.println();
   timeHere = micros();
