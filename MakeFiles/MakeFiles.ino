@@ -31,9 +31,9 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-//#define USE_SDIO_SD
+#define USE_SDIO_SD
 //#define USE_PSRAM
-#define TEST_QSPI // Typical NOR FLASH
+//#define TEST_QSPI // Typical NOR FLASH
 //#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
@@ -120,7 +120,9 @@ void setup()
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   //Serial.println("\n2206: " __FILE__ " " __DATE__ " " __TIME__);
   Serial.println("\nSetup done");
+  dSetup();
   menu();
+  dLoop();
 }
 
 void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, uint32_t growSize, int compoundGrow = 1 );
@@ -199,8 +201,16 @@ void loop() {
   uint32_t nextBlock = 0;
 #endif
   if ( Serial.available() ) {
-    CLRC = CommandLineReadChar();
+    if ( '.' == Serial.peek() ) {
+      CLRC = '.';
+      Serial.read();
+    }
+    else
+      CLRC = CommandLineReadChar();
     switch ( CLRC ) {
+    case '.':
+      dLoop();
+      break;
     case 'v':
       directoryVerify();
       break;
@@ -228,23 +238,19 @@ void loop() {
     case 'u': // USER
       makeSome( 5 );
       break;
-    /*
-          case 'r':
-            Serial.println("Send Device Reset Event");
-            MTP.send_DeviceResetEvent();
-            break;
-    */
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
     case 'U': // USB Reset
       Serial.println("USB reset: Reconnect serial port or restart Serial Monitor after.");
       delay(100);
-#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
-      usb_init();  // shuts down USB if already started, then restarts
-#endif
+      // usb_init();  // shuts down USB if already started, then restarts
+      // Serial.println("Send Device Reset Event");
+      MTP.send_DeviceResetEvent();
       delay(200);
       Serial.begin(9600);
       delay(200);
       Serial.println("USB reset Completed.");
       break;
+#endif
     case 'W':
       deleteAllDirectory(DISK.open("/"), szNone );
       break;
@@ -270,12 +276,19 @@ void loop() {
       } while ( 0 != nextBlock );
       Serial.println();
       break;
+#else
+    case 'F': // Low Level Format Disk
+      Serial.print("Starting SD Format:\n\t>");
+      DISK.format(0, '.');
+      Serial.println();
+      break;
 #endif
     case 'L': // Copy LFS Media to SD
       logCMD( 0 );
       break;
     default:
       menu();
+      dLoop(); // no Serial shows Menu
       CLRC = 0;
       break;
     }
@@ -308,14 +321,17 @@ void menu() // any single alpha or numeral char
   Serial.println("\tv - Verify Files");
   Serial.println("\tl - List files on media");
   Serial.printf("\n\t%s\n", "R - Restart Teensy");
-  Serial.println("\tU - USB reset");
+#if defined(USB_MTPDISK) || defined(USB_MTPDISK_SERIAL)
+  Serial.println("\tU - MTP USB reset");
+#endif
   Serial.println("\tW - Remove ALL media content");
+  Serial.println("\tF - Format Disk SD / LFS Low Level");
 #ifndef USE_SDIO_SD
   Serial.println("\tC - Copy LFS media content to SD");
-  Serial.println("\tF - Format Disk Low Level");
   Serial.println("\tS - SAFE Unused block Format");
 #endif
   Serial.println("\tL - List cmd log file");
+  Serial.println("\n\t. - '.?' menu for DEBUG {cpsd}");
   showMediaSpace();
   Serial.println();
 }
@@ -1191,4 +1207,183 @@ void timeOWC() {
   Serial.println(totalTime / 100.0);
   Serial.print("Per Tx in Micros:  Avg open: "); Serial.print(openTime / 100); Serial.print("    Avg print: ");
   Serial.print(printTime / 100.0); Serial.print("    Avg close: "); Serial.println(closeTime / 100.0);
+}
+
+
+#include <SD.h>
+#include <MTP_Teensy.h>
+
+#define CS_SD BUILTIN_SDCARD  // Works on T_3.6 and T_4.1
+#define CS_SD2 10
+
+#ifdef CS_SD2
+SDClass sdSPI;
+#endif
+
+#ifdef ARDUINO_TEENSY41
+extern "C" uint8_t external_psram_size;
+#endif
+
+class RAMStream : public Stream {
+public:
+  // overrides for Stream
+  virtual int available() { return (tail_ - head_); }
+  virtual int read() { return (tail_ != head_) ? buffer_[head_++] : -1; }
+  virtual int peek() { return (tail_ != head_) ? buffer_[head_] : -1; }
+
+  // overrides for Print
+  virtual size_t write(uint8_t b) {
+    if (tail_ < buffer_size) {
+      buffer_[tail_++] = b;
+      return 1;
+    }
+    return 0;
+  }
+
+  enum { BUFFER_SIZE = 32768 };
+//  uint8_t buffer_[BUFFER_SIZE];
+  uint8_t *buffer_ = nullptr;
+  uint32_t buffer_size = BUFFER_SIZE;
+  uint32_t head_ = 0;
+  uint32_t tail_ = 0;
+};
+
+RAMStream rstream;
+
+//#define CS_SD 10  // Works on SPI with this CS pin
+void dSetup()
+{
+
+  // see if external memory
+#ifdef ARDUINO_TEENSY41
+  if (external_psram_size) {
+    rstream.buffer_size = 2097152;
+    rstream.buffer_ = (uint8_t*)extmem_malloc(rstream.buffer_size);
+    Serial.printf("extmem_malloc %p %u %u\n", rstream.buffer_, rstream.buffer_size, external_psram_size);
+  }
+#endif
+  if (!rstream.buffer_) {
+    rstream.buffer_ = (uint8_t*)malloc(rstream.buffer_size);
+    Serial.printf("malloc %p %u\n", rstream.buffer_, rstream.buffer_size);
+  }
+
+
+  // mandatory to begin the MTP session.
+  //MTP.PrintStream(&rstream); // Setup which stream to use...  MTP.begin();
+  // MTP.begin();
+
+  Serial.begin(9600);
+  while (!Serial && millis() < 5000) {
+    // wait for serial port to connect.
+  }
+
+  if (CrashReport) Serial.print(CrashReport);
+
+  /*  // Add SD Card
+    if (SD.begin(CS_SD)) {
+      Serial.println("Added SD card using built in SDIO, or given SPI CS");
+    MTP.addFilesystem(SD, "SD1");
+    } else {
+      Serial.println("No SD Card");
+    }
+  #ifdef CS_SD2
+  if (sdSPI.begin(CS_SD2)) {
+    Serial.println("Added SD2 card using built in SDIO, or given SPI CS");
+    MTP.addFilesystem(sdSPI, "SD2");
+  } else {
+    Serial.println("SD2 card not present");
+  }
+  #endif
+    */
+
+  //MTP.useFileSystemIndexFileStore(MTPStorage::INDEX_STORE_MEM_FILE);
+  Serial.println("\nDEBUG Setup done");
+}
+
+
+uint8_t print_buffer[256];
+void print_capture_data() {
+
+#ifdef ARDUINO_TEENSY41
+  Serial.printf("Capture size: %d out of %d PS:%u\n", rstream.available(), rstream.buffer_size, external_psram_size);
+#else
+  Serial.printf("Capture size: %d out of %d\n", rstream.available(), rstream.buffer_size);
+#endif
+
+  int avail;
+  while ((avail = rstream.available())) {
+    if (avail > (int)sizeof(print_buffer)) avail = sizeof(print_buffer);
+
+    int avail_for_write = Serial.availableForWrite();
+    if (avail_for_write < avail) avail = avail_for_write;
+    rstream.readBytes(print_buffer, avail);
+    Serial.write(print_buffer, avail);
+
+  }
+
+
+  int ch;
+  while ((ch = rstream.read()) != -1)
+    Serial.write(ch);
+}
+
+void dLoop() {
+  MTP.loop();  //This is mandatory to be placed in the loop code.
+
+  if (Serial.available()) {
+    uint8_t command = Serial.read();
+    switch (command) {
+    case 'c':
+      // start capture debug info
+      rstream.head_ = 0;
+      rstream.tail_ = 0;
+      MTP.PrintStream(&rstream); // Setup which stream to use...
+      Serial.println("Capturing MTP debug output");
+      break;
+    case 's':
+      Serial.println("Stop Captured data");
+      rstream.head_ = 0;
+      rstream.tail_ = 0;
+      break;
+    case 'p':
+      MTP.PrintStream(&Serial); // Setup which stream to use...
+      Serial.println("Print Captured data");
+      print_capture_data();
+      rstream.head_ = 0;
+      rstream.tail_ = 0;
+      break;
+    case 'r':
+      Serial.println("Reset");
+      MTP.send_DeviceResetEvent();
+      break;
+    case 'd':
+      // first dump list of storages:
+    {
+      uint32_t fsCount = MTP.getFilesystemCount();
+      Serial.printf("\nDump Storage list(%u)\n", fsCount);
+      for (uint32_t ii = 0; ii < fsCount; ii++) {
+        Serial.printf("store:%u storage:%x name:%s fs:%x\n", ii,
+                      MTP.Store2Storage(ii), MTP.getFilesystemNameByIndex(ii),
+                      (uint32_t)MTP.getFilesystemNameByIndex(ii));
+      }
+      Serial.println("\nDump Index List");
+      MTP.storage()->dumpIndexList();
+    }
+    break;
+    default:
+      command = 0;
+      break;
+    }
+    if ( 0 != command) Serial.printf("\n----\tDebug '%c' complete!", command );
+    while (Serial.read() != -1);
+  }
+  else {
+    Serial.println("'.' Menu");
+    Serial.println("\t c - start capture debug data");
+    Serial.println("\t p - Stop capture and print");
+    Serial.println("\t s - stop capture and discard");
+    Serial.println("\t d - dump storage info");
+    Serial.println("\t r - Send MTP Reset");
+  }
+
 }
