@@ -31,9 +31,9 @@ static const uint32_t file_system_size = 1024 * 1024 * 1;
 #include <MTP_Teensy.h>
 #endif
 
-#define USE_SDIO_SD
+//#define USE_SDIO_SD
 //#define USE_PSRAM
-//#define TEST_QSPI // Typical NOR FLASH
+#define TEST_QSPI // Typical NOR FLASH
 //#define TEST_QSPI_NAND // NAND Flash
 
 #ifdef USE_SDIO_SD
@@ -355,6 +355,15 @@ void MakeData( char* szRoot ) {
     sprintf( szTmp, ".%d", 3);
     strcat( szPath, szTmp );
     DISK.mkdir( szPath );
+    if (!DISK.exists(szPath)) {
+      Serial.print("\tMake MD Dir failed!");
+      Serial.println(szPath);
+      return;
+    }
+    else {
+      Serial.print("\tMade MD Dir:");
+      Serial.println(szPath);
+    }
     uint32_t xx = startSize;
     for ( int jj = 0; jj < 3; jj++ ) {
       strcpy( szPath, szRoot );
@@ -408,8 +417,18 @@ void MakeRoot( char* szRoot, int numFiles, int startSize ) {
 void MakeNames( char* szRoot ) {
   char szPath[128];
   strcpy( szPath, szRoot );
-  if ( 0 != szPath[0] )
+  if ( 0 != szPath[0] ) {
     DISK.mkdir( szPath );
+    if (!DISK.exists(szPath)) {
+      Serial.print("\tMake MN Dir failed!");
+      Serial.println(szPath);
+      return;
+    }
+    else {
+      Serial.print("\tMade MN Dir:");
+      Serial.println(szPath);
+    }
+  }
   char jj[2] = "-";
   for ( jj[0] = 33; jj[0] < 127; jj[0]++ ) {
     bool ok;
@@ -546,13 +565,16 @@ void MakeDataFiles( char* szRoot, int numFiles, int startSize, int growSize ) {
   for ( int ii = 0; ii < 3; ii++ ) {
     if ( Abort ) break;
     strcpy( szPath, szRoot );
+    if (!DISK.exists(szPath)) {
+      DISK.mkdir( szPath );
+    }
     strcat( szPath, "/" );
     strcat( szPath, dirL[ii] );
     sprintf( szTmp, ".%d", numFiles);
     strcat( szPath, szTmp );
     DISK.mkdir( szPath );
     if (!DISK.exists(szPath)) {
-      Serial.print("\tMake Dir failed!");
+      Serial.print("\tMake DF Dir failed!");
       Serial.println(szPath);
       return;
     }
@@ -593,8 +615,18 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
   char szTmp[128];
 
   strcpy( szCurPath, szRoot );
-  if ( 0 != szCurPath[0] )
+  if ( 0 != szCurPath[0] ) {
     DISK.mkdir( szCurPath );
+    if (!DISK.exists(szCurPath)) {
+      Serial.print("\tMake DD Dir failed!");
+      Serial.println(szCurPath);
+      return;
+    }
+    else {
+      Serial.print("\tMade DD Dir:");
+      Serial.println(szCurPath);
+    }
+  }
   Serial.print("\tMake DeepDir :");
   Serial.println(szCurPath);
   if ( Abort ) {
@@ -610,7 +642,11 @@ void MakeDeepDirs( char* szRoot, int numDirs, int numFiles, uint32_t startSize, 
     strcat( szCurPath, szTmp );
     if ( !DISK.mkdir( szCurPath ) ) {
       if (!DISK.exists(szCurPath)) {
-        Serial.print("\tMake Dir failed!");
+        Serial.print("\tMake dd Dir failed!");
+        Serial.println(szCurPath);
+      }
+      else {
+        Serial.print("\tMade dd Dir:");
         Serial.println(szCurPath);
       }
     }
