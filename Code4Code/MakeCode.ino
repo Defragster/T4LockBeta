@@ -48,7 +48,7 @@ char szAlpha[] [32] = { "PROGMEM char a1[] = \n\t\"",
                       };
 
 void buildAlpha() {
-  int ii, jj;
+  int32_t ii, jj;
   char base = 'A';
   for ( ii = 0; ii < 2; ii++ ) {
     SerialUSB1.print( szAlpha[ii] );
@@ -135,8 +135,8 @@ char repeatCode3[][120] = {
 };
 
 void MakeCode( uint32_t repeat ) {
-  uint jj;
-  uint kk;
+  uint32_t jj;
+  uint32_t kk;
   if ( repeat < 2 ) {
     SerialUSB1.println( " !!! \t Must call with repeat of TWO or more! \t !!! " );
     return;
@@ -145,7 +145,7 @@ void MakeCode( uint32_t repeat ) {
   SerialUSB1.println();
   SerialUSB1.println( varHeader );
   SerialUSB1.println();
-  for ( uint ii = 1; ii < repeat; ii++ ) {
+  for ( uint32_t ii = 1; ii < repeat; ii++ ) {
     jj = 0;
     SerialUSB1.print( FuncHeader[jj++] );
     SerialUSB1.printf( "%u", ii );

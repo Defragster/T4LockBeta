@@ -1286,6 +1286,7 @@ void dSetup()
     } else {
       Serial.println("No SD Card");
     }
+    */
   #ifdef CS_SD2
   if (sdSPI.begin(CS_SD2)) {
     Serial.println("Added SD2 card using built in SDIO, or given SPI CS");
@@ -1294,7 +1295,6 @@ void dSetup()
     Serial.println("SD2 card not present");
   }
   #endif
-    */
 
   //MTP.useFileSystemIndexFileStore(MTPStorage::INDEX_STORE_MEM_FILE);
   Serial.println("\nDEBUG Setup done");
