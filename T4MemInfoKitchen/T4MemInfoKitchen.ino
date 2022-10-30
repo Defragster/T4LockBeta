@@ -12,7 +12,7 @@ void t4_serialnumber(char * serNum )
   // add extra zero to work around OS-X CDC-ACM driver bug
   if (num < 10000000) num = num * 10;
   ultoa(num, buf, 10);
-  for (i=0; i<10; i++) {
+  for (i = 0; i < 10; i++) {
     char c = buf[i];
     if (!c) break;
     serNum[i] = c;
@@ -211,13 +211,13 @@ int isEncrypt() {
     Serial.println("Fail: title_text[] is not in encrypted region");
     ok--;
   }
-  uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
-  if ( hab_PJRC == hab_csf[0] ) {
-    Serial.println("Pass: csf is PJRC");
+  uint32_t hab_Expected = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
+  if ( hab_Expected == hab_csf[0] ) {
+    Serial.println("Pass: csf as expected");
     strcat( serNum, " ENC" );
-} else {
-    Serial.println("Fail: csf not PJRC");
-  strcat( serNum, " nor" );
+  } else {
+    Serial.println("Fail: csf not as expected");
+    strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -236,10 +236,10 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
-  strcat( serNum, " SM:" );
+    strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
-  strcat( serNum, " ns:" );
+    strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );
