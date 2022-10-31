@@ -1,3 +1,7 @@
+
+// Reserve the HAB memory, so USB buffers don't overwrite logged HAB events
+__attribute__ ((section(".hab_log"), used)) volatile uint8_t HAB_logfile[8192];
+
 // https://forum.pjrc.com/threads/33443-How-to-display-free-ram
 #include <MemoryHexDump.h>  // https://github.com/KurtE/MemoryHexDump
 long time_now;
@@ -7,6 +11,7 @@ void t4_serialnumber(char * serNum )
 {
   char buf[11];
   uint32_t i, num;
+  HAB_logfile[sizeof(HAB_logfile) - 1]; // do not delete this line!
 
   num = HW_OCOTP_MAC0 & 0xFFFFFF;
   // add extra zero to work around OS-X CDC-ACM driver bug
