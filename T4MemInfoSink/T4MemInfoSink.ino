@@ -1,5 +1,7 @@
 // https://forum.pjrc.com/threads/33443-How-to-display-free-ram
 #include <MemoryHexDump.h>  // https://github.com/KurtE/MemoryHexDump
+// Reserve the HAB memory, so USB buffers don't overwrite logged HAB events
+__attribute__ ((section(".hab_log"), used)) volatile uint8_t HAB_logfile[8192];
 
 #include "LittleFS.h"
 
@@ -70,7 +72,7 @@ void t4_serialnumber(char * serNum )
   // add extra zero to work around OS-X CDC-ACM driver bug
   if (num < 10000000) num = num * 10;
   ultoa(num, buf, 10);
-  for (i=0; i<10; i++) {
+  for (i = 0; i < 10; i++) {
     char c = buf[i];
     if (!c) break;
     serNum[i] = c;
@@ -79,6 +81,7 @@ void t4_serialnumber(char * serNum )
 }
 
 void setup() {
+  HAB_logfile[sizeof(HAB_logfile) - 1]; // do not delete this line!
   t4_serialnumber( serNum );
   setup1();
   while (!Serial) ; // wait
@@ -161,11 +164,11 @@ void setup1() {
   isEncrypt();
 }
 
-uint32_t someTime=millis();
+uint32_t someTime = millis();
 void loop1() {
   float testTemp = tempmonGetTemp() - myTemp;
-  if ( (millis()-someTime > 1000 ) && (1.0 < testTemp || -1.0 > testTemp) ) {
-    someTime=millis();
+  if ( (millis() - someTime > 1000 ) && (1.0 < testTemp || -1.0 > testTemp) ) {
+    someTime = millis();
     myTemp = tempmonGetTemp();
     Serial.printf( "\tdeg  C=%f\n" , myTemp );
   }
@@ -207,23 +210,23 @@ void memInfo () {
   extern char _extram_start[], _extram_end[], *__brkval;
   Serial.printf("_extram_start %08x\n",      _extram_start);
   Serial.printf("_extram_end   %08x +%db\n", _extram_end,
-         _extram_end - _extram_start);
+                _extram_end - _extram_start);
 #endif
   Serial.printf("\n");
 
   Serial.printf("<ITCM>  %08x .. %08x\n",
-         _stext, _stext + ((int) _itcm_block_count << 15) - 1);
+                _stext, _stext + ((int) _itcm_block_count << 15) - 1);
   Serial.printf("<DTCM>  %08x .. %08x\n",
-         _sdata, _estack - 1);
+                _sdata, _estack - 1);
   Serial.printf("<RAM>   %08x .. %08x\n",
-         RAM_BASE, RAM_BASE + RAM_SIZE - 1);
+                RAM_BASE, RAM_BASE + RAM_SIZE - 1);
   Serial.printf("<FLASH> %08x .. %08x\n",
-         FLASH_BASE, FLASH_BASE + FLASH_SIZE - 1);
+                FLASH_BASE, FLASH_BASE + FLASH_SIZE - 1);
 #if ARDUINO_TEENSY41
   extern uint8_t external_psram_size;
   if (external_psram_size > 0)
     Serial.printf("<PSRAM> %08x .. %08x\n",
-           _extram_start, _extram_start + (external_psram_size << 20) - 1);
+                  _extram_start, _extram_start + (external_psram_size << 20) - 1);
 #endif
   Serial.printf("\n");
 
@@ -319,11 +322,11 @@ int isEncrypt() {
   }
   uint32_t hab_PJRC = 0x403000D4; // https://forum.pjrc.com/threads/67989-Teensyduino-1-55-Beta-1?p=286356&viewfull=1#post286356
   if ( hab_PJRC == hab_csf[0] ) {
-    Serial.println("Pass: csf is PJRC");
+    Serial.println("Pass: csf as Expected");
     strcat( serNum, " ENC" );
-} else {
-    Serial.println("Fail: csf not PJRC");
-  strcat( serNum, " nor" );
+  } else {
+    Serial.println("Fail: csf not as Expected");
+    strcat( serNum, " nor" );
     ok--;
   }
   const uint32_t hab_version = (*(uint32_t (**)())0x00200330)();
@@ -342,10 +345,10 @@ int isEncrypt() {
   }
   if ((HW_OCOTP_CFG5 & 0x04C00002) == 0x04C00002) {
     Serial.print("Secure mode IS set :: Fuses == 0x");
-  strcat( serNum, " SM:" );
+    strcat( serNum, " SM:" );
   } else {
     Serial.print("Secure mode NOT SET :: Fuses == 0x");
-  strcat( serNum, " ns:" );
+    strcat( serNum, " ns:" );
     ok--;
   }
   Serial.println( HW_OCOTP_CFG5, HEX );
