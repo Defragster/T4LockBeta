@@ -7,8 +7,8 @@ char szTeensy[24] = "";
 
 #define PI_DIGITS 15 // sets of 4
 #define PI_DIGITS_SZ  (PI_DIGITS*4) + 4 // compare string
-#define CODE_PLACE FLASHMEM // as NULL or FLASHMEM 
-#define DATA_PLACE PROGMEM // as NULL or PROGMEM 
+#define CODE_PLACE // FLASHMEM // as NULL or FLASHMEM 
+#define DATA_PLACE FASTRUN // PROGMEM // as FASTRUN or PROGMEM 
 #define PI_INLINE  inline  // Set to 'inline' for seePi() inline
 const char szPiDigits[] = "314159265358979323846264338327950288419716939937510582097494"; // 60 digits ONLY for PI_DIGITS 15
 const uint32_t sumPi60dig = 75967;
@@ -31,7 +31,7 @@ void setup() {
 
 #if defined(USB_DUAL_SERIAL)  // Send the Cascade code created to Second Serial for the indicated MakeCode( COUNT )
   buildAlpha();
-  MakeCode( 200 );
+  MakeCode( 1000 );
   delay(500);
 #endif
 
