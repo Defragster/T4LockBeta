@@ -7,8 +7,8 @@ char szTeensy[24] = "";
 
 #define PI_DIGITS 15 // sets of 4
 #define PI_DIGITS_SZ  (PI_DIGITS*4) + 4 // compare string
-#define CODE_PLACE // FLASHMEM // as NULL or FLASHMEM 
-#define DATA_PLACE FASTRUN // PROGMEM // as FASTRUN or PROGMEM 
+#define CODE_PLACE FLASHMEM // as NULL or FLASHMEM 
+#define DATA_PLACE PROGMEM // as FASTRUN or PROGMEM 
 #define PI_INLINE  inline  // Set to 'inline' for seePi() inline
 const char szPiDigits[] = "314159265358979323846264338327950288419716939937510582097494"; // 60 digits ONLY for PI_DIGITS 15
 const uint32_t sumPi60dig = 75967;
@@ -22,7 +22,10 @@ uint32_t isrCycles, allCycles;
 void setup() {
   Serial.begin(115200);
   while (!Serial && millis() < 2500 );
-  if ( CrashReport) Serial.print( CrashReport);
+  if ( CrashReport) {
+    Serial.print( CrashReport);
+    while(1) delay(10);
+  }
   Serial.println("\n" __FILE__ " " __DATE__ " " __TIME__);
   isEncrypt();
   Serial.println( szTeensy );
