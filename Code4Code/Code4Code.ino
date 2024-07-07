@@ -20,11 +20,13 @@ uint32_t time_now;
 uint32_t piCycles;
 uint32_t isrCycles, allCycles;
 extern "C" uint32_t set_arm_clock(uint32_t frequency); // clockspeed.c
-
+uint32_t runMHz = F_CPU_ACTUAL / 1000000;
 void setup() {
-#if defined(ARDUINO_TEENSY_DEVBRD5) || defined(ARDUINO_TEENSY_DEVBRD4) 
-  set_arm_clock(528000000 + 1);
+#if defined(ARDUINO_TEENSY_DEVBRD5) || defined(ARDUINO_TEENSY_DEVBRD4)
+  if ( F_CPU_ACTUAL > 585 )
+    set_arm_clock(528000000 + 1); // Prevent OC and UnderVolt : HACK HACK
 #endif
+  runMHz = F_CPU_ACTUAL / 1000000;
   Serial.begin(115200);
   while (!Serial && millis() < 2500)
     ;
@@ -52,7 +54,7 @@ void setup() {
   piTime = micros();
   iiCnt = theCount = ThisFunc1(0, seePi(PI_DIGITS, szPi), &sumPi60dig);
   piTime = micros() - piTime;
-  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net %lu us\n", theCount, piTime, piCycles, piTime - piCycles / 600);
+  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net %lu us\n", theCount, piTime, piCycles, piTime - piCycles / runMHz );
   piCycles = 0;
   piTime = micros();
   int32_t seePiStart = seePi(PI_DIGITS, szPi);
@@ -61,7 +63,7 @@ void setup() {
     iiCnt--;
   }
   piTime = micros() - piTime;
-  Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / F_CPU_ACTUAL);
   time_now = millis();
 
   pinMode(LED_BUILTIN, OUTPUT);  // testAlpha Toggles on call to show running
@@ -88,9 +90,9 @@ void setup() {
   piTime = micros() - piTime;
   Alpha.end();
   allCycles = ARM_DWT_CYCCNT - allCycles;
-  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", theCount, piTime, piCycles / 600, piTime - piCycles / 600);
+  Serial.printf("Cascading %lu calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", theCount, piTime, piCycles / runMHz, piTime - piCycles / runMHz);
   Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles);
-  Serial.printf("Cascading %lu calls took %lu us : net {less isr} %lu us\n", theCount, piTime, piCycles, piTime - isrCycles / 600);
+  Serial.printf("Cascading %lu calls took %lu us : net {less isr} %lu us\n", theCount, piTime, piCycles, piTime - isrCycles / runMHz);
   Serial.printf("Cascading %lu calls took %lu us : Cycles/call %lu\n", theCount, piTime, piTime / theCount);
   piCycles = 0;
   piTime = micros();
@@ -107,9 +109,9 @@ void setup() {
   Alpha.end();
   allCycles = ARM_DWT_CYCCNT - allCycles;
   piTime = micros() - piTime;
-  Serial.printf("\nDirect calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", piTime, piCycles / 600, piTime - piCycles / 600);
+  Serial.printf("\nDirect calls took %lu us [%lu piCycles] : net {less Pi} %lu us\n", piTime, piCycles / runMHz, piTime - piCycles / runMHz);
   Serial.printf("\t_isr Cycles %lu of %lu : CPU %%=%f\n", isrCycles, allCycles, (float)isrCycles / allCycles);
-  Serial.printf("Direct calls took %lu us [%lu piCycles] : net {less isr} %lu us\n", piTime, piCycles, piTime - isrCycles / 600);
+  Serial.printf("Direct calls took %lu us [%lu piCycles] : net {less isr} %lu us\n", piTime, piCycles, piTime - isrCycles / runMHz);
   Serial.printf("Direct calls took %lu us [%lu piCycles] : Cycles/call %lu\n", piTime, piCycles, piTime / theCount);
   time_now = millis();  // for time measure in loop on TEMP
 
@@ -136,7 +138,7 @@ void loop() {
     theCount = ThisFunc1(0, seePi(PI_DIGITS, szPi), &sumPi60dig);
     Serial.printf("%s Completed CASCADE Count %lu\t", szTeensy, theCount);
     piTime = micros() - piTime;
-    Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / 600);
+    Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / runMHz);
     piCycles = 0;
     piTime = micros();
     int32_t seePiStart = seePi(PI_DIGITS, szPi);
@@ -145,7 +147,7 @@ void loop() {
       theCount--;
     }
     piTime = micros() - piTime;
-    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / 600);
+    Serial.printf("Direct calls took %lu us [%lu piCycles] : net %lu us\n\n", piTime, piCycles, piTime - piCycles / runMHz);
     if (errAlpha(NULL, 0, 0)) {                                        // from ::   // testAlpha();
       Serial.printf(" -----\t ALPHA FAIL %lu", errAlpha(NULL, 0, 0));  // debug
       delay(500);
