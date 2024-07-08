@@ -23,11 +23,14 @@ uint32_t runMHz = F_CPU_ACTUAL / 1000000;
 extern "C" uint32_t set_arm_clock(uint32_t frequency);  // clockspeed.c
 
 void setup() {
+  set_arm_clock(564000000);
+  /*
 #if defined(ARDUINO_TEENSY_DEVBRD5) || defined(ARDUINO_TEENSY_DEVBRD4)
   if (F_CPU_ACTUAL > 585)
     set_arm_clock(528000000 + 1);  // Prevent OC and UnderVolt : HACK HACK
                                    // set_arm_clock(564000000); // V4.5 too much OC
 #endif
+*/
   runMHz = F_CPU_ACTUAL / 1000000;
   Serial.begin(115200);
   while (!Serial && millis() < 2500)
@@ -129,7 +132,7 @@ void setup() {
 
 void loop() {
   static char szPi[PI_DIGITS_SZ];
-  static uint32_t lCnt=0;
+  static uint32_t lCnt = 0;
   Serial.printf("\t%4.4f", (millis() - time_now) * 0.00001667);
   Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
@@ -141,7 +144,7 @@ void loop() {
     theCount = ThisFunc1(0, seePi(PI_DIGITS, szPi), &sumPi60dig);
     Serial.printf("%s Completed CASCADE Count %lu\t", szTeensy, theCount);
     piTime = micros() - piTime;
-    Serial.printf( "\tdeg  C=%u\tPass#%u" , (uint32_t)tempmonGetTemp(),lCnt++ );
+    Serial.printf("\tdeg  C=%u\tPass#%u", (uint32_t)tempmonGetTemp(), lCnt++);
     Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / runMHz);
     piCycles = 0;
     piTime = micros();
