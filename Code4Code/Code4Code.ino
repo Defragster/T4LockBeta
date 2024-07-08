@@ -129,6 +129,7 @@ void setup() {
 
 void loop() {
   static char szPi[PI_DIGITS_SZ];
+  static uint32_t lCnt=0;
   Serial.printf("\t%4.4f", (millis() - time_now) * 0.00001667);
   Serial.print(", ");
   Serial.println(tempmonGetTemp(), 2);
@@ -140,6 +141,7 @@ void loop() {
     theCount = ThisFunc1(0, seePi(PI_DIGITS, szPi), &sumPi60dig);
     Serial.printf("%s Completed CASCADE Count %lu\t", szTeensy, theCount);
     piTime = micros() - piTime;
+    Serial.printf( "\tdeg  C=%u\tPass#%u" , (uint32_t)tempmonGetTemp(),lCnt++ );
     Serial.printf("\nCascading took %lu us [%lu piCycles] : net %lu us\n", piTime, piCycles, piTime - piCycles / runMHz);
     piCycles = 0;
     piTime = micros();
